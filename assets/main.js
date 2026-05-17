@@ -223,6 +223,22 @@ function setL(l){
 
 function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
 
+/* THEME — dark / light */
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme',t);
+  try{localStorage.setItem('pma-theme',t)}catch(e){}
+  const m=document.querySelector('meta[name="theme-color"]');
+  if(m)m.setAttribute('content',t==='light'?'#f3f0e8':'#0c0c0e');
+}
+function toggleTheme(){
+  const cur=document.documentElement.getAttribute('data-theme')==='light'?'light':'dark';
+  applyTheme(cur==='light'?'dark':'light');
+}
+(function initTheme(){
+  let saved;try{saved=localStorage.getItem('pma-theme')}catch(e){}
+  applyTheme(saved==='light'?'light':'dark');
+})();
+
 /* NAV scroll */
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').classList.toggle('scrolled',window.scrollY>80);

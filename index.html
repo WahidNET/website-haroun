@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('pma-theme');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
 <title>PMA Accountancy Tax Advisory · Belgium</title>
 <meta name="description" content="Cabinet comptable et fiscal premium à Uccle & Drogenbos. Expert-Comptable ITAA certifié Parisa ABED. Comptabilité, TVA, ISOC, création de société, domiciliation, co-working. Multilingue FR · NL · EN · فارسی.">
 <meta name="keywords" content="comptable Uccle, expert-comptable Belgique, ITAA, fiscalité belge, création société Belgique, TVA Belgique, Peppol, domiciliation Bruxelles">
@@ -39,6 +40,10 @@
       <li><a href="#contact" data-t="nav_contact">Contact</a></li>
     </ul>
     <div class="nav-right">
+      <button class="theme-tog" id="theme-tog" onclick="toggleTheme()" aria-label="Basculer mode clair / sombre" title="Mode clair / sombre">
+        <svg class="ico-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 1.6v3M12 19.4v3M4.3 4.3l2.1 2.1M17.6 17.6l2.1 2.1M1.6 12h3M19.4 12h3M4.3 19.7l2.1-2.1M17.6 6.4l2.1-2.1"></path></svg>
+        <svg class="ico-moon" viewBox="0 0 24 24"><path d="M20.5 13.2A8.3 8.3 0 1110.8 3.5a6.5 6.5 0 009.7 9.7z"></path></svg>
+      </button>
       <div class="lang-sw" role="group" aria-label="Language">
         <button class="lb on" onclick="setL('fr')">FR</button>
         <button class="lb" onclick="setL('nl')">NL</button>
