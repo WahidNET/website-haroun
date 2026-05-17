@@ -23,9 +23,6 @@ const T={
     pq5t:"Consultants",pq5p:"IT, management, conseil",pq6t:"Startups",pq6p:"Levée de fonds & scale",
     pq7t:"E-Commerce",pq7p:"Boutiques en ligne",pq8t:"Prof. Libérales",pq8p:"Avocats, architectes…",
     pq9t:"Indépendants",pq9p:"Toutes activités",pq10t:"Sociétés",pq10p:"PME & multinationales",
-    seclbl3:"Innovation & Digital",sectit3:"Fiduciaire digitale <span class='acc'>& conseil sur mesure</span>",secsub3:"Expertise humaine certifiée ITAA combinée aux outils digitaux les plus avancés.",
-    df1t:"Peppol Gratuit",df1p:"Facturation électronique incluse",df2t:"Plateforme Sécurisée",df2p:"Portail client chiffré",
-    df3t:"Signature Digitale",df3p:"Documents signés en ligne",df4t:"100% Digital",df4p:"Upload & traitement automatisé",
     seclbl4:"PMA International Business Center",sectit4:"Votre espace de travail <span class='gold'>premium</span>",
     bf1t:"Bureaux privés & espaces partagés",bf1p:"Flexibles, modernes, tout équipés",
     bf2t:"Salles de réunion équipées",bf2p:"Visioconférence, écrans, tableau blanc",
@@ -34,6 +31,7 @@ const T={
     bf5t:"Domiciliation légale",bf5p:"Adresse officielle + gestion courrier",
     bizbtn:"Réserver un espace",
     seclbl5:"Législation & Fiscalité",sectit5:"Actualités <span class='acc'>fiscales belges</span>",
+    news_auto:"Mise à jour automatique",news_summary:"Lire l'article",news_err:"Actualités indisponibles pour le moment.",
     partners_title:"Nos partenaires & certifications",
     seclbl6:"Parlons de votre projet",sectit6:"Contactez <span class='acc'>notre équipe</span>",
     form_title:"Prendre rendez-vous",fl_nom:"Prénom & Nom",fl_email:"Email",fl_tel:"Téléphone",fl_svc:"Service souhaité",
@@ -69,9 +67,6 @@ const T={
     pq5t:"Consultants",pq5p:"IT, management, advies",pq6t:"Startups",pq6p:"Fondsenwerving & groei",
     pq7t:"E-Commerce",pq7p:"Webshops",pq8t:"Vrije Beroepen",pq8p:"Advocaten, architecten…",
     pq9t:"Zelfstandigen",pq9p:"Alle activiteiten",pq10t:"Vennootschappen",pq10p:"KMO's & multinationals",
-    seclbl3:"Innovatie & Digitaal",sectit3:"Digitale fiduciaire <span class='acc'>& advies op maat</span>",secsub3:"Gecertificeerde ITAA-expertise gecombineerd met geavanceerde digitale tools.",
-    df1t:"Peppol Gratis",df1p:"Elektronische facturatie inbegrepen",df2t:"Beveiligd Platform",df2p:"Versleuteld klantenportaal",
-    df3t:"Digitale Handtekening",df3p:"Online ondertekening",df4t:"100% Digitaal",df4p:"Upload & automatische verwerking",
     seclbl4:"PMA Internationaal Business Center",sectit4:"Uw premium <span class='gold'>werkruimte</span>",
     bf1t:"Privékantoren & gedeelde ruimtes",bf1p:"Flexibel, modern, volledig uitgerust",
     bf2t:"Uitgeruste vergaderzalen",bf2p:"Videoconferentie, schermen, whiteboard",
@@ -80,6 +75,7 @@ const T={
     bf5t:"Wettelijke domiciliëring",bf5p:"Officieel adres + postbeheer",
     bizbtn:"Ruimte reserveren",
     seclbl5:"Wetgeving & Fiscaliteit",sectit5:"Fiscaal <span class='acc'>nieuws België</span>",
+    news_auto:"Automatische update",news_summary:"Artikel lezen",news_err:"Nieuws momenteel niet beschikbaar.",
     partners_title:"Onze partners & certificeringen",
     seclbl6:"Laten we praten",sectit6:"Contacteer <span class='acc'>ons team</span>",
     form_title:"Afspraak maken",fl_nom:"Voornaam & Naam",fl_email:"E-mail",fl_tel:"Telefoon",fl_svc:"Gewenste dienst",
@@ -115,9 +111,6 @@ const T={
     pq5t:"Consultants",pq5p:"IT, management, advisory",pq6t:"Startups",pq6p:"Fundraising & scaling",
     pq7t:"E-Commerce",pq7p:"Online stores",pq8t:"Liberal professions",pq8p:"Lawyers, architects…",
     pq9t:"Self-employed",pq9p:"All activities",pq10t:"Companies",pq10p:"SMEs & multinationals",
-    seclbl3:"Innovation & Digital",sectit3:"Digital accounting <span class='acc'>& tailored advice</span>",secsub3:"Certified ITAA expertise combined with the most advanced digital tools.",
-    df1t:"Free Peppol",df1p:"E-invoicing included",df2t:"Secure Platform",df2p:"Encrypted client portal",
-    df3t:"Digital Signature",df3p:"Online document signing",df4t:"100% Digital",df4p:"Upload & automated processing",
     seclbl4:"PMA International Business Center",sectit4:"Your premium <span class='gold'>workspace</span>",
     bf1t:"Private & shared offices",bf1p:"Flexible, modern, fully equipped",
     bf2t:"Equipped meeting rooms",bf2p:"Videoconference, screens, whiteboard",
@@ -126,6 +119,7 @@ const T={
     bf5t:"Legal domiciliation",bf5p:"Official address + mail management",
     bizbtn:"Book a space",
     seclbl5:"Legislation & Tax",sectit5:"Belgian <span class='acc'>tax news</span>",
+    news_auto:"Auto-updated",news_summary:"Read article",news_err:"News currently unavailable.",
     partners_title:"Our partners & certifications",
     seclbl6:"Let's talk about your project",sectit6:"Contact <span class='acc'>our team</span>",
     form_title:"Book an appointment",fl_nom:"First & Last Name",fl_email:"Email",fl_tel:"Phone",fl_svc:"Service needed",
@@ -161,9 +155,6 @@ const T={
     pq5t:"مشاوران",pq5p:"IT، مدیریت، مشاوره",pq6t:"استارتاپ‌ها",pq6p:"جذب سرمایه و رشد",
     pq7t:"تجارت الکترونیک",pq7p:"فروشگاه‌های آنلاین",pq8t:"مشاغل آزاد",pq8p:"وکلا، معماران…",
     pq9t:"مستقل‌ها",pq9p:"همه فعالیت‌ها",pq10t:"شرکت‌ها",pq10p:"SME‌ها و چندملیتی‌ها",
-    seclbl3:"نوآوری و دیجیتال",sectit3:"حسابداری دیجیتال <span class='acc'>و مشاوره سفارشی</span>",secsub3:"تخصص معتمد ITAA همراه با پیشرفته‌ترین ابزارهای دیجیتال.",
-    df1t:"Peppol رایگان",df1p:"صدور فاکتور الکترونیک شامل",df2t:"پلتفرم امن",df2p:"پورتال مشتری رمزگذاری‌شده",
-    df3t:"امضای دیجیتال",df3p:"امضای آنلاین اسناد",df4t:"۱۰۰٪ دیجیتال",df4p:"آپلود و پردازش خودکار",
     seclbl4:"PMA مرکز تجاری بین‌المللی",sectit4:"فضای کار <span class='gold'>برتر شما</span>",
     bf1t:"دفاتر خصوصی و مشترک",bf1p:"انعطاف‌پذیر، مدرن، کاملاً مجهز",
     bf2t:"اتاق‌های جلسه مجهز",bf2p:"ویدئوکنفرانس، صفحه‌نمایش، تخته سفید",
@@ -172,6 +163,7 @@ const T={
     bf5t:"دومیسیلیاسیون قانونی",bf5p:"آدرس رسمی + مدیریت پست",
     bizbtn:"رزرو فضا",
     seclbl5:"قانون و مالیات",sectit5:"اخبار مالیاتی <span class='acc'>بلژیک</span>",
+    news_auto:"به‌روزرسانی خودکار",news_summary:"خواندن مقاله",news_err:"اخبار در حال حاضر در دسترس نیست.",
     partners_title:"شرکا و گواهینامه‌های ما",
     seclbl6:"درباره پروژه‌تان صحبت کنیم",sectit6:"با <span class='acc'>تیم ما</span> تماس بگیرید",
     form_title:"رزرو وقت ملاقات",fl_nom:"نام و نام خانوادگی",fl_email:"ایمیل",fl_tel:"تلفن",fl_svc:"خدمت مورد نیاز",
@@ -211,7 +203,7 @@ function setL(l){
   document.querySelectorAll('[data-t]').forEach(el=>{
     const k=el.getAttribute('data-t');
     if(T[l]&&T[l][k]!==undefined){
-      if(['herosub','sectit1','sectit2','sectit3','sectit4','sectit5','sectit6'].includes(k))
+      if(['herosub','sectit1','sectit2','sectit4','sectit5','sectit6'].includes(k))
         el.innerHTML=T[l][k];
       else el.textContent=T[l][k];
     }
@@ -314,6 +306,71 @@ function filterNews(cat,btn){
     else c.style.display='none';
   });
 }
+
+/* NEWS — live Belgian tax RSS feed (Google News via rss2json) */
+const NEWS_QUERY='(TVA OR ISOC OR fiscalité OR impôts OR comptabilité OR Peppol) Belgique';
+const NEWS_FEED='https://news.google.com/rss/search?q='+encodeURIComponent(NEWS_QUERY)+'&hl=fr&gl=BE&ceid=BE:fr';
+const NEWS_IMGS=['assets/photo-1460925895917-afdab827c52f.jpg','assets/photo-1554224155-6726b3ff858f.jpg','assets/photo-1507003211169-0a1dd7228f2d.jpg','assets/photo-1497366216548-37526070297c.jpg','assets/photo-1573164713988-8665fc963095.jpg'];
+
+function escapeHtml(s){
+  return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function stripHtml(s){
+  const d=document.createElement('div');d.innerHTML=s||'';
+  return (d.textContent||'').replace(/\s+/g,' ').trim();
+}
+function newsCat(title){
+  const t=(title||'').toLowerCase();
+  const c=[];
+  if(/\btva\b|\bbtw\b|\bvat\b/.test(t))c.push('tva');
+  if(/isoc|impôt des sociétés|vennootschap/.test(t))c.push('isoc');
+  if(/peppol|factur|invoic/.test(t))c.push('peppol');
+  if(/indépendant|independ|zelfstandig/.test(t))c.push('independant');
+  if(/fiscal|impôt|\btax\b|belasting/.test(t))c.push('fiscal');
+  return c.join(' ')||'fiscal';
+}
+function fmtNewsDate(iso){
+  const d=new Date(iso);
+  if(isNaN(d))return '';
+  const loc={fr:'fr-FR',nl:'nl-BE',en:'en-GB',fa:'fa-IR'}[lang]||'fr-FR';
+  return d.toLocaleDateString(loc,{year:'numeric',month:'long',day:'numeric'});
+}
+async function loadNews(){
+  const grid=document.getElementById('news-grid');
+  if(!grid)return;
+  const url='https://api.rss2json.com/v1/api.json?count=8&rss_url='+encodeURIComponent(NEWS_FEED);
+  try{
+    const ctrl=new AbortController();
+    const to=setTimeout(()=>ctrl.abort(),8000);
+    const res=await fetch(url,{signal:ctrl.signal});
+    clearTimeout(to);
+    const data=await res.json();
+    if(data.status!=='ok'||!Array.isArray(data.items)||!data.items.length)return; // keep static fallback
+    const items=data.items.slice(0,6);
+    const tagLabel={tva:'TVA',isoc:'ISOC',peppol:'Peppol',independant:'Indépendants',fiscal:'Fiscalité'};
+    grid.innerHTML='';
+    items.forEach((it,i)=>{
+      const cat=newsCat(it.title);
+      const tag=cat.split(' ')[0];
+      const fallback=NEWS_IMGS[i%NEWS_IMGS.length];
+      const img=it.thumbnail||(it.enclosure&&it.enclosure.link)||fallback;
+      let summary=stripHtml(it.description);
+      const truncated=summary.length>165;
+      summary=summary.slice(0,165);
+      const art=document.createElement('article');
+      art.className='news-card sr in sr-d'+((i%3)+1);
+      art.dataset.cat=cat;
+      art.innerHTML=
+        '<div class="news-thumb"><img src="'+escapeHtml(img)+'" alt="" loading="lazy" onerror="this.onerror=null;this.src=\''+fallback+'\'"><span class="news-tag">'+(tagLabel[tag]||'Fiscalité')+'</span></div>'+
+        '<div class="news-body"><div class="news-date">'+escapeHtml(fmtNewsDate(it.pubDate))+'</div>'+
+        '<h3><a href="'+escapeHtml(it.link||'#')+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(it.title)+'</a></h3>'+
+        (summary?'<p>'+escapeHtml(summary)+(truncated?'…':'')+'</p>':'')+
+        '</div>';
+      grid.appendChild(art);
+    });
+  }catch(e){ /* network/timeout/error → keep static cards as fallback */ }
+}
+loadNews();
 
 /* CHATBOT */
 let chatOpen=false;

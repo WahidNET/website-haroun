@@ -210,60 +210,6 @@
   </div>
 </section>
 
-<!-- ══ DIGITAL ══ -->
-<section class="section-pad" id="digital">
-  <div class="container">
-    <div class="digital-grid">
-      <div class="sr">
-        <p class="sec-label" data-t="seclbl3">Innovation &amp; Digital</p>
-        <h2 class="sec-title" data-t="sectit3">Fiduciaire digitale <span class="acc">&amp; conseil sur mesure</span></h2>
-        <p class="sec-sub" data-t="secsub3">Expertise humaine certifiée ITAA combinée aux outils digitaux les plus avancés.</p>
-        <div class="digital-features">
-          <div class="dfeat sr sr-d1">
-            <div class="dfeat-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg></div>
-            <h4 data-t="df1t">Peppol Gratuit</h4>
-            <p data-t="df1p">Facturation électronique incluse</p>
-          </div>
-          <div class="dfeat sr sr-d2">
-            <div class="dfeat-ico"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path></svg></div>
-            <h4 data-t="df2t">Plateforme Sécurisée</h4>
-            <p data-t="df2p">Portail client chiffré</p>
-          </div>
-          <div class="dfeat sr sr-d3">
-            <div class="dfeat-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14,2 14,8 20,8"></polyline></svg></div>
-            <h4 data-t="df3t">Signature Digitale</h4>
-            <p data-t="df3p">Documents signés en ligne</p>
-          </div>
-          <div class="dfeat sr sr-d4">
-            <div class="dfeat-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"></path></svg></div>
-            <h4 data-t="df4t">100% Digital</h4>
-            <p data-t="df4p">Upload &amp; traitement automatisé</p>
-          </div>
-        </div>
-      </div>
-      <div class="sr sr-d2">
-        <div class="digital-visual">
-          <div class="digital-card-main">
-            <div class="dcard-title">Tableau de bord client</div>
-            <div class="metric-row"><span class="metric-label">TVA Q2 2026</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:85%"></div></div><span class="metric-val">✓ Déposé</span></div>
-            <div class="metric-row"><span class="metric-label">ISOC 2025</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:60%"></div></div><span class="metric-val">En cours</span></div>
-            <div class="metric-row"><span class="metric-label">Payroll Mai</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:100%"></div></div><span class="metric-val">✓ Traité</span></div>
-            <div class="metric-row"><span class="metric-label">Peppol Factures</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:72%"></div></div><span class="metric-val">24 envoyées</span></div>
-          </div>
-          <div class="digital-card-float dcf-1">
-            <div class="dcf-label">Réponse moyenne</div>
-            <div class="dcf-val gold">&lt; 4h</div>
-          </div>
-          <div class="digital-card-float dcf-2">
-            <div class="dcf-label">Satisfaction clients</div>
-            <div class="dcf-val green">98%</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══ BUSINESS CENTER ══ -->
 <section class="section-pad" id="bizc">
   <div class="container">
@@ -303,6 +249,7 @@
     <div class="sec-head sr">
       <p class="sec-label" data-t="seclbl5">Législation &amp; Fiscalité</p>
       <h2 class="sec-title" data-t="sectit5">Actualités <span class="acc">fiscales belges</span></h2>
+      <span class="news-auto" id="news-auto"><span class="news-auto-dot"></span><span data-t="news_auto">Mise à jour automatique</span></span>
     </div>
     <div class="news-filters sr">
       <button class="nf on" onclick="filterNews('all',this)">Tout</button>
@@ -312,7 +259,7 @@
       <button class="nf" onclick="filterNews('peppol',this)">Peppol</button>
       <button class="nf" onclick="filterNews('fiscal',this)">Fiscalité</button>
     </div>
-    <div class="news-grid">
+    <div class="news-grid" id="news-grid">
       <article class="news-card sr sr-d1" data-cat="peppol">
         <div class="news-thumb"><img src="assets/photo-1460925895917-afdab827c52f.jpg" alt="Peppol"><span class="news-tag">Peppol</span></div>
         <div class="news-body"><div class="news-date">Mai 2026</div><h3>Facturation électronique Peppol : obligation dès 2026 pour les assujettis TVA</h3><p>La Belgique généralise le réseau Peppol pour les factures B2B. Découvrez comment PMA vous accompagne gratuitement dans cette transition.</p></div>
@@ -475,7 +422,6 @@
     <div class="footer-col">
       <h4 data-t="fc2h">Cabinet</h4>
       <a href="#pourqui" data-t="fc2_1">Pour qui</a>
-      <a href="#digital" data-t="fc2_2">Digital &amp; IA</a>
       <a href="#news" data-t="fc2_3">Actualités</a>
       <a href="#contact" data-t="fc2_4">Contact</a>
       <a href="#" data-t="fc2_5">Portail client</a>
