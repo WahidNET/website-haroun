@@ -170,6 +170,7 @@ section{position:relative}
 .nav-links a{
   font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
   color:var(--ink-soft);transition:color .2s;position:relative;padding-bottom:3px;
+  white-space:nowrap;
 }
 .nav-links a::after{
   content:'';position:absolute;bottom:0;inset-inline-start:0;width:0;height:1.5px;
@@ -203,12 +204,20 @@ section{position:relative}
 
 /* MOBILE NAV */
 #mobile-nav{
-  position:fixed;inset:0;z-index:490;
-  background:rgba(10,10,12,.98);backdrop-filter:blur(16px);
+  position:fixed;inset:0;z-index:600;
+  background:rgba(10,10,12,.99);backdrop-filter:blur(16px);
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;
   opacity:0;pointer-events:none;transition:opacity .3s var(--ease);
 }
 #mobile-nav.open{opacity:1;pointer-events:all}
+.mn-close{
+  position:absolute;top:1.3rem;inset-inline-end:var(--gutter);
+  width:46px;height:46px;border-radius:var(--r-sm);
+  background:var(--surface);border:1px solid var(--line);
+  color:var(--ink-soft);font-size:1.25rem;line-height:1;
+  display:flex;align-items:center;justify-content:center;transition:color .2s,border-color .2s;
+}
+.mn-close:hover{color:var(--ink);border-color:var(--line-strong)}
 #mobile-nav a{
   font-family:'Manrope',sans-serif;font-size:1.9rem;font-weight:800;
   color:var(--ink-soft);transition:color .2s;
@@ -624,6 +633,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:clamp(3rem,
 }
 @media(max-width:700px){
   .nav-links{display:none}
+  .nav-right .lang-sw,.nav-right .nav-cta{display:none}
   .hamburger{display:flex}
   .hero-inner{padding:8rem var(--gutter) 9rem}
   .svc-grid,.pq-grid{grid-template-columns:1fr 1fr}
