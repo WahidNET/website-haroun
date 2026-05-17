@@ -32,6 +32,7 @@ const T={
     bizbtn:"Réserver un espace",
     seclbl5:"Législation & Fiscalité",sectit5:"Actualités <span class='acc'>fiscales belges</span>",
     news_auto:"Mise à jour automatique",news_summary:"Lire l'article",news_err:"Actualités indisponibles pour le moment.",
+    news_back:"Retour aux actualités",news_source:"Lire l'article complet sur la source",news_contact:"Prendre rendez-vous",
     partners_title:"Nos partenaires & certifications",
     seclbl6:"Parlons de votre projet",sectit6:"Contactez <span class='acc'>notre équipe</span>",
     form_title:"Prendre rendez-vous",fl_nom:"Prénom & Nom",fl_email:"Email",fl_tel:"Téléphone",fl_svc:"Service souhaité",
@@ -76,6 +77,7 @@ const T={
     bizbtn:"Ruimte reserveren",
     seclbl5:"Wetgeving & Fiscaliteit",sectit5:"Fiscaal <span class='acc'>nieuws België</span>",
     news_auto:"Automatische update",news_summary:"Artikel lezen",news_err:"Nieuws momenteel niet beschikbaar.",
+    news_back:"Terug naar nieuws",news_source:"Lees het volledige artikel bij de bron",news_contact:"Afspraak maken",
     partners_title:"Onze partners & certificeringen",
     seclbl6:"Laten we praten",sectit6:"Contacteer <span class='acc'>ons team</span>",
     form_title:"Afspraak maken",fl_nom:"Voornaam & Naam",fl_email:"E-mail",fl_tel:"Telefoon",fl_svc:"Gewenste dienst",
@@ -120,6 +122,7 @@ const T={
     bizbtn:"Book a space",
     seclbl5:"Legislation & Tax",sectit5:"Belgian <span class='acc'>tax news</span>",
     news_auto:"Auto-updated",news_summary:"Read article",news_err:"News currently unavailable.",
+    news_back:"Back to news",news_source:"Read the full article at the source",news_contact:"Book an appointment",
     partners_title:"Our partners & certifications",
     seclbl6:"Let's talk about your project",sectit6:"Contact <span class='acc'>our team</span>",
     form_title:"Book an appointment",fl_nom:"First & Last Name",fl_email:"Email",fl_tel:"Phone",fl_svc:"Service needed",
@@ -164,6 +167,7 @@ const T={
     bizbtn:"رزرو فضا",
     seclbl5:"قانون و مالیات",sectit5:"اخبار مالیاتی <span class='acc'>بلژیک</span>",
     news_auto:"به‌روزرسانی خودکار",news_summary:"خواندن مقاله",news_err:"اخبار در حال حاضر در دسترس نیست.",
+    news_back:"بازگشت به اخبار",news_source:"خواندن مقاله کامل در منبع",news_contact:"رزرو وقت",
     partners_title:"شرکا و گواهینامه‌های ما",
     seclbl6:"درباره پروژه‌تان صحبت کنیم",sectit6:"با <span class='acc'>تیم ما</span> تماس بگیرید",
     form_title:"رزرو وقت ملاقات",fl_nom:"نام و نام خانوادگی",fl_email:"ایمیل",fl_tel:"تلفن",fl_svc:"خدمت مورد نیاز",
@@ -335,6 +339,117 @@ function fmtNewsDate(iso){
   const loc={fr:'fr-FR',nl:'nl-BE',en:'en-GB',fa:'fa-IR'}[lang]||'fr-FR';
   return d.toLocaleDateString(loc,{year:'numeric',month:'long',day:'numeric'});
 }
+/* static PMA articles — shown immediately, also fallback if the RSS feed fails */
+const STATIC_NEWS=[
+  {
+    title:"Facturation électronique Peppol : obligation dès 2026 pour les assujettis TVA",
+    cat:"peppol",tag:"Peppol",date:"2026-05-01",
+    image:"assets/photo-1460925895917-afdab827c52f.jpg",
+    summary:"La Belgique généralise le réseau Peppol pour les factures B2B. Découvrez comment PMA vous accompagne gratuitement dans cette transition.",
+    body:[
+      "À partir de 2026, la facturation électronique structurée via le réseau Peppol devient progressivement obligatoire pour les transactions B2B entre assujettis à la TVA en Belgique. Les factures papier et les simples PDF ne suffiront plus.",
+      "Concrètement, vos factures devront être émises et reçues dans un format électronique structuré, échangé automatiquement entre les logiciels comptables via le réseau sécurisé Peppol. Cela réduit les erreurs d'encodage et accélère les paiements.",
+      "PMA Accountancy accompagne gratuitement ses clients dans cette transition : choix du logiciel compatible, paramétrage de l'accès Peppol et formation de vos équipes. Contactez-nous pour préparer votre cabinet sereinement."
+    ],
+    link:null
+  },
+  {
+    title:"ISOC 2025 : nouveaux taux et déductions pour les PME belges",
+    cat:"isoc",tag:"ISOC",date:"2026-04-01",
+    image:"assets/photo-1554224155-6726b3ff858f.jpg",
+    summary:"Le gouvernement confirme des ajustements importants pour l'impôt des sociétés. Optimisez votre situation dès maintenant.",
+    body:[
+      "Plusieurs ajustements de l'impôt des sociétés (ISOC) s'appliquent à l'exercice 2025. Les PME qui remplissent les conditions du taux réduit restent avantagées, mais les règles de déduction évoluent.",
+      "Parmi les points d'attention : les conditions de la déduction pour investissement, le traitement des réserves de liquidation et les obligations liées aux versements anticipés d'impôt pour éviter les majorations.",
+      "Une analyse personnalisée de votre situation permet d'optimiser légalement votre charge fiscale. L'équipe de PMA réalise un bilan fiscal complet et vous propose les meilleures options pour votre société."
+    ],
+    link:null
+  },
+  {
+    title:"Nouveau statut d'indépendant complémentaire : ce qui change en 2026",
+    cat:"independant tva",tag:"Indépendants",date:"2026-03-01",
+    image:"assets/photo-1507003211169-0a1dd7228f2d.jpg",
+    summary:"Les seuils de cotisations ONSS évoluent. Comprendre votre situation pour éviter les mauvaises surprises fiscales.",
+    body:[
+      "Le statut d'indépendant à titre complémentaire séduit de plus en plus de Belges qui souhaitent développer une activité en parallèle de leur emploi salarié. En 2026, plusieurs seuils de cotisations sociales évoluent.",
+      "Selon vos revenus, le montant des cotisations trimestrielles change, tout comme les conditions d'accès à certains droits sociaux. Une mauvaise estimation peut entraîner des régularisations coûteuses.",
+      "PMA vous aide à choisir le bon statut, à estimer vos cotisations et à structurer votre activité complémentaire de manière optimale. Prenez rendez-vous pour un premier conseil gratuit."
+    ],
+    link:null
+  }
+];
+let currentArticles=[];
+
+function renderNews(items){
+  const grid=document.getElementById('news-grid');
+  if(!grid)return;
+  currentArticles=items;
+  grid.innerHTML='';
+  items.forEach((a,i)=>{
+    const fallback=NEWS_IMGS[i%NEWS_IMGS.length];
+    const art=document.createElement('article');
+    art.className='news-card sr in sr-d'+((i%3)+1);
+    art.dataset.cat=a.cat||'fiscal';
+    art.tabIndex=0;
+    art.setAttribute('role','button');
+    art.addEventListener('click',()=>openArticle(i));
+    art.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openArticle(i);}});
+    art.innerHTML=
+      '<div class="news-thumb"><img src="'+escapeHtml(a.image||fallback)+'" alt="" loading="lazy" onerror="this.onerror=null;this.src=\''+fallback+'\'"><span class="news-tag">'+escapeHtml(a.tag||'Fiscalité')+'</span></div>'+
+      '<div class="news-body"><div class="news-date">'+escapeHtml(fmtNewsDate(a.date))+'</div>'+
+      '<h3>'+escapeHtml(a.title)+'</h3>'+
+      (a.summary?'<p>'+escapeHtml(a.summary)+'</p>':'')+
+      '</div>';
+    grid.appendChild(art);
+  });
+}
+
+function openArticle(i){
+  const a=currentArticles[i];
+  if(!a)return;
+  const fallback=NEWS_IMGS[i%NEWS_IMGS.length];
+  const img=document.getElementById('av-img');
+  img.onerror=function(){this.onerror=null;this.src=fallback;};
+  img.src=a.image||fallback;
+  document.getElementById('av-tag').textContent=a.tag||'Fiscalité';
+  document.getElementById('av-date').textContent=fmtNewsDate(a.date);
+  document.getElementById('av-title').textContent=a.title;
+  const body=document.getElementById('av-body');
+  body.innerHTML='';
+  (Array.isArray(a.body)?a.body:[a.body]).forEach(p=>{
+    if(p){const el=document.createElement('p');el.textContent=p;body.appendChild(el);}
+  });
+  const src=document.getElementById('av-source');
+  const lbl=document.getElementById('av-source-label');
+  if(a.link){
+    src.href=a.link;src.target='_blank';src.rel='noopener noreferrer';src.onclick=null;
+    lbl.setAttribute('data-t','news_source');
+    lbl.textContent=(T[lang]&&T[lang].news_source)||"Lire l'article complet sur la source";
+  }else{
+    src.href='#contact';src.target='_self';src.removeAttribute('rel');
+    src.onclick=function(e){e.preventDefault();closeArticle();go('contact');};
+    lbl.removeAttribute('data-t');
+    lbl.textContent=(T[lang]&&T[lang].news_contact)||'Prendre rendez-vous';
+  }
+  const av=document.getElementById('article-view');
+  av.classList.add('open');
+  av.setAttribute('aria-hidden','false');
+  av.scrollTop=0;
+  document.body.style.overflow='hidden';
+}
+function closeArticle(){
+  const av=document.getElementById('article-view');
+  av.classList.remove('open');
+  av.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    const av=document.getElementById('article-view');
+    if(av&&av.classList.contains('open'))closeArticle();
+  }
+});
+
 async function loadNews(){
   const grid=document.getElementById('news-grid');
   if(!grid)return;
@@ -346,30 +461,28 @@ async function loadNews(){
     clearTimeout(to);
     const data=await res.json();
     if(data.status!=='ok'||!Array.isArray(data.items)||!data.items.length)return; // keep static fallback
-    const items=data.items.slice(0,6);
     const tagLabel={tva:'TVA',isoc:'ISOC',peppol:'Peppol',independant:'Indépendants',fiscal:'Fiscalité'};
-    grid.innerHTML='';
-    items.forEach((it,i)=>{
+    const mapped=data.items.slice(0,6).map((it,i)=>{
       const cat=newsCat(it.title);
       const tag=cat.split(' ')[0];
-      const fallback=NEWS_IMGS[i%NEWS_IMGS.length];
-      const img=it.thumbnail||(it.enclosure&&it.enclosure.link)||fallback;
-      let summary=stripHtml(it.description);
-      const truncated=summary.length>165;
-      summary=summary.slice(0,165);
-      const art=document.createElement('article');
-      art.className='news-card sr in sr-d'+((i%3)+1);
-      art.dataset.cat=cat;
-      art.innerHTML=
-        '<div class="news-thumb"><img src="'+escapeHtml(img)+'" alt="" loading="lazy" onerror="this.onerror=null;this.src=\''+fallback+'\'"><span class="news-tag">'+(tagLabel[tag]||'Fiscalité')+'</span></div>'+
-        '<div class="news-body"><div class="news-date">'+escapeHtml(fmtNewsDate(it.pubDate))+'</div>'+
-        '<h3><a href="'+escapeHtml(it.link||'#')+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(it.title)+'</a></h3>'+
-        (summary?'<p>'+escapeHtml(summary)+(truncated?'…':'')+'</p>':'')+
-        '</div>';
-      grid.appendChild(art);
+      const full=stripHtml(it.description);
+      let summary=full;
+      if(summary.length>165)summary=summary.slice(0,165)+'…';
+      return {
+        title:stripHtml(it.title),
+        cat:cat,
+        tag:tagLabel[tag]||'Fiscalité',
+        date:it.pubDate,
+        image:it.thumbnail||(it.enclosure&&it.enclosure.link)||'',
+        summary:summary,
+        body:[full||summary||stripHtml(it.title)],
+        link:it.link||null
+      };
     });
+    if(mapped.length)renderNews(mapped);
   }catch(e){ /* network/timeout/error → keep static cards as fallback */ }
 }
+renderNews(STATIC_NEWS);
 loadNews();
 
 /* CHATBOT */
