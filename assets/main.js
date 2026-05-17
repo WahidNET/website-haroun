@@ -1,0 +1,360 @@
+/* ── TRANSLATIONS ── */
+const T={
+  fr:{
+    nav_svc:"Services",nav_pq:"Pour Qui",nav_biz:"Business Center",nav_news:"Actualités",nav_contact:"Contact",
+    cta:"Consultation Gratuite",
+    eyebrow:"Expert-Comptable Certifié ITAA · Uccle & Drogenbos",
+    h1a:"Votre partenaire",h1b:"comptable stratégique",h1c:"en Belgique.",
+    herosub:"<strong>Comptabilité · Fiscalité · Business Center</strong><br>Cabinet multilingue haut de gamme. Membre certifié ITAA. Parisa ABED, Expert-Comptable.",
+    btn1t:"Prendre rendez-vous",btn2t:"Créer mon entreprise",
+    hs1:"Années d'expérience",hs2:"Clients actifs",hs3:"Langues",hs4:"Temps de réponse",hs5:"Digital",hs6:"Certifié",
+    seclbl1:"Ce que nous faisons",sectit1:"Nos services <span class='acc'>sur mesure</span>",secsub1:"De la tenue comptable à la création de société — un interlocuteur unique pour tous vos besoins.",
+    s1t:"Comptabilité",s1p:"Tenue complète, bilans et comptes annuels. Reporting mensuel.",
+    s2t:"Fiscalité & ISOC",s2p:"Optimisation fiscale, TVA, ISOC, IPP. Conseil stratégique.",
+    s3t:"Création de société",s3p:"Statuts, BCE, plan financier, accompagnement complet.",
+    s4t:"Social & Payroll",s4p:"Salaires, ONSS, contrats de travail.",
+    s5t:"Conseil Stratégique",s5p:"Analyse financière, trésorerie, accompagnement dirigeant.",
+    s6t:"TVA Belgique",s6p:"Déclarations TVA, Intrastat, listing clients.",
+    s7t:"Domiciliation",s7p:"Adresse légale, siège social à Uccle & Drogenbos.",
+    s8t:"Co-Working",s8p:"Bureaux flexibles et salles de réunion premium.",
+    seclbl2:"Nous accompagnons",sectit2:"Une expertise pour <span class='gold'>chaque profil</span>",
+    pq1t:"Médecins",pq1p:"Spécialistes & généralistes",pq2t:"Infirmiers",pq2p:"Indépendants & structures",
+    pq3t:"Horeca",pq3p:"Restaurants, cafés, hôtels",pq4t:"Chauffeurs",pq4p:"VTC, taxi, transport",
+    pq5t:"Consultants",pq5p:"IT, management, conseil",pq6t:"Startups",pq6p:"Levée de fonds & scale",
+    pq7t:"E-Commerce",pq7p:"Boutiques en ligne",pq8t:"Prof. Libérales",pq8p:"Avocats, architectes…",
+    pq9t:"Indépendants",pq9p:"Toutes activités",pq10t:"Sociétés",pq10p:"PME & multinationales",
+    seclbl3:"Innovation & Digital",sectit3:"Fiduciaire digitale <span class='acc'>& conseil sur mesure</span>",secsub3:"Expertise humaine certifiée ITAA combinée aux outils digitaux les plus avancés.",
+    df1t:"Peppol Gratuit",df1p:"Facturation électronique incluse",df2t:"Plateforme Sécurisée",df2p:"Portail client chiffré",
+    df3t:"Signature Digitale",df3p:"Documents signés en ligne",df4t:"100% Digital",df4p:"Upload & traitement automatisé",
+    seclbl4:"PMA International Business Center",sectit4:"Votre espace de travail <span class='gold'>premium</span>",
+    bf1t:"Bureaux privés & espaces partagés",bf1p:"Flexibles, modernes, tout équipés",
+    bf2t:"Salles de réunion équipées",bf2p:"Visioconférence, écrans, tableau blanc",
+    bf3t:"WiFi haut débit & IT",bf3p:"Infrastructure professionnelle fiable",
+    bf4t:"Réception & Secrétariat",bf4p:"Standard téléphonique dédié",
+    bf5t:"Domiciliation légale",bf5p:"Adresse officielle + gestion courrier",
+    bizbtn:"Réserver un espace",
+    seclbl5:"Législation & Fiscalité",sectit5:"Actualités <span class='acc'>fiscales belges</span>",
+    partners_title:"Nos partenaires & certifications",
+    seclbl6:"Parlons de votre projet",sectit6:"Contactez <span class='acc'>notre équipe</span>",
+    form_title:"Prendre rendez-vous",fl_nom:"Prénom & Nom",fl_email:"Email",fl_tel:"Téléphone",fl_svc:"Service souhaité",
+    fl_rdv:"Type de rendez-vous",fl_msg:"Message",fl_send:"Envoyer la demande",
+    opt1:"Comptabilité",opt2:"Fiscalité",opt3:"Création société",opt4:"Domiciliation",opt5:"Co-Working",opt6:"Autre",
+    rdv1:"Réunion physique — Uccle",rdv2:"Réunion physique — Drogenbos",rdv3:"Visioconférence",rdv4:"Appel téléphonique",
+    ci_title:"Un cabinet à votre écoute",ci_sub:"Parisa ABED et son équipe vous accueillent dans nos deux locaux ou à distance. Réponse garantie sous 24h.",
+    wa_btn:"Écrire sur WhatsApp",
+    fc1h:"Services",fc1_1:"Comptabilité",fc1_2:"Fiscalité",fc1_3:"Création société",fc1_4:"Social & Payroll",fc1_5:"Co-Working",fc1_6:"Domiciliation",
+    fc2h:"Cabinet",fc2_1:"Pour qui",fc2_2:"Digital & IA",fc2_3:"Actualités",fc2_4:"Contact",fc2_5:"Portail client",
+    fc3h:"Coordonnées",fc3_legal:"Mentions légales",
+    footer_desc:"Cabinet comptable et fiscal premium à Uccle & Drogenbos. Certifié ITAA. Multilingue FR · NL · EN · فارسی.",
+    footer_cr:"© 2026 PMA Accountancy Tax Advisory · Tous droits réservés · Belgique",
+    w1:"Prendre rendez-vous",w2:"Créer mon entreprise",w3:"Appeler",w4:"Assistant IA",
+    ch_welcome:"Bonjour ! Je suis l'assistant IA de PMA Accountancy. Posez-moi vos questions sur la comptabilité, TVA, création de société en Belgique ou nos services.",
+    cq1:"Délai TVA belge",cq2:"Créer une SRL",cq3:"Peppol c'est quoi ?",cq4:"Nos tarifs"
+  },
+  nl:{
+    nav_svc:"Diensten",nav_pq:"Voor Wie",nav_biz:"Business Center",nav_news:"Nieuws",nav_contact:"Contact",
+    cta:"Gratis Consult",eyebrow:"Gecertificeerd Accountant ITAA · Ukkel & Drogenbos",
+    h1a:"Uw strategische",h1b:"boekhoudkundige partner",h1c:"in België.",
+    herosub:"<strong>Boekhouding · Fiscaliteit · Business Center</strong><br>Meertalig premium kantoor. Gecertificeerd ITAA-lid. Parisa ABED, Expert-Accountant.",
+    btn1t:"Afspraak maken",btn2t:"Mijn bedrijf oprichten",
+    hs1:"Jaar ervaring",hs2:"Actieve klanten",hs3:"Talen",hs4:"Reactietijd",hs5:"Digitaal",hs6:"Gecertificeerd",
+    seclbl1:"Wat wij doen",sectit1:"Onze diensten <span class='acc'>op maat</span>",secsub1:"Van boekhouding tot oprichting — één aanspreekpunt voor al uw behoeften.",
+    s1t:"Boekhouding",s1p:"Volledige boekhouding, balansen en jaarrekeningen.",s2t:"Fiscaliteit & VenB",s2p:"Fiscale optimalisatie, BTW, VenB, PB. Strategisch advies.",
+    s3t:"Oprichting vennootschap",s3p:"Statuten, KBO, financieel plan, volledige begeleiding.",s4t:"Sociaal & Payroll",s4p:"Lonen, RSZ, arbeidsovereenkomsten.",
+    s5t:"Strategisch Advies",s5p:"Financiële analyse, cashflow, begeleiding.",s6t:"BTW België",s6p:"BTW-aangiften, Intrastat, klantenlisting.",
+    s7t:"Domiciliëring",s7p:"Wettelijk adres, maatschappelijke zetel in Ukkel & Drogenbos.",s8t:"Co-Working",s8p:"Flexibele kantoren en vergaderzalen.",
+    seclbl2:"Wij begeleiden",sectit2:"Expertise voor <span class='gold'>elk profiel</span>",
+    pq1t:"Artsen",pq1p:"Specialisten & huisartsen",pq2t:"Verpleegkundigen",pq2p:"Zelfstandigen & structuren",
+    pq3t:"Horeca",pq3p:"Restaurants, cafés, hotels",pq4t:"Chauffeurs",pq4p:"VTC, taxi, transport",
+    pq5t:"Consultants",pq5p:"IT, management, advies",pq6t:"Startups",pq6p:"Fondsenwerving & groei",
+    pq7t:"E-Commerce",pq7p:"Webshops",pq8t:"Vrije Beroepen",pq8p:"Advocaten, architecten…",
+    pq9t:"Zelfstandigen",pq9p:"Alle activiteiten",pq10t:"Vennootschappen",pq10p:"KMO's & multinationals",
+    seclbl3:"Innovatie & Digitaal",sectit3:"Digitale fiduciaire <span class='acc'>& advies op maat</span>",secsub3:"Gecertificeerde ITAA-expertise gecombineerd met geavanceerde digitale tools.",
+    df1t:"Peppol Gratis",df1p:"Elektronische facturatie inbegrepen",df2t:"Beveiligd Platform",df2p:"Versleuteld klantenportaal",
+    df3t:"Digitale Handtekening",df3p:"Online ondertekening",df4t:"100% Digitaal",df4p:"Upload & automatische verwerking",
+    seclbl4:"PMA Internationaal Business Center",sectit4:"Uw premium <span class='gold'>werkruimte</span>",
+    bf1t:"Privékantoren & gedeelde ruimtes",bf1p:"Flexibel, modern, volledig uitgerust",
+    bf2t:"Uitgeruste vergaderzalen",bf2p:"Videoconferentie, schermen, whiteboard",
+    bf3t:"Snel WiFi & IT",bf3p:"Betrouwbare professionele infrastructuur",
+    bf4t:"Receptie & Secretariaat",bf4p:"Toegewijd telefoonnummer",
+    bf5t:"Wettelijke domiciliëring",bf5p:"Officieel adres + postbeheer",
+    bizbtn:"Ruimte reserveren",
+    seclbl5:"Wetgeving & Fiscaliteit",sectit5:"Fiscaal <span class='acc'>nieuws België</span>",
+    partners_title:"Onze partners & certificeringen",
+    seclbl6:"Laten we praten",sectit6:"Contacteer <span class='acc'>ons team</span>",
+    form_title:"Afspraak maken",fl_nom:"Voornaam & Naam",fl_email:"E-mail",fl_tel:"Telefoon",fl_svc:"Gewenste dienst",
+    fl_rdv:"Type afspraak",fl_msg:"Bericht",fl_send:"Aanvraag versturen",
+    opt1:"Boekhouding",opt2:"Fiscaliteit",opt3:"Oprichting",opt4:"Domiciliëring",opt5:"Co-Working",opt6:"Andere",
+    rdv1:"Fysieke vergadering — Ukkel",rdv2:"Fysieke vergadering — Drogenbos",rdv3:"Videoconferentie",rdv4:"Telefoongesprek",
+    ci_title:"Een kantoor dat naar u luistert",ci_sub:"Parisa ABED en haar team ontvangen u in onze twee vestigingen of op afstand. Antwoord gegarandeerd binnen 24u.",
+    wa_btn:"WhatsApp schrijven",
+    fc1h:"Diensten",fc1_1:"Boekhouding",fc1_2:"Fiscaliteit",fc1_3:"Oprichting",fc1_4:"Sociaal & Payroll",fc1_5:"Co-Working",fc1_6:"Domiciliëring",
+    fc2h:"Kantoor",fc2_1:"Voor wie",fc2_2:"Digitaal & AI",fc2_3:"Nieuws",fc2_4:"Contact",fc2_5:"Klantenportaal",
+    fc3h:"Contactgegevens",fc3_legal:"Juridische vermeldingen",
+    footer_desc:"Premium boekhoudkantoor in Ukkel & Drogenbos. ITAA gecertificeerd. Meertalig FR · NL · EN · فارسی.",
+    footer_cr:"© 2026 PMA Accountancy Tax Advisory · Alle rechten voorbehouden · België",
+    w1:"Afspraak maken",w2:"Mijn bedrijf oprichten",w3:"Bellen",w4:"AI Assistent",
+    ch_welcome:"Goedag! Ik ben de AI-assistent van PMA Accountancy. Stel mij uw vragen over boekhouding, BTW, oprichting of onze diensten.",
+    cq1:"BTW-deadline België",cq2:"BV oprichten",cq3:"Wat is Peppol?",cq4:"Onze tarieven"
+  },
+  en:{
+    nav_svc:"Services",nav_pq:"Who We Serve",nav_biz:"Business Center",nav_news:"News",nav_contact:"Contact",
+    cta:"Free Consultation",eyebrow:"ITAA Certified Accountant · Uccle & Drogenbos",
+    h1a:"Your strategic",h1b:"accounting partner",h1c:"in Belgium.",
+    herosub:"<strong>Accounting · Tax · Business Center</strong><br>Premium multilingual firm. ITAA certified member. Parisa ABED, Chartered Accountant.",
+    btn1t:"Book appointment",btn2t:"Set up my company",
+    hs1:"Years experience",hs2:"Active clients",hs3:"Languages",hs4:"Response time",hs5:"Digital",hs6:"Certified",
+    seclbl1:"What we do",sectit1:"Our tailored <span class='acc'>services</span>",secsub1:"From bookkeeping to company formation — one point of contact for all your needs.",
+    s1t:"Accounting",s1p:"Full bookkeeping, balance sheets and annual accounts.",s2t:"Tax & CIT",s2p:"Tax optimization, VAT, CIT, PIT. Strategic advisory.",
+    s3t:"Company formation",s3p:"Articles, CBE, financial plan, full support.",s4t:"HR & Payroll",s4p:"Salaries, NSSO, employment contracts.",
+    s5t:"Strategic Advisory",s5p:"Financial analysis, cash flow, executive coaching.",s6t:"Belgium VAT",s6p:"VAT returns, Intrastat, client listing.",
+    s7t:"Domiciliation",s7p:"Legal address, registered office in Uccle & Drogenbos.",s8t:"Co-Working",s8p:"Flexible offices and premium meeting rooms.",
+    seclbl2:"We serve",sectit2:"Expertise for <span class='gold'>every profile</span>",
+    pq1t:"Physicians",pq1p:"Specialists & GPs",pq2t:"Nurses",pq2p:"Self-employed & structures",
+    pq3t:"Horeca",pq3p:"Restaurants, cafés, hotels",pq4t:"Drivers",pq4p:"Private hire, taxi, transport",
+    pq5t:"Consultants",pq5p:"IT, management, advisory",pq6t:"Startups",pq6p:"Fundraising & scaling",
+    pq7t:"E-Commerce",pq7p:"Online stores",pq8t:"Liberal professions",pq8p:"Lawyers, architects…",
+    pq9t:"Self-employed",pq9p:"All activities",pq10t:"Companies",pq10p:"SMEs & multinationals",
+    seclbl3:"Innovation & Digital",sectit3:"Digital accounting <span class='acc'>& tailored advice</span>",secsub3:"Certified ITAA expertise combined with the most advanced digital tools.",
+    df1t:"Free Peppol",df1p:"E-invoicing included",df2t:"Secure Platform",df2p:"Encrypted client portal",
+    df3t:"Digital Signature",df3p:"Online document signing",df4t:"100% Digital",df4p:"Upload & automated processing",
+    seclbl4:"PMA International Business Center",sectit4:"Your premium <span class='gold'>workspace</span>",
+    bf1t:"Private & shared offices",bf1p:"Flexible, modern, fully equipped",
+    bf2t:"Equipped meeting rooms",bf2p:"Videoconference, screens, whiteboard",
+    bf3t:"High-speed WiFi & IT",bf3p:"Reliable professional infrastructure",
+    bf4t:"Reception & Secretariat",bf4p:"Dedicated phone number",
+    bf5t:"Legal domiciliation",bf5p:"Official address + mail management",
+    bizbtn:"Book a space",
+    seclbl5:"Legislation & Tax",sectit5:"Belgian <span class='acc'>tax news</span>",
+    partners_title:"Our partners & certifications",
+    seclbl6:"Let's talk about your project",sectit6:"Contact <span class='acc'>our team</span>",
+    form_title:"Book an appointment",fl_nom:"First & Last Name",fl_email:"Email",fl_tel:"Phone",fl_svc:"Service needed",
+    fl_rdv:"Appointment type",fl_msg:"Message",fl_send:"Send request",
+    opt1:"Accounting",opt2:"Tax",opt3:"Company formation",opt4:"Domiciliation",opt5:"Co-Working",opt6:"Other",
+    rdv1:"Physical meeting — Uccle",rdv2:"Physical meeting — Drogenbos",rdv3:"Video call",rdv4:"Phone call",
+    ci_title:"A firm that listens",ci_sub:"Parisa ABED and her team welcome you in our two offices or remotely. Reply guaranteed within 24h.",
+    wa_btn:"Chat on WhatsApp",
+    fc1h:"Services",fc1_1:"Accounting",fc1_2:"Tax",fc1_3:"Company formation",fc1_4:"HR & Payroll",fc1_5:"Co-Working",fc1_6:"Domiciliation",
+    fc2h:"Firm",fc2_1:"Who we serve",fc2_2:"Digital & AI",fc2_3:"News",fc2_4:"Contact",fc2_5:"Client portal",
+    fc3h:"Contact",fc3_legal:"Legal notice",
+    footer_desc:"Premium accounting firm in Uccle & Drogenbos. ITAA certified. Multilingual FR · NL · EN · فارسی.",
+    footer_cr:"© 2026 PMA Accountancy Tax Advisory · All rights reserved · Belgium",
+    w1:"Book appointment",w2:"Set up my company",w3:"Call us",w4:"AI Assistant",
+    ch_welcome:"Hello! I'm the PMA Accountancy AI assistant. Ask me about accounting, VAT, company formation in Belgium or our services.",
+    cq1:"VAT deadlines Belgium",cq2:"Set up a company",cq3:"What is Peppol?",cq4:"Our pricing"
+  },
+  fa:{
+    nav_svc:"خدمات",nav_pq:"مشتریان",nav_biz:"مرکز تجاری",nav_news:"اخبار",nav_contact:"تماس",
+    cta:"مشاوره رایگان",eyebrow:"حسابدار معتمد ITAA · اوکل و دروخنبوس",
+    h1a:"شریک استراتژیک",h1b:"حسابداری شما",h1c:"در بلژیک.",
+    herosub:"<strong>حسابداری · مالیات · مرکز تجاری</strong><br>دفتر چندزبانه برتر. عضو معتمد ITAA. Parisa ABED، حسابدار معتمد.",
+    btn1t:"رزرو وقت",btn2t:"تأسیس شرکت",
+    hs1:"سال تجربه",hs2:"مشتری فعال",hs3:"زبان",hs4:"زمان پاسخ",hs5:"دیجیتال",hs6:"معتمد",
+    seclbl1:"آنچه انجام می‌دهیم",sectit1:"خدمات <span class='acc'>سفارشی ما</span>",secsub1:"از حسابداری تا تأسیس شرکت — یک مخاطب برای همه نیازهای شما.",
+    s1t:"حسابداری",s1p:"دفترداری کامل، ترازنامه و حساب‌های سالانه.",s2t:"مالیات و VenB",s2p:"بهینه‌سازی مالیاتی، TVA، ISOC، IPP.",
+    s3t:"تأسیس شرکت",s3p:"اساسنامه، BCE، برنامه مالی، همراهی کامل.",s4t:"حقوق و دستمزد",s4p:"مدیریت حقوق، ONSS، قراردادهای کار.",
+    s5t:"مشاوره استراتژیک",s5p:"تحلیل مالی، جریان نقدی، مشاوره مدیریتی.",s6t:"TVA بلژیک",s6p:"اظهارنامه TVA، Intrastat، فهرست مشتریان.",
+    s7t:"دومیسیلیاسیون",s7p:"آدرس قانونی، مقر شرکت در اوکل و دروخنبوس.",s8t:"کو-ورکینگ",s8p:"دفاتر انعطاف‌پذیر و اتاق‌های جلسه.",
+    seclbl2:"ما همراهی می‌کنیم",sectit2:"تخصص برای <span class='gold'>هر پروفیل</span>",
+    pq1t:"پزشکان",pq1p:"متخصصان و عمومی",pq2t:"پرستاران",pq2p:"مستقل و ساختارها",
+    pq3t:"هورکا",pq3p:"رستوران، کافه، هتل",pq4t:"رانندگان",pq4p:"VTC، تاکسی، حمل‌ونقل",
+    pq5t:"مشاوران",pq5p:"IT، مدیریت، مشاوره",pq6t:"استارتاپ‌ها",pq6p:"جذب سرمایه و رشد",
+    pq7t:"تجارت الکترونیک",pq7p:"فروشگاه‌های آنلاین",pq8t:"مشاغل آزاد",pq8p:"وکلا، معماران…",
+    pq9t:"مستقل‌ها",pq9p:"همه فعالیت‌ها",pq10t:"شرکت‌ها",pq10p:"SME‌ها و چندملیتی‌ها",
+    seclbl3:"نوآوری و دیجیتال",sectit3:"حسابداری دیجیتال <span class='acc'>و مشاوره سفارشی</span>",secsub3:"تخصص معتمد ITAA همراه با پیشرفته‌ترین ابزارهای دیجیتال.",
+    df1t:"Peppol رایگان",df1p:"صدور فاکتور الکترونیک شامل",df2t:"پلتفرم امن",df2p:"پورتال مشتری رمزگذاری‌شده",
+    df3t:"امضای دیجیتال",df3p:"امضای آنلاین اسناد",df4t:"۱۰۰٪ دیجیتال",df4p:"آپلود و پردازش خودکار",
+    seclbl4:"PMA مرکز تجاری بین‌المللی",sectit4:"فضای کار <span class='gold'>برتر شما</span>",
+    bf1t:"دفاتر خصوصی و مشترک",bf1p:"انعطاف‌پذیر، مدرن، کاملاً مجهز",
+    bf2t:"اتاق‌های جلسه مجهز",bf2p:"ویدئوکنفرانس، صفحه‌نمایش، تخته سفید",
+    bf3t:"WiFi پرسرعت و IT",bf3p:"زیرساخت حرفه‌ای قابل اعتماد",
+    bf4t:"پذیرش و منشی‌گری",bf4p:"شماره تلفن اختصاصی",
+    bf5t:"دومیسیلیاسیون قانونی",bf5p:"آدرس رسمی + مدیریت پست",
+    bizbtn:"رزرو فضا",
+    seclbl5:"قانون و مالیات",sectit5:"اخبار مالیاتی <span class='acc'>بلژیک</span>",
+    partners_title:"شرکا و گواهینامه‌های ما",
+    seclbl6:"درباره پروژه‌تان صحبت کنیم",sectit6:"با <span class='acc'>تیم ما</span> تماس بگیرید",
+    form_title:"رزرو وقت ملاقات",fl_nom:"نام و نام خانوادگی",fl_email:"ایمیل",fl_tel:"تلفن",fl_svc:"خدمت مورد نیاز",
+    fl_rdv:"نوع ملاقات",fl_msg:"پیام",fl_send:"ارسال درخواست",
+    opt1:"حسابداری",opt2:"مالیات",opt3:"تأسیس شرکت",opt4:"دومیسیلیاسیون",opt5:"کو-ورکینگ",opt6:"سایر",
+    rdv1:"ملاقات حضوری — اوکل",rdv2:"ملاقات حضوری — دروخنبوس",rdv3:"ویدئوکنفرانس",rdv4:"تماس تلفنی",
+    ci_title:"دفتری که به شما گوش می‌دهد",ci_sub:"Parisa ABED و تیمش در دو دفتر یا از راه دور پذیرایتان هستند. پاسخ در کمتر از ۲۴ ساعت.",
+    wa_btn:"نوشتن در واتساپ",
+    fc1h:"خدمات",fc1_1:"حسابداری",fc1_2:"مالیات",fc1_3:"تأسیس شرکت",fc1_4:"حقوق و دستمزد",fc1_5:"کو-ورکینگ",fc1_6:"دومیسیلیاسیون",
+    fc2h:"دفتر",fc2_1:"مشتریان ما",fc2_2:"دیجیتال و هوش مصنوعی",fc2_3:"اخبار",fc2_4:"تماس",fc2_5:"پورتال مشتری",
+    fc3h:"اطلاعات تماس",fc3_legal:"اطلاعات قانونی",
+    footer_desc:"دفتر حسابداری برتر در اوکل و دروخنبوس. معتمد ITAA. چندزبانه FR · NL · EN · فارسی.",
+    footer_cr:"© ۲۰۲۶ PMA Accountancy Tax Advisory · کلیه حقوق محفوظ است · بلژیک",
+    w1:"رزرو وقت",w2:"تأسیس شرکت",w3:"تماس",w4:"دستیار هوش مصنوعی",
+    ch_welcome:"سلام! من دستیار هوش مصنوعی PMA Accountancy هستم. سؤالاتتان را درباره حسابداری، TVA، تأسیس شرکت یا خدمات ما بپرسید.",
+    cq1:"مهلت TVA بلژیک",cq2:"تأسیس SRL",cq3:"Peppol چیست؟",cq4:"تعرفه‌های ما"
+  }
+};
+
+const QUICK={
+  fr:{"Délai TVA belge":"En Belgique, les déclarations TVA trimestrielles sont dues le 20 du mois suivant la fin du trimestre. TVA mensuelle : le 20 du mois suivant. Pour les nouveaux assujettis, la fréquence dépend du chiffre d'affaires annuel.","Créer une SRL":"Pour créer une SRL en Belgique : plan financier, acte notarié, dépôt au greffe et BCE. Capital minimum légalement 1€ mais recommandé 18.550€. PMA vous accompagne de A à Z en quelques jours.","Peppol c'est quoi ?":"Peppol est le réseau européen de facturation électronique. Obligatoire pour les marchés publics, bientôt pour le B2B en Belgique. PMA intègre Peppol gratuitement dans vos services.","Nos tarifs":"Nos tarifs sont personnalisés selon votre situation. Pour une PME standard : à partir de 150€/mois. Contactez-nous pour un devis gratuit : +32 483 43 41 56 ou pma.advisors@outlook.com."},
+  nl:{"BTW-deadline België":"In België zijn kwartaalaangiften BTW verschuldigd op de 20e van de maand na het kwartaal. Maandelijkse BTW: de 20e van de volgende maand.","BV oprichten":"Voor een BV in België: financieel plan, notariële akte, neerlegging ter griffie en KBO. Minimumkapitaal: wettelijk €1 maar aanbevolen €18.550. PMA begeleidt u volledig.","Wat is Peppol?":"Peppol is het Europees netwerk voor elektronische facturatie. Verplicht voor overheidsopdrachten, binnenkort voor B2B in België. PMA integreert Peppol gratis.","Onze tarieven":"Onze tarieven zijn op maat. Voor een standaard kmo: vanaf €150/maand. Contacteer ons voor een gratis offerte: +32 483 43 41 56."},
+  en:{"VAT deadlines Belgium":"In Belgium, quarterly VAT returns are due on the 20th of the month following the quarter end. Monthly VAT: 20th of the following month.","Set up a company":"To set up a company in Belgium: financial plan, notarial deed, filing at court registry and CBE. Minimum capital: legally €1 but recommended €18,550. PMA guides you fully.","What is Peppol?":"Peppol is the European e-invoicing network. Mandatory for public procurement, soon for B2B in Belgium. PMA integrates Peppol for free.","Our pricing":"Our fees are tailored to your situation. For a standard SME: from €150/month. Contact us for a free quote: +32 483 43 41 56."},
+  fa:{"مهلت TVA بلژیک":"در بلژیک، اظهارنامه‌های TVA فصلی تا بیستم ماه پس از پایان فصل باید ارائه شوند. TVA ماهانه: بیستم ماه بعد.","تأسیس SRL":"برای تأسیس SRL در بلژیک: برنامه مالی، سند نوتاریوس، ثبت در دادگاه و BCE. سرمایه حداقل: قانوناً ۱€ اما توصیه‌شده ۱۸،۵۵۰€. PMA شما را کامل همراهی می‌کند.","Peppol چیست؟":"Peppol شبکه اروپایی صدور فاکتور الکترونیک است. اجباری برای مناقصات عمومی، به زودی برای B2B در بلژیک. PMA Peppol را رایگان یکپارچه می‌کند.","تعرفه‌های ما":"تعرفه‌های ما بر اساس وضعیت شما تنظیم می‌شود. برای یک SME استاندارد: از ۱۵۰€ در ماه. با ما تماس بگیرید: +32 483 43 41 56."}
+};
+
+let lang='fr';
+function setL(l){
+  lang=l;
+  document.body.dir=l==='fa'?'rtl':'ltr';
+  document.documentElement.lang=l;
+  document.querySelectorAll('.lb').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.lb').forEach(b=>{
+    const map={fr:'FR',nl:'NL',en:'EN',fa:'فا'};
+    if(b.textContent.trim()===map[l])b.classList.add('on');
+  });
+  document.querySelectorAll('[data-t]').forEach(el=>{
+    const k=el.getAttribute('data-t');
+    if(T[l]&&T[l][k]!==undefined){
+      if(['herosub','sectit1','sectit2','sectit3','sectit4','sectit5','sectit6'].includes(k))
+        el.innerHTML=T[l][k];
+      else el.textContent=T[l][k];
+    }
+  });
+  // update chatbot welcome
+  const first=document.querySelector('#chatMsgs .msg.bot');
+  if(first)first.textContent=T[l]['ch_welcome'];
+}
+
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+
+/* NAV scroll */
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>80);
+  document.getElementById('back-top').classList.toggle('visible',window.scrollY>400);
+});
+
+/* HAMBURGER MENU */
+function toggleMobileNav(){
+  const ham=document.getElementById('ham');
+  const mn=document.getElementById('mobile-nav');
+  ham.classList.toggle('open');
+  mn.classList.toggle('open');
+  ham.setAttribute('aria-expanded',mn.classList.contains('open'));
+  document.body.style.overflow=mn.classList.contains('open')?'hidden':'';
+}
+function closeMobileNav(){
+  document.getElementById('ham').classList.remove('open');
+  document.getElementById('ham').setAttribute('aria-expanded','false');
+  document.getElementById('mobile-nav').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+/* FORM SUBMIT */
+function submitForm(btn){
+  const form=btn.closest('.contact-form');
+  const name=form.querySelector('input[type=text]')?.value?.trim();
+  const email=form.querySelector('input[type=email]')?.value?.trim();
+  if(!name||!email){
+    btn.textContent='⚠ Remplissez au moins votre nom et email';
+    btn.classList.add('btn-error');
+    setTimeout(()=>{btn.innerHTML='<span data-t="fl_send">'+(T[lang]?.fl_send||'Envoyer la demande')+'</span>';btn.classList.remove('btn-error');},3000);
+    return;
+  }
+  btn.textContent='✓ Message envoyé — réponse sous 24h !';
+  btn.classList.add('btn-success');
+  btn.disabled=true;
+}
+
+/* SCROLL REVEAL */
+const srObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')});
+},{threshold:.08});
+document.querySelectorAll('.sr').forEach(el=>srObs.observe(el));
+
+/* COUNTER animation */
+function animateCounters(){
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    const target=parseInt(el.dataset.count);
+    let start=0,dur=1800,startTime=null;
+    function step(ts){
+      if(!startTime)startTime=ts;
+      const progress=Math.min((ts-startTime)/dur,1);
+      const ease=1-Math.pow(1-progress,3);
+      el.textContent=Math.floor(ease*target)+(progress===1?'+':'');
+      if(progress<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}
+const counterObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){animateCounters();counterObs.disconnect()}});
+},{threshold:.3});
+const statsBar=document.querySelector('.hero-stats-bar');
+if(statsBar)counterObs.observe(statsBar);
+
+/* NEWS FILTER */
+function filterNews(cat,btn){
+  document.querySelectorAll('.nf').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.news-card').forEach(c=>{
+    if(cat==='all'||c.dataset.cat.includes(cat))
+      c.style.display='';
+    else c.style.display='none';
+  });
+}
+
+/* CHATBOT */
+let chatOpen=false;
+function toggleChat(){
+  chatOpen=!chatOpen;
+  document.getElementById('chat-panel').classList.toggle('open',chatOpen);
+  document.getElementById('chat-notif').style.display=chatOpen?'none':'block';
+}
+function addMsg(text,role){
+  const msgs=document.getElementById('chatMsgs');
+  const div=document.createElement('div');
+  div.className='msg '+role;
+  div.textContent=text;
+  msgs.appendChild(div);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+function showTyping(){
+  const msgs=document.getElementById('chatMsgs');
+  const d=document.createElement('div');
+  d.className='msg bot';d.id='typing';d.innerHTML='<span class="typing-dots">···</span>';
+  msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+}
+async function sendChat(){
+  const inp=document.getElementById('chatInput');
+  const text=inp.value.trim();
+  if(!text)return;
+  inp.value='';
+  addMsg(text,'user');
+  document.getElementById('chatSugs').style.display='none';
+  showTyping();
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',max_tokens:350,
+        system:`Tu es l'assistant IA de PMA Accountancy Tax Advisory, cabinet comptable belge premium à Uccle & Drogenbos. Réponds en ${lang==='fr'?'français':lang==='nl'?'néerlandais':lang==='en'?'anglais':'persan'}, de façon courte, professionnelle et précise. Infos: tél +32 483 43 41 56, email pma.advisors@outlook.com. Expert-Comptable: Parisa ABED ITAA. Services: comptabilité, TVA, ISOC, IPP, création société, domiciliation, co-working, Peppol. Deux adresses: Uccle Avenue Bel-Air 35 et Drogenbos Grand Route 315-317.`,
+        messages:[{role:'user',content:text}]
+      })
+    });
+    const d=await res.json();
+    document.getElementById('typing')?.remove();
+    addMsg(d.content[0].text,'bot');
+  }catch{
+    document.getElementById('typing')?.remove();
+    const fb={fr:"Contactez-nous au +32 483 43 41 56 ou pma.advisors@outlook.com.",nl:"Contacteer ons via +32 483 43 41 56.",en:"Contact us at +32 483 43 41 56.",fa:"با ما تماس بگیرید: +32 483 43 41 56."};
+    addMsg(fb[lang],'bot');
+  }
+}
+function quickAsk(btn){
+  const q=btn.textContent.trim();
+  addMsg(q,'user');
+  document.getElementById('chatSugs').style.display='none';
+  showTyping();
+  setTimeout(()=>{
+    document.getElementById('typing')?.remove();
+    const a=QUICK[lang]?.[q]||'Contactez-nous pour plus d\'informations : +32 483 43 41 56';
+    addMsg(a,'bot');
+  },900);
+}

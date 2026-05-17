@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="fr" dir="ltr">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PMA Accountancy Tax Advisory · Belgium</title>
@@ -9,413 +9,25 @@
 <meta property="og:title" content="PMA Accountancy Tax Advisory · Belgium">
 <meta property="og:description" content="Cabinet comptable premium certifié ITAA à Uccle & Drogenbos. Comptabilité, fiscalité, création de société.">
 <meta property="og:type" content="website">
+<meta name="theme-color" content="#0c0c0e">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link href="assets/css2.css" rel="stylesheet">
-<style>
-/* ═══════════════════════════════════════════
-   TOKENS & RESET
-═══════════════════════════════════════════ */
-:root{
-  --c-bg:#06101e;
-  --c-bg2:#0c1a2e;
-  --c-bg3:#0f2040;
-  --c-navy:#1a3a5e;
-  --c-blue:#2d6ab4;
-  --c-blue2:#4a8fd4;
-  --c-blue3:#6aaee8;
-  --c-sky:#b8d8f8;
-  --c-gold:#c8922a;
-  --c-gold2:#e6b84a;
-  --c-gold3:#f5d070;
-  --c-white:#ffffff;
-  --c-cream:#f2f5f9;
-  --c-text:#e8eef6;
-  --c-muted:rgba(184,216,248,.5);
-  --c-border:rgba(74,143,212,.18);
-  --c-glass:rgba(255,255,255,.04);
-  --c-glass2:rgba(255,255,255,.07);
-  --blur:blur(18px);
-  --r:12px;
-  --r2:20px;
-  --shadow-gold:0 0 40px rgba(200,146,42,.18);
-  --shadow-blue:0 0 40px rgba(45,106,180,.22);
-  --shadow-card:0 8px 40px rgba(0,0,0,.35);
-  --transition:.4s cubic-bezier(.22,1,.36,1);
-}
-*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--c-bg);color:var(--c-text);overflow-x:hidden;line-height:1.6}
-::selection{background:var(--c-blue);color:#fff}
-::-webkit-scrollbar{width:5px}
-::-webkit-scrollbar-track{background:var(--c-bg2)}
-::-webkit-scrollbar-thumb{background:var(--c-blue);border-radius:3px}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-
-/* ═══════════════════════════════════════════
-   MARQUEE TICKER
-═══════════════════════════════════════════ */
-.ticker{background:linear-gradient(90deg,var(--c-bg2),var(--c-navy),var(--c-bg2));border-top:1px solid var(--c-border);border-bottom:1px solid var(--c-border);overflow:hidden;padding:.65rem 0;position:relative;z-index:10}
-.ticker-track{display:flex;gap:0;animation:tick 30s linear infinite;width:max-content}
-.ticker-track:hover{animation-play-state:paused}
-.ticker-item{display:flex;align-items:center;gap:2.5rem;padding:0 2.5rem;font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--c-muted);white-space:nowrap}
-.ticker-dot{color:var(--c-gold2);font-size:.8rem}
-@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* ═══════════════════════════════════════════
-   NAV
-═══════════════════════════════════════════ */
-#nav{position:fixed;top:0;width:100%;z-index:500;transition:all .5s cubic-bezier(.22,1,.36,1)}
-#nav.scrolled{background:rgba(6,16,30,.92);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border-bottom:1px solid var(--c-border);box-shadow:0 4px 40px rgba(0,0,0,.4)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:1.3rem 4rem}
-.logo{display:flex;flex-direction:column;gap:.05rem}
-.logo-mark{font-family:'Manrope',sans-serif;font-size:1.9rem;font-weight:800;letter-spacing:-.01em;background:linear-gradient(135deg,var(--c-gold2),var(--c-gold3),var(--c-gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
-.logo-tag{font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--c-muted);font-weight:600}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);transition:color .25s;position:relative;padding-bottom:2px}
-.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--c-gold2);transition:width .35s}
-.nav-links a:hover{color:#fff}
-.nav-links a:hover::after{width:100%}
-.nav-right{display:flex;align-items:center;gap:.8rem}
-.lang-sw{display:flex;gap:.3rem;background:var(--c-glass);border:1px solid var(--c-border);border-radius:6px;padding:.25rem}
-.lb{background:none;border:none;padding:.3rem .65rem;border-radius:4px;color:var(--c-muted);font-size:.7rem;font-weight:700;letter-spacing:.1em;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .25s}
-.lb.on,.lb:hover{background:var(--c-blue);color:#fff}
-.nav-cta{background:linear-gradient(135deg,var(--c-gold),var(--c-gold2));color:#fff;border:none;padding:.65rem 1.6rem;border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:var(--transition);box-shadow:var(--shadow-gold)}
-.nav-cta:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 0 50px rgba(200,146,42,.35)}
-
-/* ═══════════════════════════════════════════
-   HERO
-═══════════════════════════════════════════ */
-#hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:brightness(.38) saturate(.8)}
-.hero-gradient{position:absolute;inset:0;background:linear-gradient(120deg,rgba(6,16,30,.92) 0%,rgba(6,16,30,.72) 50%,rgba(6,16,30,.4) 100%)}
-.hero-glow{position:absolute;top:20%;left:10%;width:600px;height:600px;background:radial-gradient(circle,rgba(45,106,180,.18) 0%,transparent 70%);pointer-events:none;animation:glow-pulse 6s ease-in-out infinite}
-.hero-glow2{position:absolute;top:40%;right:5%;width:400px;height:400px;background:radial-gradient(circle,rgba(200,146,42,.1) 0%,transparent 70%);pointer-events:none;animation:glow-pulse 8s ease-in-out infinite 2s}
-@keyframes glow-pulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(74,143,212,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(74,143,212,.04) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
-.hero-content{position:relative;z-index:2;padding:12rem 4rem 6rem;max-width:900px}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:.7rem;background:rgba(74,143,212,.12);border:1px solid rgba(74,143,212,.3);padding:.45rem 1.2rem;border-radius:100px;margin-bottom:2rem;animation:fadeUp .8s .2s both}
-.hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--c-gold2);animation:ping 2s infinite}
-@keyframes ping{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.5}}
-.hero-eyebrow span{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--c-sky)}
-.hero-h1{font-family:'Manrope',sans-serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:800;line-height:1.06;letter-spacing:-.02em;color:#fff;margin-bottom:1.4rem;animation:fadeUp .8s .35s both}
-.hero-h1 .gold{background:linear-gradient(135deg,var(--c-gold2),var(--c-gold3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-h1 .blue-hl{color:var(--c-sky)}
-.hero-sub{font-size:1.1rem;font-weight:400;color:rgba(255,255,255,.62);line-height:1.75;max-width:580px;margin-bottom:2.8rem;animation:fadeUp .8s .5s both}
-.hero-sub strong{color:var(--c-sky);font-weight:600}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp .8s .65s both}
-.btn-primary{display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,var(--c-gold),var(--c-gold2));color:#fff;border:none;padding:1rem 2.2rem;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.06em;cursor:pointer;transition:var(--transition);box-shadow:var(--shadow-gold)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 0 60px rgba(200,146,42,.4)}
-.btn-secondary{display:inline-flex;align-items:center;gap:.6rem;background:var(--c-glass2);backdrop-filter:var(--blur);color:#fff;border:1px solid rgba(255,255,255,.2);padding:1rem 2.2rem;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;transition:var(--transition)}
-.btn-secondary:hover{border-color:var(--c-blue3);background:rgba(74,143,212,.12);transform:translateY(-2px)}
-.btn-whatsapp{display:inline-flex;align-items:center;gap:.6rem;background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.35);color:#25d366;padding:1rem 1.8rem;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;font-weight:700;cursor:pointer;transition:var(--transition)}
-.btn-whatsapp:hover{background:rgba(37,211,102,.25);transform:translateY(-2px)}
-.hero-stats-bar{position:absolute;bottom:0;left:0;right:0;z-index:2;display:grid;grid-template-columns:repeat(6,1fr);background:rgba(6,16,30,.85);backdrop-filter:var(--blur);border-top:1px solid var(--c-border);animation:fadeUp .8s .8s both}
-.hstat{padding:1.6rem 1rem;text-align:center;border-right:1px solid var(--c-border);transition:background .3s}
-.hstat:hover{background:rgba(74,143,212,.08)}
-.hstat:last-child{border-right:none}
-.hstat-n{font-family:'Manrope',sans-serif;font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,var(--c-gold2),var(--c-gold3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1;margin-bottom:.25rem}
-.hstat-l{font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--c-muted)}
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
-
-/* ═══════════════════════════════════════════
-   SHARED SECTION STYLES
-═══════════════════════════════════════════ */
-section{position:relative}
-.section-pad{padding:7rem 4rem}
-.sec-label{display:inline-flex;align-items:center;gap:.6rem;font-size:.65rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--c-blue3);margin-bottom:1rem}
-.sec-label::before{content:'';width:24px;height:2px;background:var(--c-blue3);border-radius:2px}
-.sec-title{font-family:'Manrope',sans-serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
-.sec-title .acc{background:linear-gradient(135deg,var(--c-blue2),var(--c-blue3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.sec-title .gold{background:linear-gradient(135deg,var(--c-gold2),var(--c-gold3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.sec-rule{width:48px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--c-gold),var(--c-gold2));margin:1.2rem 0 3.5rem}
-.sec-sub{font-size:1.05rem;color:var(--c-muted);line-height:1.75;max-width:580px;margin-bottom:3.5rem}
-
-/* SCROLL REVEAL */
-.sr{opacity:0;transform:translateY(40px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1)}
-.sr.in{opacity:1;transform:none}
-.sr-d1{transition-delay:.08s}.sr-d2{transition-delay:.16s}.sr-d3{transition-delay:.24s}.sr-d4{transition-delay:.32s}
-.sr-d5{transition-delay:.4s}.sr-d6{transition-delay:.48s}.sr-d7{transition-delay:.56s}.sr-d8{transition-delay:.64s}
-.sr-d9{transition-delay:.72s}.sr-d10{transition-delay:.8s}.sr-d11{transition-delay:.88s}.sr-d12{transition-delay:.96s}
-
-/* ═══════════════════════════════════════════
-   SERVICES
-═══════════════════════════════════════════ */
-#services{background:var(--c-bg2)}
-.services-intro{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem}
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
-.svc{background:var(--c-glass);border:1px solid var(--c-border);border-radius:var(--r);padding:1.8rem 1.5rem;position:relative;overflow:hidden;cursor:default;transition:var(--transition)}
-.svc::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(74,143,212,.06),rgba(200,146,42,.04));opacity:0;transition:opacity .4s}
-.svc:hover{transform:translateY(-8px) scale(1.01);border-color:rgba(74,143,212,.4);box-shadow:0 20px 60px rgba(0,0,0,.35),0 0 0 1px rgba(74,143,212,.15) inset}
-.svc:hover::before{opacity:1}
-.svc-glow{position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,rgba(74,143,212,.2),transparent);opacity:0;transition:opacity .4s}
-.svc:hover .svc-glow{opacity:1}
-.svc-ico{width:44px;height:44px;border-radius:10px;background:rgba(74,143,212,.1);border:1px solid rgba(74,143,212,.2);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;transition:all .3s}
-.svc:hover .svc-ico{background:rgba(74,143,212,.18);border-color:rgba(74,143,212,.4);box-shadow:0 0 20px rgba(74,143,212,.2)}
-.svc-ico svg{width:22px;height:22px;stroke:var(--c-blue3);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.svc-num{font-size:.58rem;font-weight:700;letter-spacing:.2em;color:var(--c-blue3);margin-bottom:.6rem;opacity:.6}
-.svc h3{font-family:'Manrope',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:.5rem;line-height:1.3}
-.svc p{font-size:.78rem;color:var(--c-muted);line-height:1.65}
-.svc-arr{position:absolute;bottom:1.4rem;right:1.4rem;width:28px;height:28px;border-radius:50%;background:rgba(74,143,212,.12);border:1px solid rgba(74,143,212,.2);display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.7);transition:all .3s}
-.svc-arr svg{width:12px;height:12px;stroke:var(--c-blue3);stroke-width:2;fill:none}
-.svc:hover .svc-arr{opacity:1;transform:scale(1)}
-
-/* ═══════════════════════════════════════════
-   POUR QUI
-═══════════════════════════════════════════ */
-#pourqui{background:var(--c-bg)}
-.pq-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
-.pq-card{background:var(--c-glass);border:1px solid var(--c-border);border-radius:var(--r);padding:1.6rem 1.2rem;text-align:center;transition:var(--transition);cursor:default}
-.pq-card:hover{transform:translateY(-6px);border-color:rgba(74,143,212,.35);background:rgba(74,143,212,.06);box-shadow:var(--shadow-blue)}
-.pq-ico{font-size:1.8rem;margin-bottom:.8rem;display:block;filter:grayscale(.3)}
-.pq-card h4{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:.3rem}
-.pq-card p{font-size:.72rem;color:var(--c-muted);line-height:1.55}
-
-/* ═══════════════════════════════════════════
-   DIGITAL SECTION
-═══════════════════════════════════════════ */
-#digital{background:linear-gradient(160deg,var(--c-bg2) 0%,var(--c-bg3) 100%);overflow:hidden}
-.digital-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
-.digital-features{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem}
-.dfeat{background:var(--c-glass);border:1px solid var(--c-border);border-radius:var(--r);padding:1.4rem;transition:var(--transition)}
-.dfeat:hover{border-color:rgba(74,143,212,.3);transform:translateY(-4px);box-shadow:var(--shadow-card)}
-.dfeat-ico{width:36px;height:36px;border-radius:8px;background:rgba(74,143,212,.1);display:flex;align-items:center;justify-content:center;margin-bottom:.8rem}
-.dfeat-ico svg{width:18px;height:18px;stroke:var(--c-blue3);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.dfeat h4{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:.25rem}
-.dfeat p{font-size:.75rem;color:var(--c-muted);line-height:1.55}
-.digital-visual{position:relative}
-.digital-card-main{background:rgba(15,32,64,.8);backdrop-filter:var(--blur);border:1px solid var(--c-border);border-radius:var(--r2);padding:2rem;box-shadow:var(--shadow-card),var(--shadow-blue)}
-.digital-card-float{position:absolute;background:rgba(15,32,64,.9);backdrop-filter:var(--blur);border:1px solid rgba(74,143,212,.2);border-radius:var(--r);padding:1rem 1.4rem;box-shadow:var(--shadow-card);animation:float 4s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.dcf-1{top:-2rem;right:-2rem;animation-delay:0s}
-.dcf-2{bottom:-1.5rem;left:-2rem;animation-delay:2s}
-.metric-row{display:flex;justify-content:space-between;align-items:center;padding:.7rem 0;border-bottom:1px solid var(--c-border)}
-.metric-row:last-child{border-bottom:none}
-.metric-label{font-size:.75rem;color:var(--c-muted)}
-.metric-val{font-size:.9rem;font-weight:700;color:var(--c-sky)}
-.metric-bar-wrap{flex:1;margin:0 1rem;height:4px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden}
-.metric-bar{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--c-blue),var(--c-blue3))}
-
-/* ═══════════════════════════════════════════
-   BUSINESS CENTER
-═══════════════════════════════════════════ */
-#bizc{background:var(--c-bg2)}
-.bizc-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.bizc-gallery{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:240px 180px;gap:1rem}
-.bizc-img{border-radius:var(--r);overflow:hidden;position:relative}
-.bizc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.bizc-img:hover img{transform:scale(1.06)}
-.bizc-img:first-child{grid-column:1/3;grid-row:1/2}
-.bizc-badge{position:absolute;bottom:.8rem;left:.8rem;background:rgba(6,16,30,.8);backdrop-filter:var(--blur);border:1px solid var(--c-border);border-radius:6px;padding:.4rem .9rem;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--c-sky)}
-.bizc-features{list-style:none;margin:1.5rem 0 2rem}
-.bizc-feat{display:flex;align-items:flex-start;gap:.9rem;padding:.85rem 0;border-bottom:1px solid var(--c-border)}
-.bizc-feat:last-child{border-bottom:none}
-.bizc-feat-ico{width:32px;height:32px;border-radius:8px;background:rgba(74,143,212,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
-.bizc-feat-ico svg{width:16px;height:16px;stroke:var(--c-gold2);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.bizc-feat-text h4{font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.15rem}
-.bizc-feat-text p{font-size:.75rem;color:var(--c-muted);line-height:1.5}
-.addr-cards{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.5rem}
-.addr-card{background:var(--c-glass);border:1px solid var(--c-border);border-radius:var(--r);padding:1.2rem}
-.addr-label{font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--c-gold2);margin-bottom:.4rem}
-.addr-card p{font-size:.8rem;color:rgba(255,255,255,.6);line-height:1.6}
-
-/* ═══════════════════════════════════════════
-   ACTUALITÉS
-═══════════════════════════════════════════ */
-#news{background:var(--c-bg)}
-.news-filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.5rem}
-.nf{background:var(--c-glass);border:1px solid var(--c-border);color:var(--c-muted);padding:.4rem 1.1rem;border-radius:100px;font-size:.72rem;font-weight:600;letter-spacing:.08em;cursor:pointer;transition:all .25s;font-family:'Plus Jakarta Sans',sans-serif}
-.nf.on,.nf:hover{background:var(--c-blue);border-color:var(--c-blue);color:#fff}
-.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-.news-card{background:var(--c-glass);border:1px solid var(--c-border);border-radius:var(--r);overflow:hidden;transition:var(--transition);cursor:pointer}
-.news-card:hover{transform:translateY(-6px);border-color:rgba(74,143,212,.3);box-shadow:var(--shadow-card)}
-.news-thumb{height:160px;overflow:hidden;position:relative}
-.news-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.news-card:hover .news-thumb img{transform:scale(1.07)}
-.news-tag{position:absolute;top:.8rem;left:.8rem;background:var(--c-blue);color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .7rem;border-radius:4px}
-.news-body{padding:1.4rem}
-.news-date{font-size:.65rem;color:var(--c-muted);margin-bottom:.5rem;font-weight:500}
-.news-card h3{font-family:'Manrope',sans-serif;font-size:.95rem;font-weight:700;color:#fff;line-height:1.4;margin-bottom:.5rem}
-.news-card p{font-size:.78rem;color:var(--c-muted);line-height:1.6}
-
-/* ═══════════════════════════════════════════
-   PARTENAIRES
-═══════════════════════════════════════════ */
-#partners{background:var(--c-bg2);padding:5rem 4rem}
-.partners-title{text-align:center;font-size:.65rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--c-muted);margin-bottom:3rem}
-.partners-row{display:flex;justify-content:center;align-items:center;gap:3rem;flex-wrap:wrap}
-.partner{display:flex;flex-direction:column;align-items:center;gap:.8rem;opacity:.55;transition:all .4s;cursor:default}
-.partner:hover{opacity:1;transform:scale(1.06)}
-.partner-logo{width:80px;height:48px;display:flex;align-items:center;justify-content:center;filter:brightness(0) invert(1)}
-.partner-logo svg{max-width:100%;max-height:100%}
-.partner-name{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--c-muted)}
-
-/* ═══════════════════════════════════════════
-   CONTACT + MAP
-═══════════════════════════════════════════ */
-#contact{background:var(--c-bg)}
-.contact-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start}
-.contact-form{background:var(--c-glass);backdrop-filter:var(--blur);border:1px solid var(--c-border);border-radius:var(--r2);padding:2.5rem;box-shadow:var(--shadow-card)}
-.form-row{margin-bottom:1.2rem}
-.form-row label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.5rem}
-.form-row input,.form-row select,.form-row textarea{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--c-border);border-radius:8px;padding:.8rem 1.1rem;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;outline:none;transition:border .25s,box-shadow .25s}
-.form-row input:focus,.form-row select:focus,.form-row textarea:focus{border-color:var(--c-blue2);box-shadow:0 0 0 3px rgba(74,143,212,.15)}
-.form-row textarea{height:110px;resize:vertical}
-.form-row select{cursor:pointer}
-.form-row select option{background:var(--c-bg2)}
-.form-2col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.contact-info h3{font-family:'Manrope',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:.6rem}
-.contact-info p{color:var(--c-muted);font-size:.9rem;line-height:1.7;margin-bottom:2rem}
-.contact-item{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;color:rgba(255,255,255,.75);font-size:.88rem;transition:color .25s}
-.contact-item:hover{color:#fff}
-.contact-item a{color:inherit}
-.contact-ico{width:38px;height:38px;border-radius:9px;background:rgba(74,143,212,.1);border:1px solid rgba(74,143,212,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.contact-ico svg{width:17px;height:17px;stroke:var(--c-blue3);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.map-wrap{margin-top:2rem;border-radius:var(--r);overflow:hidden;border:1px solid var(--c-border);box-shadow:var(--shadow-card)}
-.map-wrap iframe{width:100%;height:300px;display:block;filter:invert(.9) hue-rotate(185deg) saturate(.8) brightness(.8)}
-.wa-btn{display:inline-flex;align-items:center;gap:.7rem;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.3);color:#25d366;padding:.8rem 1.6rem;border-radius:8px;font-size:.82rem;font-weight:700;cursor:pointer;transition:var(--transition);font-family:'Plus Jakarta Sans',sans-serif;margin-top:1.5rem;text-decoration:none}
-.wa-btn:hover{background:rgba(37,211,102,.22);transform:translateY(-2px)}
-
-/* ═══════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════ */
-footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:4rem 4rem 2rem}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
-.footer-brand .logo-mark{font-family:'Manrope',sans-serif;font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,var(--c-gold2),var(--c-gold3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.3rem}
-.footer-brand p{font-size:.82rem;color:var(--c-muted);line-height:1.7;margin:.8rem 0 1.5rem;max-width:280px}
-.footer-badges{display:flex;gap:.6rem;flex-wrap:wrap}
-.fbadge{background:var(--c-glass);border:1px solid var(--c-border);padding:.35rem .85rem;border-radius:5px;font-size:.62rem;font-weight:700;letter-spacing:.12em;color:var(--c-muted)}
-.footer-col h4{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--c-sky);margin-bottom:1.2rem}
-.footer-col a{display:block;font-size:.8rem;color:var(--c-muted);margin-bottom:.6rem;transition:color .25s}
-.footer-col a:hover{color:#fff}
-.footer-bottom{border-top:1px solid var(--c-border);padding-top:1.8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.25);letter-spacing:.04em}
-
-/* ═══════════════════════════════════════════
-   FLOATING WIDGET
-═══════════════════════════════════════════ */
-#widget{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:400;display:flex;flex-direction:column;gap:.4rem;padding-right:0}
-.wid-btn{display:flex;align-items:center;gap:.7rem;background:rgba(15,32,64,.92);backdrop-filter:var(--blur);border:1px solid var(--c-border);border-right:none;border-radius:10px 0 0 10px;padding:.75rem 1.1rem;color:rgba(255,255,255,.7);font-size:.72rem;font-weight:600;cursor:pointer;transition:var(--transition);transform:translateX(calc(100% - 44px));font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap}
-.wid-btn:hover{transform:translateX(0);color:#fff;border-color:rgba(74,143,212,.35);background:rgba(20,50,90,.95)}
-.wid-btn .wico{width:22px;height:22px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.wid-btn .wico svg{width:18px;height:18px;stroke:var(--c-blue3);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.wid-btn.wa{border-color:rgba(37,211,102,.2)}
-.wid-btn.wa svg{stroke:#25d366}
-.wid-btn.wa:hover{border-color:rgba(37,211,102,.4);background:rgba(37,211,102,.08)}
-
-/* ═══════════════════════════════════════════
-   CHATBOT
-═══════════════════════════════════════════ */
-#chat-btn{position:fixed;bottom:2.2rem;right:2.2rem;z-index:450;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--c-blue),var(--c-navy));border:none;cursor:pointer;box-shadow:0 8px 32px rgba(45,106,180,.5);display:flex;align-items:center;justify-content:center;transition:var(--transition)}
-#chat-btn:hover{transform:scale(1.12);box-shadow:0 12px 48px rgba(45,106,180,.65)}
-#chat-btn svg{width:26px;height:26px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-#chat-notif{position:absolute;top:2px;right:2px;width:16px;height:16px;background:var(--c-gold);border-radius:50%;border:2px solid var(--c-bg);animation:ping 2s infinite}
-#chat-panel{position:fixed;bottom:5.5rem;right:2.2rem;z-index:449;width:380px;background:rgba(10,20,38,.96);backdrop-filter:var(--blur);border:1px solid var(--c-border);border-radius:var(--r2);box-shadow:0 24px 80px rgba(0,0,0,.5);display:none;flex-direction:column;overflow:hidden}
-#chat-panel.open{display:flex;animation:chatIn .4s cubic-bezier(.22,1,.36,1)}
-@keyframes chatIn{from{opacity:0;transform:translateY(20px) scale(.95)}to{opacity:1;transform:none;scale:1}}
-.ch-head{background:linear-gradient(135deg,var(--c-navy),var(--c-blue));padding:1.1rem 1.4rem;display:flex;align-items:center;gap:.9rem}
-.ch-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--c-gold),var(--c-gold2));display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-size:1.1rem;font-weight:800;color:var(--c-bg);flex-shrink:0}
-.ch-info h4{color:#fff;font-size:.9rem;font-weight:700}
-.ch-info p{font-size:.68rem;color:rgba(255,255,255,.55)}
-.ch-info p span{display:inline-block;width:7px;height:7px;background:#4ade80;border-radius:50%;margin-right:.3rem;vertical-align:middle;animation:ping 2s infinite}
-.ch-close{margin-left:auto;background:none;border:none;color:rgba(255,255,255,.5);cursor:pointer;font-size:1.3rem;padding:.2rem;transition:color .2s}
-.ch-close:hover{color:#fff}
-.ch-msgs{overflow-y:auto;max-height:320px;padding:1.2rem;display:flex;flex-direction:column;gap:.9rem;background:rgba(6,16,30,.6)}
-.msg{max-width:84%;padding:.8rem 1.1rem;border-radius:12px;font-size:.82rem;line-height:1.6;animation:msgIn .3s ease}
-@keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.msg.bot{background:rgba(255,255,255,.07);border:1px solid var(--c-border);color:var(--c-text);border-bottom-left-radius:3px;align-self:flex-start}
-.msg.user{background:linear-gradient(135deg,var(--c-blue),var(--c-navy));color:#fff;border-bottom-right-radius:3px;align-self:flex-end}
-.ch-sugs{padding:.8rem 1.1rem;display:flex;gap:.5rem;flex-wrap:wrap;border-top:1px solid var(--c-border);background:rgba(6,16,30,.4)}
-.sug{background:rgba(74,143,212,.1);border:1px solid rgba(74,143,212,.2);color:var(--c-sky);padding:.35rem .9rem;border-radius:100px;font-size:.7rem;font-weight:600;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .2s;white-space:nowrap}
-.sug:hover{background:var(--c-blue);border-color:var(--c-blue);color:#fff}
-.ch-inp{display:flex;gap:.6rem;padding:.9rem 1.1rem;border-top:1px solid var(--c-border);background:rgba(6,16,30,.5)}
-#chatInput{flex:1;background:rgba(255,255,255,.06);border:1px solid var(--c-border);border-radius:8px;padding:.6rem 1rem;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;outline:none;transition:border .2s}
-#chatInput:focus{border-color:var(--c-blue2)}
-#chatInput::placeholder{color:rgba(255,255,255,.3)}
-#chatSend{background:var(--c-blue);border:none;border-radius:8px;padding:.6rem 1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
-#chatSend:hover{background:var(--c-blue2)}
-#chatSend svg{width:16px;height:16px;stroke:#fff;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-
-/* ═══════════════════════════════════════════
-   MOBILE
-═══════════════════════════════════════════ */
-@media(max-width:1024px){
-  .svc-grid{grid-template-columns:repeat(2,1fr)}
-  .pq-grid{grid-template-columns:repeat(3,1fr)}
-  .digital-grid,.bizc-grid,.contact-wrap,.services-intro,.footer-grid{grid-template-columns:1fr}
-  .news-grid{grid-template-columns:repeat(2,1fr)}
-  .hero-stats-bar{grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:700px){
-  .nav-inner{padding:.9rem 1.4rem}
-  .nav-links{display:none}
-  .section-pad{padding:4.5rem 1.4rem}
-  .hero-content{padding:9rem 1.4rem 5rem}
-  .svc-grid{grid-template-columns:1fr 1fr}
-  .pq-grid{grid-template-columns:repeat(2,1fr)}
-  .news-grid{grid-template-columns:1fr}
-  .hero-stats-bar{grid-template-columns:repeat(2,1fr)}
-  .footer-grid{grid-template-columns:1fr}
-  #chat-panel{width:calc(100vw - 2rem);right:1rem}
-  #widget{display:none}
-  .digital-features{grid-template-columns:1fr}
-  .form-2col{grid-template-columns:1fr}
-  .bizc-gallery{grid-template-columns:1fr;grid-template-rows:auto auto auto}
-  .bizc-img:first-child{grid-column:auto}
-  .addr-cards{grid-template-columns:1fr}
-  .digital-card-float{display:none}
-  .hero-btns{flex-direction:column;align-items:flex-start}
-  .btn-primary,.btn-secondary,.btn-whatsapp{width:100%;justify-content:center}
-  .footer-bottom{flex-direction:column;text-align:center;gap:.5rem}
-  .partners-row{gap:1.5rem}
-}
-
-/* ═══════════════════════════════════════════
-   HAMBURGER MENU
-═══════════════════════════════════════════ */
-.hamburger{display:none;background:none;border:1px solid var(--c-border);border-radius:8px;padding:.5rem .7rem;cursor:pointer;flex-direction:column;gap:5px;align-items:center;justify-content:center;transition:all .25s}
-.hamburger span{display:block;width:20px;height:2px;background:rgba(255,255,255,.75);border-radius:2px;transition:all .35s cubic-bezier(.22,1,.36,1)}
-.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
-.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-@media(max-width:700px){
-  .hamburger{display:flex}
-}
-
-/* Mobile nav overlay */
-#mobile-nav{position:fixed;top:0;left:0;right:0;bottom:0;z-index:490;background:rgba(6,16,30,.97);backdrop-filter:var(--blur);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .35s cubic-bezier(.22,1,.36,1)}
-#mobile-nav.open{opacity:1;pointer-events:all}
-#mobile-nav a{font-family:'Manrope',sans-serif;font-size:2rem;font-weight:800;color:rgba(255,255,255,.6);text-decoration:none;letter-spacing:-.01em;transition:color .2s}
-#mobile-nav a:hover{color:#fff}
-#mobile-nav .mobile-cta{margin-top:1rem;background:linear-gradient(135deg,var(--c-gold),var(--c-gold2));color:#fff;border:none;padding:1rem 2.5rem;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:.08em;cursor:pointer;text-transform:uppercase}
-#mobile-nav .mobile-lang{display:flex;gap:.5rem;margin-top:.5rem}
-#mobile-nav .mobile-lang .lb{font-size:.85rem;padding:.5rem 1rem}
-
-/* ═══════════════════════════════════════════
-   BACK TO TOP
-═══════════════════════════════════════════ */
-#back-top{position:fixed;bottom:2.2rem;left:2.2rem;z-index:400;width:44px;height:44px;border-radius:50%;background:var(--c-glass2);backdrop-filter:var(--blur);border:1px solid var(--c-border);color:rgba(255,255,255,.6);cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(10px);transition:all .4s cubic-bezier(.22,1,.36,1);pointer-events:none}
-#back-top.visible{opacity:1;transform:none;pointer-events:all}
-#back-top:hover{background:rgba(74,143,212,.15);border-color:var(--c-blue3);color:#fff;transform:translateY(-3px)}
-#back-top svg{width:16px;height:16px;stroke:currentColor;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-</style>
+<link href="assets/styles.css" rel="stylesheet">
 </head>
 <body dir="ltr">
 
 <!-- ══ TICKER ══ -->
-<div class="ticker" style="margin-top:0;position:relative;z-index:501">
+<div class="ticker">
   <div class="ticker-track" id="ticker">
     <div class="ticker-item">ITAA Certified <span class="ticker-dot">✦</span> Belgique <span class="ticker-dot">✦</span> FR · NL · EN · فارسی <span class="ticker-dot">✦</span> Uccle <span class="ticker-dot">✦</span> Drogenbos <span class="ticker-dot">✦</span> Tax Advisory <span class="ticker-dot">✦</span> Co-Working <span class="ticker-dot">✦</span> Domiciliation <span class="ticker-dot">✦</span> Peppol Certified <span class="ticker-dot">✦</span> Parisa ABED <span class="ticker-dot">✦</span> Cabinet Premium <span class="ticker-dot">✦</span></div>
-    <div class="ticker-item">ITAA Certified <span class="ticker-dot">✦</span> Belgique <span class="ticker-dot">✦</span> FR · NL · EN · فارسی <span class="ticker-dot">✦</span> Uccle <span class="ticker-dot">✦</span> Drogenbos <span class="ticker-dot">✦</span> Tax Advisory <span class="ticker-dot">✦</span> Co-Working <span class="ticker-dot">✦</span> Domiciliation <span class="ticker-dot">✦</span> Peppol Certified <span class="ticker-dot">✦</span> Parisa ABED <span class="ticker-dot">✦</span> Cabinet Premium <span class="ticker-dot">✦</span></div>
+    <div class="ticker-item" aria-hidden="true">ITAA Certified <span class="ticker-dot">✦</span> Belgique <span class="ticker-dot">✦</span> FR · NL · EN · فارسی <span class="ticker-dot">✦</span> Uccle <span class="ticker-dot">✦</span> Drogenbos <span class="ticker-dot">✦</span> Tax Advisory <span class="ticker-dot">✦</span> Co-Working <span class="ticker-dot">✦</span> Domiciliation <span class="ticker-dot">✦</span> Peppol Certified <span class="ticker-dot">✦</span> Parisa ABED <span class="ticker-dot">✦</span> Cabinet Premium <span class="ticker-dot">✦</span></div>
   </div>
 </div>
 
 <!-- ══ NAV ══ -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#hero" class="logo" style="text-decoration:none">
+    <a href="#hero" class="logo">
       <span class="logo-mark">PMA</span>
       <span class="logo-tag">Accountancy · Tax · Advisory</span>
     </a>
@@ -427,14 +39,14 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:4rem
       <li><a href="#contact" data-t="nav_contact">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <div class="lang-sw">
+      <div class="lang-sw" role="group" aria-label="Language">
         <button class="lb on" onclick="setL('fr')">FR</button>
         <button class="lb" onclick="setL('nl')">NL</button>
         <button class="lb" onclick="setL('en')">EN</button>
         <button class="lb" onclick="setL('fa')">فا</button>
       </div>
       <button class="nav-cta" onclick="go('contact')" data-t="cta">Consultation Gratuite</button>
-      <button class="hamburger" id="ham" onclick="toggleMobileNav()" aria-label="Menu">
+      <button class="hamburger" id="ham" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -443,6 +55,7 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:4rem
 
 <!-- ══ MOBILE NAV ══ -->
 <div id="mobile-nav">
+  <button class="mn-close" onclick="closeMobileNav()" aria-label="Fermer le menu">✕</button>
   <a href="#services" data-t="nav_svc" onclick="closeMobileNav()">Services</a>
   <a href="#pourqui" data-t="nav_pq" onclick="closeMobileNav()">Pour Qui</a>
   <a href="#bizc" data-t="nav_biz" onclick="closeMobileNav()">Business Center</a>
@@ -460,15 +73,14 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:4rem
 <!-- ══ HERO ══ -->
 <section id="hero">
   <div class="hero-bg">
-    <img id="hero-img" src="assets/photo-1486325212027-8081e485255e.jpg" alt="PMA Business Center">
+    <img id="hero-img" src="assets/photo-1486325212027-8081e485255e.jpg" alt="">
   </div>
   <div class="hero-gradient"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-content">
+  <div class="accent-blob hero-blob-1"></div>
+  <div class="accent-blob hero-blob-2"></div>
+  <div class="hero-inner">
     <div class="hero-eyebrow">
-      <div class="hero-eyebrow-dot"></div>
+      <span class="hero-eyebrow-dot"></span>
       <span data-t="eyebrow">Expert-Comptable Certifié ITAA · Uccle &amp; Drogenbos</span>
     </div>
     <h1 class="hero-h1">
@@ -478,16 +90,16 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:4rem
     </h1>
     <p class="hero-sub" data-t="herosub"><strong>Comptabilité · Fiscalité · Business Center</strong><br>Cabinet multilingue haut de gamme. Membre certifié ITAA. Parisa ABED, Expert-Comptable.</p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="go('contact')" data-t="btn1">
-        <svg viewBox="0 0 20 20" style="width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round"><rect x="3" y="4" width="14" height="13" rx="2"></rect><path d="M3 8h14"></path><path d="M8 4V2M12 4V2"></path></svg>
+      <button class="btn-primary" onclick="go('contact')">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="14" height="13" rx="2"></rect><path d="M3 8h14M8 4V2M12 4V2"></path></svg>
         <span data-t="btn1t">Prendre rendez-vous</span>
       </button>
-      <button class="btn-secondary" onclick="go('contact')" data-t="btn2">
-        <svg viewBox="0 0 20 20" style="width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round"><circle cx="10" cy="10" r="8"></circle><path d="M10 6v4l3 3"></path></svg>
+      <button class="btn-secondary" onclick="go('contact')">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10" cy="10" r="8"></circle><path d="M10 6v4l3 3"></path></svg>
         <span data-t="btn2t">Créer mon entreprise</span>
       </button>
       <a href="https://wa.me/32483434156" class="btn-whatsapp">
-        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
         WhatsApp
       </a>
     </div>
@@ -504,150 +116,143 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:4rem
 
 <!-- ══ SERVICES ══ -->
 <section class="section-pad" id="services">
-  <div class="services-intro sr">
-    <div>
+  <div class="container">
+    <div class="sec-head sr">
       <p class="sec-label" data-t="seclbl1">Ce que nous faisons</p>
       <h2 class="sec-title" data-t="sectit1">Nos services <span class="acc">sur mesure</span></h2>
-      <div class="sec-rule"></div>
+      <p class="sec-sub" data-t="secsub1">De la tenue comptable à la création de société — un interlocuteur unique pour tous vos besoins.</p>
     </div>
-    <p class="sec-sub" data-t="secsub1">De la tenue comptable à la création de société — un interlocuteur unique pour tous vos besoins.</p>
-  </div>
-  <div class="svc-grid">
-    <div class="svc sr sr-d1">
-      <div class="svc-glow"></div>
-      <div class="svc-num">01</div>
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14,2 14,8 20,8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div>
-      <h3 data-t="s1t">Comptabilité</h3>
-      <p data-t="s1p">Tenue complète, bilans et comptes annuels. Reporting mensuel.</p>
-      <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
-    </div>
-    <div class="svc sr sr-d2">
-      <div class="svc-glow"></div>
-      <div class="svc-num">02</div>
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
-      <h3 data-t="s2t">Fiscalité &amp; ISOC</h3>
-      <p data-t="s2p">Optimisation fiscale, TVA, ISOC, IPP. Conseil stratégique.</p>
-      <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
-    </div>
-    <div class="svc sr sr-d3">
-      <div class="svc-glow"></div>
-      <div class="svc-num">03</div>
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M3 7l9-4 9 4M4 7v14M20 7v14M9 21V11h6v10"></path></svg></div>
-      <h3 data-t="s3t">Création de société</h3>
-      <p data-t="s3p">Statuts, BCE, plan financier, accompagnement complet.</p>
-      <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
-    </div>
-    <div class="svc sr sr-d4">
-      <div class="svc-glow"></div>
-      <div class="svc-num">04</div>
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path></svg></div>
-      <h3 data-t="s4t">Social &amp; Payroll</h3>
-      <p data-t="s4p">Salaires, ONSS, contrats de travail.</p>
-      <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
-    </div>
-    <div class="svc sr sr-d5">
-      <div class="svc-glow"></div>
-      <div class="svc-num">05</div>
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
-      <h3 data-t="s5t">Conseil Stratégique</h3>
-      <p data-t="s5p">Analyse financière, trésorerie, accompagnement dirigeant.</p>
-      <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
-    </div>
-    <div class="svc sr sr-d6">
-      <div class="svc-glow"></div>
-      <div class="svc-num">06</div>
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
-      <h3 data-t="s6t">TVA Belgique</h3>
-      <p data-t="s6p">Déclarations TVA, Intrastat, listing clients.</p>
-      <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
-    </div>
-    <div class="svc sr sr-d7">
-      <div class="svc-glow"></div>
-      <div class="svc-num">07</div>
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><polyline points="9,22 9,12 15,12 15,22"></polyline></svg></div>
-      <h3 data-t="s7t">Domiciliation</h3>
-      <p data-t="s7p">Adresse légale, siège social à Uccle &amp; Drogenbos.</p>
-      <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
-    </div>
-    <div class="svc sr sr-d8">
-      <div class="svc-glow"></div>
-      <div class="svc-num">08</div>
-      <div class="svc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"></path><line x1="12" y1="12" x2="12" y2="16"></line><line x1="10" y1="14" x2="14" y2="14"></line></svg></div>
-      <h3 data-t="s8t">Co-Working</h3>
-      <p data-t="s8p">Bureaux flexibles et salles de réunion premium.</p>
-      <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
+    <div class="svc-grid">
+      <div class="svc sr sr-d1">
+        <div class="svc-num">01</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14,2 14,8 20,8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div>
+        <h3 data-t="s1t">Comptabilité</h3>
+        <p data-t="s1p">Tenue complète, bilans et comptes annuels. Reporting mensuel.</p>
+        <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
+      </div>
+      <div class="svc sr sr-d2">
+        <div class="svc-num">02</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+        <h3 data-t="s2t">Fiscalité &amp; ISOC</h3>
+        <p data-t="s2p">Optimisation fiscale, TVA, ISOC, IPP. Conseil stratégique.</p>
+        <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
+      </div>
+      <div class="svc sr sr-d3">
+        <div class="svc-num">03</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M3 7l9-4 9 4M4 7v14M20 7v14M9 21V11h6v10"></path></svg></div>
+        <h3 data-t="s3t">Création de société</h3>
+        <p data-t="s3p">Statuts, BCE, plan financier, accompagnement complet.</p>
+        <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
+      </div>
+      <div class="svc sr sr-d4">
+        <div class="svc-num">04</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path></svg></div>
+        <h3 data-t="s4t">Social &amp; Payroll</h3>
+        <p data-t="s4p">Salaires, ONSS, contrats de travail.</p>
+        <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
+      </div>
+      <div class="svc sr sr-d5">
+        <div class="svc-num">05</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+        <h3 data-t="s5t">Conseil Stratégique</h3>
+        <p data-t="s5p">Analyse financière, trésorerie, accompagnement dirigeant.</p>
+        <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
+      </div>
+      <div class="svc sr sr-d6">
+        <div class="svc-num">06</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+        <h3 data-t="s6t">TVA Belgique</h3>
+        <p data-t="s6p">Déclarations TVA, Intrastat, listing clients.</p>
+        <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
+      </div>
+      <div class="svc sr sr-d7">
+        <div class="svc-num">07</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><polyline points="9,22 9,12 15,12 15,22"></polyline></svg></div>
+        <h3 data-t="s7t">Domiciliation</h3>
+        <p data-t="s7p">Adresse légale, siège social à Uccle &amp; Drogenbos.</p>
+        <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
+      </div>
+      <div class="svc sr sr-d8">
+        <div class="svc-num">08</div>
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"></path><line x1="12" y1="12" x2="12" y2="16"></line><line x1="10" y1="14" x2="14" y2="14"></line></svg></div>
+        <h3 data-t="s8t">Co-Working</h3>
+        <p data-t="s8p">Bureaux flexibles et salles de réunion premium.</p>
+        <div class="svc-arr"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"></path></svg></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ══ POUR QUI ══ -->
 <section class="section-pad" id="pourqui">
-  <div class="sr" style="text-align:center;margin-bottom:3.5rem">
-    <p class="sec-label" style="justify-content:center" data-t="seclbl2">Nous accompagnons</p>
-    <h2 class="sec-title" data-t="sectit2">Une expertise pour <span class="gold">chaque profil</span></h2>
-    <div class="sec-rule" style="margin:1.2rem auto 0"></div>
-  </div>
-  <div class="pq-grid">
-    <div class="pq-card sr sr-d1"><span class="pq-ico">🏥</span><h4 data-t="pq1t">Médecins</h4><p data-t="pq1p">Spécialistes &amp; généralistes</p></div>
-    <div class="pq-card sr sr-d2"><span class="pq-ico">💊</span><h4 data-t="pq2t">Infirmiers</h4><p data-t="pq2p">Indépendants &amp; structures</p></div>
-    <div class="pq-card sr sr-d3"><span class="pq-ico">🍽️</span><h4 data-t="pq3t">Horeca</h4><p data-t="pq3p">Restaurants, cafés, hôtels</p></div>
-    <div class="pq-card sr sr-d4"><span class="pq-ico">🚗</span><h4 data-t="pq4t">Chauffeurs</h4><p data-t="pq4p">VTC, taxi, transport</p></div>
-    <div class="pq-card sr sr-d5"><span class="pq-ico">💼</span><h4 data-t="pq5t">Consultants</h4><p data-t="pq5p">IT, management, conseil</p></div>
-    <div class="pq-card sr sr-d6"><span class="pq-ico">🚀</span><h4 data-t="pq6t">Startups</h4><p data-t="pq6p">Levée de fonds &amp; scale</p></div>
-    <div class="pq-card sr sr-d7"><span class="pq-ico">🛒</span><h4 data-t="pq7t">E-Commerce</h4><p data-t="pq7p">Boutiques en ligne</p></div>
-    <div class="pq-card sr sr-d8"><span class="pq-ico">⚖️</span><h4 data-t="pq8t">Prof. Libérales</h4><p data-t="pq8p">Avocats, architectes…</p></div>
-    <div class="pq-card sr sr-d9"><span class="pq-ico">🏗️</span><h4 data-t="pq9t">Indépendants</h4><p data-t="pq9p">Toutes activités</p></div>
-    <div class="pq-card sr sr-d10"><span class="pq-ico">🏢</span><h4 data-t="pq10t">Sociétés</h4><p data-t="pq10p">PME &amp; multinationales</p></div>
+  <div class="container">
+    <div class="sec-head center sr">
+      <p class="sec-label" data-t="seclbl2">Nous accompagnons</p>
+      <h2 class="sec-title" data-t="sectit2">Une expertise pour <span class="gold">chaque profil</span></h2>
+    </div>
+    <div class="pq-grid">
+      <div class="pq-card sr sr-d1"><span class="pq-ico">🏥</span><h4 data-t="pq1t">Médecins</h4><p data-t="pq1p">Spécialistes &amp; généralistes</p></div>
+      <div class="pq-card sr sr-d2"><span class="pq-ico">💊</span><h4 data-t="pq2t">Infirmiers</h4><p data-t="pq2p">Indépendants &amp; structures</p></div>
+      <div class="pq-card sr sr-d3"><span class="pq-ico">🍽️</span><h4 data-t="pq3t">Horeca</h4><p data-t="pq3p">Restaurants, cafés, hôtels</p></div>
+      <div class="pq-card sr sr-d4"><span class="pq-ico">🚗</span><h4 data-t="pq4t">Chauffeurs</h4><p data-t="pq4p">VTC, taxi, transport</p></div>
+      <div class="pq-card sr sr-d5"><span class="pq-ico">💼</span><h4 data-t="pq5t">Consultants</h4><p data-t="pq5p">IT, management, conseil</p></div>
+      <div class="pq-card sr sr-d6"><span class="pq-ico">🚀</span><h4 data-t="pq6t">Startups</h4><p data-t="pq6p">Levée de fonds &amp; scale</p></div>
+      <div class="pq-card sr sr-d7"><span class="pq-ico">🛒</span><h4 data-t="pq7t">E-Commerce</h4><p data-t="pq7p">Boutiques en ligne</p></div>
+      <div class="pq-card sr sr-d8"><span class="pq-ico">⚖️</span><h4 data-t="pq8t">Prof. Libérales</h4><p data-t="pq8p">Avocats, architectes…</p></div>
+      <div class="pq-card sr sr-d9"><span class="pq-ico">🏗️</span><h4 data-t="pq9t">Indépendants</h4><p data-t="pq9p">Toutes activités</p></div>
+      <div class="pq-card sr sr-d10"><span class="pq-ico">🏢</span><h4 data-t="pq10t">Sociétés</h4><p data-t="pq10p">PME &amp; multinationales</p></div>
+    </div>
   </div>
 </section>
 
 <!-- ══ DIGITAL ══ -->
 <section class="section-pad" id="digital">
-  <div class="digital-grid">
-    <div class="sr">
-      <p class="sec-label" data-t="seclbl3">Innovation &amp; Digital</p>
-      <h2 class="sec-title" data-t="sectit3">Fiduciaire digitale <span class="acc">&amp; conseil sur mesure</span></h2>
-      <div class="sec-rule"></div>
-      <p class="sec-sub" data-t="secsub3">Expertise humaine certifiée ITAA combinée aux outils digitaux les plus avancés.</p>
-      <div class="digital-features">
-        <div class="dfeat sr sr-d1">
-          <div class="dfeat-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg></div>
-          <h4 data-t="df1t">Peppol Gratuit</h4>
-          <p data-t="df1p">Facturation électronique incluse</p>
-        </div>
-        <div class="dfeat sr sr-d2">
-          <div class="dfeat-ico"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path></svg></div>
-          <h4 data-t="df2t">Plateforme Sécurisée</h4>
-          <p data-t="df2p">Portail client chiffré</p>
-        </div>
-        <div class="dfeat sr sr-d3">
-          <div class="dfeat-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14,2 14,8 20,8"></polyline></svg></div>
-          <h4 data-t="df3t">Signature Digitale</h4>
-          <p data-t="df3p">Documents signés en ligne</p>
-        </div>
-        <div class="dfeat sr sr-d4">
-          <div class="dfeat-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"></path></svg></div>
-          <h4 data-t="df4t">100% Digital</h4>
-          <p data-t="df4p">Upload &amp; traitement automatisé</p>
+  <div class="container">
+    <div class="digital-grid">
+      <div class="sr">
+        <p class="sec-label" data-t="seclbl3">Innovation &amp; Digital</p>
+        <h2 class="sec-title" data-t="sectit3">Fiduciaire digitale <span class="acc">&amp; conseil sur mesure</span></h2>
+        <p class="sec-sub" data-t="secsub3">Expertise humaine certifiée ITAA combinée aux outils digitaux les plus avancés.</p>
+        <div class="digital-features">
+          <div class="dfeat sr sr-d1">
+            <div class="dfeat-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg></div>
+            <h4 data-t="df1t">Peppol Gratuit</h4>
+            <p data-t="df1p">Facturation électronique incluse</p>
+          </div>
+          <div class="dfeat sr sr-d2">
+            <div class="dfeat-ico"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path></svg></div>
+            <h4 data-t="df2t">Plateforme Sécurisée</h4>
+            <p data-t="df2p">Portail client chiffré</p>
+          </div>
+          <div class="dfeat sr sr-d3">
+            <div class="dfeat-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14,2 14,8 20,8"></polyline></svg></div>
+            <h4 data-t="df3t">Signature Digitale</h4>
+            <p data-t="df3p">Documents signés en ligne</p>
+          </div>
+          <div class="dfeat sr sr-d4">
+            <div class="dfeat-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"></path></svg></div>
+            <h4 data-t="df4t">100% Digital</h4>
+            <p data-t="df4p">Upload &amp; traitement automatisé</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="sr sr-d2">
-      <div class="digital-visual">
-        <div class="digital-card-main">
-          <div style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--c-blue3);margin-bottom:1.2rem">Tableau de bord client</div>
-          <div class="metric-row"><span class="metric-label">TVA Q2 2026</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:85%"></div></div><span class="metric-val">✓ Déposé</span></div>
-          <div class="metric-row"><span class="metric-label">ISOC 2025</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:60%"></div></div><span class="metric-val">En cours</span></div>
-          <div class="metric-row"><span class="metric-label">Payroll Mai</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:100%"></div></div><span class="metric-val">✓ Traité</span></div>
-          <div class="metric-row"><span class="metric-label">Peppol Factures</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:72%"></div></div><span class="metric-val">24 envoyées</span></div>
-        </div>
-        <div class="digital-card-float dcf-1">
-          <div style="font-size:.62rem;color:var(--c-muted);margin-bottom:.2rem">Réponse moyenne</div>
-          <div style="font-size:1.4rem;font-weight:800;color:var(--c-gold2);font-family:'Manrope',sans-serif">&lt; 4h</div>
-        </div>
-        <div class="digital-card-float dcf-2">
-          <div style="font-size:.62rem;color:var(--c-muted);margin-bottom:.2rem">Satisfaction clients</div>
-          <div style="font-size:1.4rem;font-weight:800;color:#4ade80;font-family:'Manrope',sans-serif">98%</div>
+      <div class="sr sr-d2">
+        <div class="digital-visual">
+          <div class="digital-card-main">
+            <div class="dcard-title">Tableau de bord client</div>
+            <div class="metric-row"><span class="metric-label">TVA Q2 2026</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:85%"></div></div><span class="metric-val">✓ Déposé</span></div>
+            <div class="metric-row"><span class="metric-label">ISOC 2025</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:60%"></div></div><span class="metric-val">En cours</span></div>
+            <div class="metric-row"><span class="metric-label">Payroll Mai</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:100%"></div></div><span class="metric-val">✓ Traité</span></div>
+            <div class="metric-row"><span class="metric-label">Peppol Factures</span><div class="metric-bar-wrap"><div class="metric-bar" style="width:72%"></div></div><span class="metric-val">24 envoyées</span></div>
+          </div>
+          <div class="digital-card-float dcf-1">
+            <div class="dcf-label">Réponse moyenne</div>
+            <div class="dcf-val gold">&lt; 4h</div>
+          </div>
+          <div class="digital-card-float dcf-2">
+            <div class="dcf-label">Satisfaction clients</div>
+            <div class="dcf-val green">98%</div>
+          </div>
         </div>
       </div>
     </div>
@@ -656,32 +261,31 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:4rem
 
 <!-- ══ BUSINESS CENTER ══ -->
 <section class="section-pad" id="bizc">
-  <div class="sr" style="margin-bottom:3.5rem">
-    <p class="sec-label" data-t="seclbl4">PMA International Business Center</p>
-    <h2 class="sec-title" data-t="sectit4">Votre espace de travail <span class="gold">premium</span></h2>
-    <div class="sec-rule"></div>
-  </div>
-  <div class="bizc-grid">
-    <div class="sr sr-d1">
-      <div class="bizc-gallery">
-        <div class="bizc-img"><img src="assets/photo-1497366216548-37526070297c.jpg" alt="Business Center"><div class="bizc-badge">PMA Business Center · Drogenbos</div></div>
-        <div class="bizc-img"><img src="assets/photo-1573164713988-8665fc963095.jpg" alt="Salle réunion"></div>
-        <div class="bizc-img"><img src="assets/photo-1524758631624-e2822e304c36.jpg" alt="Co-working"></div>
-      </div>
+  <div class="container">
+    <div class="sec-head sr">
+      <p class="sec-label" data-t="seclbl4">PMA International Business Center</p>
+      <h2 class="sec-title" data-t="sectit4">Votre espace de travail <span class="gold">premium</span></h2>
     </div>
-    <div class="sr sr-d2">
-      <ul class="bizc-features">
-        <li class="bizc-feat"><div class="bizc-feat-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div><div class="bizc-feat-text"><h4 data-t="bf1t">Bureaux privés &amp; espaces partagés</h4><p data-t="bf1p">Flexibles, modernes, tout équipés</p></div></li>
-        <li class="bizc-feat"><div class="bizc-feat-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></div><div class="bizc-feat-text"><h4 data-t="bf2t">Salles de réunion équipées</h4><p data-t="bf2p">Visioconférence, écrans, tableau blanc</p></div></li>
-        <li class="bizc-feat"><div class="bizc-feat-ico"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01"></path></svg></div><div class="bizc-feat-text"><h4 data-t="bf3t">WiFi haut débit &amp; IT</h4><p data-t="bf3p">Infrastructure professionnelle fiable</p></div></li>
-        <li class="bizc-feat"><div class="bizc-feat-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79 19.79 19.79 0 01.007 1.18 2 2 0 012 .01h3a2 2 0 012 1.72"></path></svg></div><div class="bizc-feat-text"><h4 data-t="bf4t">Réception &amp; Secrétariat</h4><p data-t="bf4p">Standard téléphonique dédié</p></div></li>
-        <li class="bizc-feat"><div class="bizc-feat-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><div class="bizc-feat-text"><h4 data-t="bf5t">Domiciliation légale</h4><p data-t="bf5p">Adresse officielle + gestion courrier</p></div></li>
-      </ul>
-      <div class="addr-cards">
-        <div class="addr-card"><div class="addr-label">Uccle / Ukkel</div><p>Avenue Bel-Air 35<br>1180 Uccle, Belgique</p></div>
-        <div class="addr-card"><div class="addr-label">Drogenbos</div><p>Grand Route 315-317<br>1620 Drogenbos, Belgique</p></div>
+    <div class="bizc-grid">
+      <div class="sr sr-d1">
+        <div class="bizc-gallery">
+          <div class="bizc-img"><img src="assets/photo-1497366216548-37526070297c.jpg" alt="PMA Business Center"><div class="bizc-badge">PMA Business Center · Drogenbos</div></div>
+          <div class="bizc-img"><img src="assets/photo-1573164713988-8665fc963095.jpg" alt="Salle de réunion"></div>
+          <div class="bizc-img"><img src="assets/photo-1524758631624-e2822e304c36.jpg" alt="Espace co-working"></div>
+        </div>
       </div>
-      <div style="margin-top:1.8rem">
+      <div class="sr sr-d2">
+        <ul class="bizc-features">
+          <li class="bizc-feat"><div class="bizc-feat-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div><div class="bizc-feat-text"><h4 data-t="bf1t">Bureaux privés &amp; espaces partagés</h4><p data-t="bf1p">Flexibles, modernes, tout équipés</p></div></li>
+          <li class="bizc-feat"><div class="bizc-feat-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></div><div class="bizc-feat-text"><h4 data-t="bf2t">Salles de réunion équipées</h4><p data-t="bf2p">Visioconférence, écrans, tableau blanc</p></div></li>
+          <li class="bizc-feat"><div class="bizc-feat-ico"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01"></path></svg></div><div class="bizc-feat-text"><h4 data-t="bf3t">WiFi haut débit &amp; IT</h4><p data-t="bf3p">Infrastructure professionnelle fiable</p></div></li>
+          <li class="bizc-feat"><div class="bizc-feat-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79 19.79 19.79 0 01.007 1.18 2 2 0 012 .01h3a2 2 0 012 1.72"></path></svg></div><div class="bizc-feat-text"><h4 data-t="bf4t">Réception &amp; Secrétariat</h4><p data-t="bf4p">Standard téléphonique dédié</p></div></li>
+          <li class="bizc-feat"><div class="bizc-feat-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><div class="bizc-feat-text"><h4 data-t="bf5t">Domiciliation légale</h4><p data-t="bf5p">Adresse officielle + gestion courrier</p></div></li>
+        </ul>
+        <div class="addr-cards">
+          <div class="addr-card"><div class="addr-label">Uccle / Ukkel</div><p>Avenue Bel-Air 35<br>1180 Uccle, Belgique</p></div>
+          <div class="addr-card"><div class="addr-label">Drogenbos</div><p>Grand Route 315-317<br>1620 Drogenbos, Belgique</p></div>
+        </div>
         <button class="btn-primary" onclick="go('contact')" data-t="bizbtn">Réserver un espace</button>
       </div>
     </div>
@@ -690,81 +294,74 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:4rem
 
 <!-- ══ ACTUALITÉS ══ -->
 <section class="section-pad" id="news">
-  <div class="sr" style="margin-bottom:2.5rem">
-    <p class="sec-label" data-t="seclbl5">Législation &amp; Fiscalité</p>
-    <h2 class="sec-title" data-t="sectit5">Actualités <span class="acc">fiscales belges</span></h2>
-    <div class="sec-rule"></div>
-  </div>
-  <div class="news-filters sr in">
-    <button class="nf on" onclick="filterNews('all',this)">Tout</button>
-    <button class="nf" onclick="filterNews('tva',this)">TVA</button>
-    <button class="nf" onclick="filterNews('isoc',this)">ISOC</button>
-    <button class="nf" onclick="filterNews('independant',this)">Indépendants</button>
-    <button class="nf" onclick="filterNews('peppol',this)">Peppol</button>
-    <button class="nf" onclick="filterNews('fiscal',this)">Fiscalité</button>
-  </div>
-  <div class="news-grid">
-    <div class="news-card sr sr-d1" data-cat="peppol" style="display: block;">
-      <div class="news-thumb"><img src="assets/photo-1460925895917-afdab827c52f.jpg" alt="Peppol"><div class="news-tag">Peppol</div></div>
-      <div class="news-body"><div class="news-date">Mai 2026</div><h3>Facturation électronique Peppol : obligation dès 2026 pour les assujettis TVA</h3><p>La
- Belgique généralise le réseau Peppol pour les factures B2B. Découvrez 
-comment PMA vous accompagne gratuitement dans cette transition.</p></div>
+  <div class="container">
+    <div class="sec-head sr">
+      <p class="sec-label" data-t="seclbl5">Législation &amp; Fiscalité</p>
+      <h2 class="sec-title" data-t="sectit5">Actualités <span class="acc">fiscales belges</span></h2>
     </div>
-    <div class="news-card sr sr-d2" data-cat="isoc" style="display: block;">
-      <div class="news-thumb"><img src="assets/photo-1554224155-6726b3ff858f.jpg" alt="ISOC"><div class="news-tag">ISOC</div></div>
-      <div class="news-body"><div class="news-date">Avril 2026</div><h3>ISOC 2025 : nouveaux taux et déductions pour les PME belges</h3><p>Le
- gouvernement De Wever confirme des ajustements importants pour l'impôt 
-des sociétés. Optimisez votre situation dès maintenant.</p></div>
+    <div class="news-filters sr">
+      <button class="nf on" onclick="filterNews('all',this)">Tout</button>
+      <button class="nf" onclick="filterNews('tva',this)">TVA</button>
+      <button class="nf" onclick="filterNews('isoc',this)">ISOC</button>
+      <button class="nf" onclick="filterNews('independant',this)">Indépendants</button>
+      <button class="nf" onclick="filterNews('peppol',this)">Peppol</button>
+      <button class="nf" onclick="filterNews('fiscal',this)">Fiscalité</button>
     </div>
-    <div class="news-card sr sr-d3" data-cat="independant tva" style="display: block;">
-      <div class="news-thumb"><img src="assets/photo-1507003211169-0a1dd7228f2d.jpg" alt="Indépendant"><div class="news-tag">Indépendants</div></div>
-      <div class="news-body"><div class="news-date">Mars 2026</div><h3>Nouveau statut d'indépendant complémentaire : ce qui change en 2026</h3><p>Les seuils de cotisations ONSS évoluent. Comprendre votre situation pour éviter les mauvaises surprises fiscales.</p></div>
+    <div class="news-grid">
+      <article class="news-card sr sr-d1" data-cat="peppol">
+        <div class="news-thumb"><img src="assets/photo-1460925895917-afdab827c52f.jpg" alt="Peppol"><span class="news-tag">Peppol</span></div>
+        <div class="news-body"><div class="news-date">Mai 2026</div><h3>Facturation électronique Peppol : obligation dès 2026 pour les assujettis TVA</h3><p>La Belgique généralise le réseau Peppol pour les factures B2B. Découvrez comment PMA vous accompagne gratuitement dans cette transition.</p></div>
+      </article>
+      <article class="news-card sr sr-d2" data-cat="isoc">
+        <div class="news-thumb"><img src="assets/photo-1554224155-6726b3ff858f.jpg" alt="ISOC"><span class="news-tag">ISOC</span></div>
+        <div class="news-body"><div class="news-date">Avril 2026</div><h3>ISOC 2025 : nouveaux taux et déductions pour les PME belges</h3><p>Le gouvernement De Wever confirme des ajustements importants pour l'impôt des sociétés. Optimisez votre situation dès maintenant.</p></div>
+      </article>
+      <article class="news-card sr sr-d3" data-cat="independant tva">
+        <div class="news-thumb"><img src="assets/photo-1507003211169-0a1dd7228f2d.jpg" alt="Indépendant"><span class="news-tag">Indépendants</span></div>
+        <div class="news-body"><div class="news-date">Mars 2026</div><h3>Nouveau statut d'indépendant complémentaire : ce qui change en 2026</h3><p>Les seuils de cotisations ONSS évoluent. Comprendre votre situation pour éviter les mauvaises surprises fiscales.</p></div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- ══ PARTENAIRES ══ -->
-<section id="partners" class="section-pad" style="padding-top:4rem;padding-bottom:4rem">
-  <div class="sr">
+<section class="section-pad" id="partners">
+  <div class="container sr">
     <div class="partners-title" data-t="partners_title">Nos partenaires &amp; certifications</div>
     <div class="partners-row">
-      <!-- ITAA -->
       <div class="partner">
         <div class="partner-logo">
           <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="116" height="44" rx="6" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></rect>
+            <rect x="2" y="2" width="116" height="44" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></rect>
             <text x="60" y="30" text-anchor="middle" font-family="Manrope,sans-serif" font-size="18" font-weight="800" fill="white" letter-spacing="4">ITAA</text>
           </svg>
         </div>
         <span class="partner-name">ITAA</span>
       </div>
-      <!-- Acerta -->
       <div class="partner">
         <div class="partner-logo">
           <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="116" height="44" rx="6" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></rect>
+            <rect x="2" y="2" width="116" height="44" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></rect>
             <circle cx="22" cy="24" r="8" fill="white" fill-opacity="0.6"></circle>
             <text x="70" y="30" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="700" fill="white" letter-spacing="2">ACERTA</text>
           </svg>
         </div>
         <span class="partner-name">Acerta</span>
       </div>
-      <!-- Liantis -->
       <div class="partner">
         <div class="partner-logo">
           <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="116" height="44" rx="6" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></rect>
+            <rect x="2" y="2" width="116" height="44" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></rect>
             <path d="M16 32 L16 16 L24 16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
             <text x="72" y="30" text-anchor="middle" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="2">LIANTIS</text>
           </svg>
         </div>
         <span class="partner-name">Liantis</span>
       </div>
-      <!-- Octopus -->
       <div class="partner">
         <div class="partner-logo">
           <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="116" height="44" rx="6" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></rect>
+            <rect x="2" y="2" width="116" height="44" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></rect>
             <circle cx="22" cy="24" r="9" fill="none" stroke="white" stroke-width="2.5"></circle>
             <circle cx="22" cy="24" r="4" fill="white" fill-opacity="0.7"></circle>
             <text x="74" y="30" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" font-weight="700" fill="white" letter-spacing="1">OCTOPUS</text>
@@ -772,11 +369,10 @@ des sociétés. Optimisez votre situation dès maintenant.</p></div>
         </div>
         <span class="partner-name">Octopus</span>
       </div>
-      <!-- Xerius -->
       <div class="partner">
         <div class="partner-logo">
           <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="116" height="44" rx="6" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></rect>
+            <rect x="2" y="2" width="116" height="44" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></rect>
             <path d="M14 16 L30 32 M30 16 L14 32" stroke="white" stroke-width="3" stroke-linecap="round"></path>
             <text x="74" y="30" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="700" fill="white" letter-spacing="2">XERIUS</text>
           </svg>
@@ -789,59 +385,60 @@ des sociétés. Optimisez votre situation dès maintenant.</p></div>
 
 <!-- ══ CONTACT + MAP ══ -->
 <section class="section-pad" id="contact">
-  <div class="sr" style="margin-bottom:3.5rem">
-    <p class="sec-label" data-t="seclbl6">Parlons de votre projet</p>
-    <h2 class="sec-title" data-t="sectit6">Contactez <span class="acc">notre équipe</span></h2>
-    <div class="sec-rule"></div>
-  </div>
-  <div class="contact-wrap">
-    <div class="sr sr-d1">
-      <div class="contact-form">
-        <div style="font-family:'Manrope',sans-serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:1.6rem" data-t="form_title">Prendre rendez-vous</div>
-        <div class="form-2col">
-          <div class="form-row"><label data-t="fl_nom">Prénom &amp; Nom</label><input type="text" placeholder="Jean Dupont"></div>
-          <div class="form-row"><label data-t="fl_email">Email</label><input type="email" placeholder="jean@societe.be"></div>
-        </div>
-        <div class="form-2col">
-          <div class="form-row"><label data-t="fl_tel">Téléphone</label><input type="tel" placeholder="+32 ..."></div>
-          <div class="form-row"><label data-t="fl_svc">Service souhaité</label>
+  <div class="container">
+    <div class="sec-head sr">
+      <p class="sec-label" data-t="seclbl6">Parlons de votre projet</p>
+      <h2 class="sec-title" data-t="sectit6">Contactez <span class="acc">notre équipe</span></h2>
+    </div>
+    <div class="contact-wrap">
+      <div class="sr sr-d1">
+        <div class="contact-form">
+          <div class="form-title" data-t="form_title">Prendre rendez-vous</div>
+          <div class="form-2col">
+            <div class="form-row"><label data-t="fl_nom">Prénom &amp; Nom</label><input type="text" placeholder="Jean Dupont"></div>
+            <div class="form-row"><label data-t="fl_email">Email</label><input type="email" placeholder="jean@societe.be"></div>
+          </div>
+          <div class="form-2col">
+            <div class="form-row"><label data-t="fl_tel">Téléphone</label><input type="tel" placeholder="+32 ..."></div>
+            <div class="form-row"><label data-t="fl_svc">Service souhaité</label>
+              <select>
+                <option data-t="opt1" selected>Comptabilité</option>
+                <option data-t="opt2">Fiscalité</option>
+                <option data-t="opt3">Création société</option>
+                <option data-t="opt4">Domiciliation</option>
+                <option data-t="opt5">Co-Working</option>
+                <option data-t="opt6">Autre</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row"><label data-t="fl_rdv">Type de rendez-vous</label>
             <select>
-              <option data-t="opt1" selected="selected">Comptabilité</option>
-              <option data-t="opt2">Fiscalité</option>
-              <option data-t="opt3">Création société</option>
-              <option data-t="opt4">Domiciliation</option>
-              <option data-t="opt5">Co-Working</option>
-              <option data-t="opt6">Autre</option>
+              <option data-t="rdv1" selected>Réunion physique — Uccle</option>
+              <option data-t="rdv2">Réunion physique — Drogenbos</option>
+              <option data-t="rdv3">Visioconférence</option>
+              <option data-t="rdv4">Appel téléphonique</option>
             </select>
           </div>
+          <div class="form-row"><label data-t="fl_msg">Message</label><textarea placeholder="Décrivez votre projet ou votre question..."></textarea></div>
+          <button class="btn-primary form-send" onclick="submitForm(this)"><span data-t="fl_send">Envoyer la demande</span></button>
         </div>
-        <div class="form-row"><label data-t="fl_rdv">Type de rendez-vous</label>
-          <select>
-            <option data-t="rdv1" selected="selected">Réunion physique — Uccle</option>
-            <option data-t="rdv2">Réunion physique — Drogenbos</option>
-            <option data-t="rdv3">Visioconférence</option>
-            <option data-t="rdv4">Appel téléphonique</option>
-          </select>
+      </div>
+      <div class="sr sr-d2">
+        <div class="contact-info">
+          <h3 data-t="ci_title">Un cabinet à votre écoute</h3>
+          <p data-t="ci_sub">Parisa ABED et son équipe vous accueillent dans nos deux locaux ou à distance. Réponse garantie sous 24h.</p>
+          <div class="contact-item"><div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79 19.79 19.79 0 01.007 1.18 2 2 0 012 .01h3a2 2 0 012 1.72"></path></svg></div><a href="tel:+32483434156">+32 483 43 41 56</a></div>
+          <div class="contact-item"><div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div><a href="mailto:pma.advisors@outlook.com">pma.advisors@outlook.com</a></div>
+          <div class="contact-item"><div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><span>Avenue Bel-Air 35, 1180 Uccle</span></div>
+          <div class="contact-item"><div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><span>Grand Route 315-317, 1620 Drogenbos</span></div>
+          <a href="https://wa.me/32483434156" class="wa-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+            <span data-t="wa_btn">Écrire sur WhatsApp</span>
+          </a>
+          <div class="map-wrap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.827!2d4.3555!3d50.8135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c4a9e2e2e2e3%3A0x0!2sAvenue%20Bel-Air%2035%2C%201180%20Uccle%2C%20Belgique!5e0!3m2!1sfr!2sbe!4v1716000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="PMA Uccle"></iframe>
+          </div>
         </div>
-        <div class="form-row"><label data-t="fl_msg">Message</label><textarea placeholder="Décrivez votre projet ou votre question..."></textarea></div>
-        <button class="btn-primary" style="width:100%;justify-content:center" onclick="submitForm(this)" data-t="fl_send">Envoyer la demande</button>
-      </div>
-    </div>
-    <div class="sr sr-d2">
-      <div class="contact-info">
-        <h3 data-t="ci_title">Un cabinet à votre écoute</h3>
-        <p data-t="ci_sub">Parisa ABED et son équipe vous accueillent dans nos deux locaux ou à distance. Réponse garantie sous 24h.</p>
-        <div class="contact-item"><div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79 19.79 19.79 0 01.007 1.18 2 2 0 012 .01h3a2 2 0 012 1.72"></path></svg></div><a href="tel:+32483434156">+32 483 43 41 56</a></div>
-        <div class="contact-item"><div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div><a href="mailto:pma.advisors@outlook.com">pma.advisors@outlook.com</a></div>
-        <div class="contact-item"><div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><span>Avenue Bel-Air 35, 1180 Uccle</span></div>
-        <div class="contact-item"><div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><span>Grand Route 315-317, 1620 Drogenbos</span></div>
-        <a href="https://wa.me/32483434156" class="wa-btn">
-          <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
-          <span data-t="wa_btn">Écrire sur WhatsApp</span>
-        </a>
-      </div>
-      <div class="map-wrap sr sr-d3 in">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.827!2d4.3555!3d50.8135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c4a9e2e2e2e3%3A0x0!2sAvenue%20Bel-Air%2035%2C%201180%20Uccle%2C%20Belgique!5e0!3m2!1sfr!2sbe!4v1716000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="PMA Uccle"></iframe>
       </div>
     </div>
   </div>
@@ -849,10 +446,10 @@ des sociétés. Optimisez votre situation dès maintenant.</p></div>
 
 <!-- ══ FOOTER ══ -->
 <footer>
-  <div class="footer-grid sr in">
+  <div class="footer-grid sr">
     <div class="footer-brand">
       <div class="logo-mark">PMA</div>
-      <div style="font-size:.75rem;color:var(--c-muted);letter-spacing:.1em;margin-bottom:.8rem">Accountancy · Tax · Advisory</div>
+      <div class="footer-tag">Accountancy · Tax · Advisory</div>
       <p data-t="footer_desc">Cabinet comptable et fiscal premium à Uccle &amp; Drogenbos. Certifié ITAA. Multilingue FR · NL · EN · فارسی.</p>
       <div class="footer-badges">
         <span class="fbadge">ITAA</span>
@@ -882,8 +479,8 @@ des sociétés. Optimisez votre situation dès maintenant.</p></div>
       <h4 data-t="fc3h">Coordonnées</h4>
       <a href="tel:+32483434156">+32 483 43 41 56</a>
       <a href="mailto:pma.advisors@outlook.com">pma.advisors@outlook.com</a>
-      <a href="#">Av. Bel-Air 35, Uccle</a>
-      <a href="#">Grand Route 315, Drogenbos</a>
+      <a href="#bizc">Av. Bel-Air 35, Uccle</a>
+      <a href="#bizc">Grand Route 315, Drogenbos</a>
       <a href="#" data-t="fc3_legal">Mentions légales</a>
     </div>
   </div>
@@ -901,42 +498,40 @@ des sociétés. Optimisez votre situation dès maintenant.</p></div>
 <!-- ══ FLOATING WIDGET ══ -->
 <div id="widget">
   <button class="wid-btn" onclick="go('contact')">
-    <div class="wico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></div>
+    <span class="wico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></span>
     <span data-t="w1">Prendre rendez-vous</span>
   </button>
   <button class="wid-btn" onclick="go('contact')">
-    <div class="wico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></div>
+    <span class="wico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></span>
     <span data-t="w2">Créer mon entreprise</span>
   </button>
   <button class="wid-btn wa" onclick="window.open('https://wa.me/32483434156')">
-    <div class="wico"><svg viewBox="0 0 24 24" style="stroke:none;fill:#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></div>
+    <span class="wico"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></span>
     <span>WhatsApp</span>
   </button>
   <button class="wid-btn" onclick="window.open('tel:+32483434156')">
-    <div class="wico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79 19.79 19.79 0 01.007 1.18 2 2 0 012 .01h3a2 2 0 012 1.72"></path></svg></div>
+    <span class="wico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79 19.79 19.79 0 01.007 1.18 2 2 0 012 .01h3a2 2 0 012 1.72"></path></svg></span>
     <span data-t="w3">Appeler</span>
   </button>
   <button class="wid-btn" onclick="toggleChat()">
-    <div class="wico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg></div>
+    <span class="wico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg></span>
     <span data-t="w4">Assistant IA</span>
   </button>
 </div>
 
 <!-- ══ CHATBOT ══ -->
-<button id="chat-btn" onclick="toggleChat()">
-  <div id="chat-notif" style="display: block;"></div>
+<button id="chat-btn" onclick="toggleChat()" aria-label="Assistant IA">
+  <span id="chat-notif"></span>
   <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg>
 </button>
-<div id="chat-panel" class="">
+<div id="chat-panel">
   <div class="ch-head">
     <div class="ch-avatar">P</div>
     <div class="ch-info"><h4>PMA Advisory</h4><p><span></span>En ligne · Réponse &lt; 4h</p></div>
-    <button class="ch-close" onclick="toggleChat()">✕</button>
+    <button class="ch-close" onclick="toggleChat()" aria-label="Fermer">✕</button>
   </div>
   <div class="ch-msgs" id="chatMsgs">
-    <div class="msg bot" data-t="ch_welcome">Bonjour ! Je suis 
-l'assistant IA de PMA Accountancy. Posez-moi vos questions sur la 
-comptabilité, TVA, création de société en Belgique ou nos services.</div>
+    <div class="msg bot" data-t="ch_welcome">Bonjour ! Je suis l'assistant IA de PMA Accountancy. Posez-moi vos questions sur la comptabilité, TVA, création de société en Belgique ou nos services.</div>
   </div>
   <div class="ch-sugs" id="chatSugs">
     <button class="sug" onclick="quickAsk(this)" data-t="cq1">Délai TVA belge</button>
@@ -946,370 +541,10 @@ comptabilité, TVA, création de société en Belgique ou nos services.</div>
   </div>
   <div class="ch-inp">
     <input id="chatInput" type="text" placeholder="Votre question..." onkeydown="if(event.key==='Enter')sendChat()">
-    <button id="chatSend" onclick="sendChat()"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22,2 15,22 11,13 2,9"></polygon></svg></button>
+    <button id="chatSend" onclick="sendChat()" aria-label="Envoyer"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22,2 15,22 11,13 2,9"></polygon></svg></button>
   </div>
 </div>
 
-<!-- ══ SCRIPTS ══ -->
-<script>
-/* ── TRANSLATIONS ── */
-const T={
-  fr:{
-    nav_svc:"Services",nav_pq:"Pour Qui",nav_biz:"Business Center",nav_news:"Actualités",nav_contact:"Contact",
-    cta:"Consultation Gratuite",
-    eyebrow:"Expert-Comptable Certifié ITAA · Uccle & Drogenbos",
-    h1a:"Votre partenaire",h1b:"comptable stratégique",h1c:"en Belgique.",
-    herosub:"<strong>Comptabilité · Fiscalité · Business Center</strong><br>Cabinet multilingue haut de gamme. Membre certifié ITAA. Parisa ABED, Expert-Comptable.",
-    btn1t:"Prendre rendez-vous",btn2t:"Créer mon entreprise",
-    hs1:"Années d'expérience",hs2:"Clients actifs",hs3:"Langues",hs4:"Temps de réponse",hs5:"Digital",hs6:"Certifié",
-    seclbl1:"Ce que nous faisons",sectit1:"Nos services <span class='acc'>sur mesure</span>",secsub1:"De la tenue comptable à la création de société — un interlocuteur unique pour tous vos besoins.",
-    s1t:"Comptabilité",s1p:"Tenue complète, bilans et comptes annuels. Reporting mensuel.",
-    s2t:"Fiscalité & ISOC",s2p:"Optimisation fiscale, TVA, ISOC, IPP. Conseil stratégique.",
-    s3t:"Création de société",s3p:"Statuts, BCE, plan financier, accompagnement complet.",
-    s4t:"Social & Payroll",s4p:"Salaires, ONSS, contrats de travail.",
-    s5t:"Conseil Stratégique",s5p:"Analyse financière, trésorerie, accompagnement dirigeant.",
-    s6t:"TVA Belgique",s6p:"Déclarations TVA, Intrastat, listing clients.",
-    s7t:"Domiciliation",s7p:"Adresse légale, siège social à Uccle & Drogenbos.",
-    s8t:"Co-Working",s8p:"Bureaux flexibles et salles de réunion premium.",
-    seclbl2:"Nous accompagnons",sectit2:"Une expertise pour <span class='gold'>chaque profil</span>",
-    pq1t:"Médecins",pq1p:"Spécialistes & généralistes",pq2t:"Infirmiers",pq2p:"Indépendants & structures",
-    pq3t:"Horeca",pq3p:"Restaurants, cafés, hôtels",pq4t:"Chauffeurs",pq4p:"VTC, taxi, transport",
-    pq5t:"Consultants",pq5p:"IT, management, conseil",pq6t:"Startups",pq6p:"Levée de fonds & scale",
-    pq7t:"E-Commerce",pq7p:"Boutiques en ligne",pq8t:"Prof. Libérales",pq8p:"Avocats, architectes…",
-    pq9t:"Indépendants",pq9p:"Toutes activités",pq10t:"Sociétés",pq10p:"PME & multinationales",
-    seclbl3:"Innovation & Digital",sectit3:"Fiduciaire digitale <span class='acc'>& conseil sur mesure</span>",secsub3:"Expertise humaine certifiée ITAA combinée aux outils digitaux les plus avancés.",
-    df1t:"Peppol Gratuit",df1p:"Facturation électronique incluse",df2t:"Plateforme Sécurisée",df2p:"Portail client chiffré",
-    df3t:"Signature Digitale",df3p:"Documents signés en ligne",df4t:"100% Digital",df4p:"Upload & traitement automatisé",
-    seclbl4:"PMA International Business Center",sectit4:"Votre espace de travail <span class='gold'>premium</span>",
-    bf1t:"Bureaux privés & espaces partagés",bf1p:"Flexibles, modernes, tout équipés",
-    bf2t:"Salles de réunion équipées",bf2p:"Visioconférence, écrans, tableau blanc",
-    bf3t:"WiFi haut débit & IT",bf3p:"Infrastructure professionnelle fiable",
-    bf4t:"Réception & Secrétariat",bf4p:"Standard téléphonique dédié",
-    bf5t:"Domiciliation légale",bf5p:"Adresse officielle + gestion courrier",
-    bizbtn:"Réserver un espace",
-    seclbl5:"Législation & Fiscalité",sectit5:"Actualités <span class='acc'>fiscales belges</span>",
-    partners_title:"Nos partenaires & certifications",
-    seclbl6:"Parlons de votre projet",sectit6:"Contactez <span class='acc'>notre équipe</span>",
-    form_title:"Prendre rendez-vous",fl_nom:"Prénom & Nom",fl_email:"Email",fl_tel:"Téléphone",fl_svc:"Service souhaité",
-    fl_rdv:"Type de rendez-vous",fl_msg:"Message",fl_send:"Envoyer la demande",
-    opt1:"Comptabilité",opt2:"Fiscalité",opt3:"Création société",opt4:"Domiciliation",opt5:"Co-Working",opt6:"Autre",
-    rdv1:"Réunion physique — Uccle",rdv2:"Réunion physique — Drogenbos",rdv3:"Visioconférence",rdv4:"Appel téléphonique",
-    ci_title:"Un cabinet à votre écoute",ci_sub:"Parisa ABED et son équipe vous accueillent dans nos deux locaux ou à distance. Réponse garantie sous 24h.",
-    wa_btn:"Écrire sur WhatsApp",
-    fc1h:"Services",fc1_1:"Comptabilité",fc1_2:"Fiscalité",fc1_3:"Création société",fc1_4:"Social & Payroll",fc1_5:"Co-Working",fc1_6:"Domiciliation",
-    fc2h:"Cabinet",fc2_1:"Pour qui",fc2_2:"Digital & IA",fc2_3:"Actualités",fc2_4:"Contact",fc2_5:"Portail client",
-    fc3h:"Coordonnées",fc3_legal:"Mentions légales",
-    footer_desc:"Cabinet comptable et fiscal premium à Uccle & Drogenbos. Certifié ITAA. Multilingue FR · NL · EN · فارسی.",
-    footer_cr:"© 2026 PMA Accountancy Tax Advisory · Tous droits réservés · Belgique",
-    w1:"Prendre rendez-vous",w2:"Créer mon entreprise",w3:"Appeler",w4:"Assistant IA",
-    ch_welcome:"Bonjour ! Je suis l'assistant IA de PMA Accountancy. Posez-moi vos questions sur la comptabilité, TVA, création de société en Belgique ou nos services.",
-    cq1:"Délai TVA belge",cq2:"Créer une SRL",cq3:"Peppol c'est quoi ?",cq4:"Nos tarifs"
-  },
-  nl:{
-    nav_svc:"Diensten",nav_pq:"Voor Wie",nav_biz:"Business Center",nav_news:"Nieuws",nav_contact:"Contact",
-    cta:"Gratis Consult",eyebrow:"Gecertificeerd Accountant ITAA · Ukkel & Drogenbos",
-    h1a:"Uw strategische",h1b:"boekhoudkundige partner",h1c:"in België.",
-    herosub:"<strong>Boekhouding · Fiscaliteit · Business Center</strong><br>Meertalig premium kantoor. Gecertificeerd ITAA-lid. Parisa ABED, Expert-Accountant.",
-    btn1t:"Afspraak maken",btn2t:"Mijn bedrijf oprichten",
-    hs1:"Jaar ervaring",hs2:"Actieve klanten",hs3:"Talen",hs4:"Reactietijd",hs5:"Digitaal",hs6:"Gecertificeerd",
-    seclbl1:"Wat wij doen",sectit1:"Onze diensten <span class='acc'>op maat</span>",secsub1:"Van boekhouding tot oprichting — één aanspreekpunt voor al uw behoeften.",
-    s1t:"Boekhouding",s1p:"Volledige boekhouding, balansen en jaarrekeningen.",s2t:"Fiscaliteit & VenB",s2p:"Fiscale optimalisatie, BTW, VenB, PB. Strategisch advies.",
-    s3t:"Oprichting vennootschap",s3p:"Statuten, KBO, financieel plan, volledige begeleiding.",s4t:"Sociaal & Payroll",s4p:"Lonen, RSZ, arbeidsovereenkomsten.",
-    s5t:"Strategisch Advies",s5p:"Financiële analyse, cashflow, begeleiding.",s6t:"BTW België",s6p:"BTW-aangiften, Intrastat, klantenlisting.",
-    s7t:"Domiciliëring",s7p:"Wettelijk adres, maatschappelijke zetel in Ukkel & Drogenbos.",s8t:"Co-Working",s8p:"Flexibele kantoren en vergaderzalen.",
-    seclbl2:"Wij begeleiden",sectit2:"Expertise voor <span class='gold'>elk profiel</span>",
-    pq1t:"Artsen",pq1p:"Specialisten & huisartsen",pq2t:"Verpleegkundigen",pq2p:"Zelfstandigen & structuren",
-    pq3t:"Horeca",pq3p:"Restaurants, cafés, hotels",pq4t:"Chauffeurs",pq4p:"VTC, taxi, transport",
-    pq5t:"Consultants",pq5p:"IT, management, advies",pq6t:"Startups",pq6p:"Fondsenwerving & groei",
-    pq7t:"E-Commerce",pq7p:"Webshops",pq8t:"Vrije Beroepen",pq8p:"Advocaten, architecten…",
-    pq9t:"Zelfstandigen",pq9p:"Alle activiteiten",pq10t:"Vennootschappen",pq10p:"KMO's & multinationals",
-    seclbl3:"Innovatie & Digitaal",sectit3:"Digitale fiduciaire <span class='acc'>& advies op maat</span>",secsub3:"Gecertificeerde ITAA-expertise gecombineerd met geavanceerde digitale tools.",
-    df1t:"Peppol Gratis",df1p:"Elektronische facturatie inbegrepen",df2t:"Beveiligd Platform",df2p:"Versleuteld klantenportaal",
-    df3t:"Digitale Handtekening",df3p:"Online ondertekening",df4t:"100% Digitaal",df4p:"Upload & automatische verwerking",
-    seclbl4:"PMA Internationaal Business Center",sectit4:"Uw premium <span class='gold'>werkruimte</span>",
-    bf1t:"Privékantoren & gedeelde ruimtes",bf1p:"Flexibel, modern, volledig uitgerust",
-    bf2t:"Uitgeruste vergaderzalen",bf2p:"Videoconferentie, schermen, whiteboard",
-    bf3t:"Snel WiFi & IT",bf3p:"Betrouwbare professionele infrastructuur",
-    bf4t:"Receptie & Secretariaat",bf4p:"Toegewijd telefoonnummer",
-    bf5t:"Wettelijke domiciliëring",bf5p:"Officieel adres + postbeheer",
-    bizbtn:"Ruimte reserveren",
-    seclbl5:"Wetgeving & Fiscaliteit",sectit5:"Fiscaal <span class='acc'>nieuws België</span>",
-    partners_title:"Onze partners & certificeringen",
-    seclbl6:"Laten we praten",sectit6:"Contacteer <span class='acc'>ons team</span>",
-    form_title:"Afspraak maken",fl_nom:"Voornaam & Naam",fl_email:"E-mail",fl_tel:"Telefoon",fl_svc:"Gewenste dienst",
-    fl_rdv:"Type afspraak",fl_msg:"Bericht",fl_send:"Aanvraag versturen",
-    opt1:"Boekhouding",opt2:"Fiscaliteit",opt3:"Oprichting",opt4:"Domiciliëring",opt5:"Co-Working",opt6:"Andere",
-    rdv1:"Fysieke vergadering — Ukkel",rdv2:"Fysieke vergadering — Drogenbos",rdv3:"Videoconferentie",rdv4:"Telefoongesprek",
-    ci_title:"Een kantoor dat naar u luistert",ci_sub:"Parisa ABED en haar team ontvangen u in onze twee vestigingen of op afstand. Antwoord gegarandeerd binnen 24u.",
-    wa_btn:"WhatsApp schrijven",
-    fc1h:"Diensten",fc1_1:"Boekhouding",fc1_2:"Fiscaliteit",fc1_3:"Oprichting",fc1_4:"Sociaal & Payroll",fc1_5:"Co-Working",fc1_6:"Domiciliëring",
-    fc2h:"Kantoor",fc2_1:"Voor wie",fc2_2:"Digitaal & AI",fc2_3:"Nieuws",fc2_4:"Contact",fc2_5:"Klantenportaal",
-    fc3h:"Contactgegevens",fc3_legal:"Juridische vermeldingen",
-    footer_desc:"Premium boekhoudkantoor in Ukkel & Drogenbos. ITAA gecertificeerd. Meertalig FR · NL · EN · فارسی.",
-    footer_cr:"© 2026 PMA Accountancy Tax Advisory · Alle rechten voorbehouden · België",
-    w1:"Afspraak maken",w2:"Mijn bedrijf oprichten",w3:"Bellen",w4:"AI Assistent",
-    ch_welcome:"Goedag! Ik ben de AI-assistent van PMA Accountancy. Stel mij uw vragen over boekhouding, BTW, oprichting of onze diensten.",
-    cq1:"BTW-deadline België",cq2:"BV oprichten",cq3:"Wat is Peppol?",cq4:"Onze tarieven"
-  },
-  en:{
-    nav_svc:"Services",nav_pq:"Who We Serve",nav_biz:"Business Center",nav_news:"News",nav_contact:"Contact",
-    cta:"Free Consultation",eyebrow:"ITAA Certified Accountant · Uccle & Drogenbos",
-    h1a:"Your strategic",h1b:"accounting partner",h1c:"in Belgium.",
-    herosub:"<strong>Accounting · Tax · Business Center</strong><br>Premium multilingual firm. ITAA certified member. Parisa ABED, Chartered Accountant.",
-    btn1t:"Book appointment",btn2t:"Set up my company",
-    hs1:"Years experience",hs2:"Active clients",hs3:"Languages",hs4:"Response time",hs5:"Digital",hs6:"Certified",
-    seclbl1:"What we do",sectit1:"Our tailored <span class='acc'>services</span>",secsub1:"From bookkeeping to company formation — one point of contact for all your needs.",
-    s1t:"Accounting",s1p:"Full bookkeeping, balance sheets and annual accounts.",s2t:"Tax & CIT",s2p:"Tax optimization, VAT, CIT, PIT. Strategic advisory.",
-    s3t:"Company formation",s3p:"Articles, CBE, financial plan, full support.",s4t:"HR & Payroll",s4p:"Salaries, NSSO, employment contracts.",
-    s5t:"Strategic Advisory",s5p:"Financial analysis, cash flow, executive coaching.",s6t:"Belgium VAT",s6p:"VAT returns, Intrastat, client listing.",
-    s7t:"Domiciliation",s7p:"Legal address, registered office in Uccle & Drogenbos.",s8t:"Co-Working",s8p:"Flexible offices and premium meeting rooms.",
-    seclbl2:"We serve",sectit2:"Expertise for <span class='gold'>every profile</span>",
-    pq1t:"Physicians",pq1p:"Specialists & GPs",pq2t:"Nurses",pq2p:"Self-employed & structures",
-    pq3t:"Horeca",pq3p:"Restaurants, cafés, hotels",pq4t:"Drivers",pq4p:"Private hire, taxi, transport",
-    pq5t:"Consultants",pq5p:"IT, management, advisory",pq6t:"Startups",pq6p:"Fundraising & scaling",
-    pq7t:"E-Commerce",pq7p:"Online stores",pq8t:"Liberal professions",pq8p:"Lawyers, architects…",
-    pq9t:"Self-employed",pq9p:"All activities",pq10t:"Companies",pq10p:"SMEs & multinationals",
-    seclbl3:"Innovation & Digital",sectit3:"Digital accounting <span class='acc'>& tailored advice</span>",secsub3:"Certified ITAA expertise combined with the most advanced digital tools.",
-    df1t:"Free Peppol",df1p:"E-invoicing included",df2t:"Secure Platform",df2p:"Encrypted client portal",
-    df3t:"Digital Signature",df3p:"Online document signing",df4t:"100% Digital",df4p:"Upload & automated processing",
-    seclbl4:"PMA International Business Center",sectit4:"Your premium <span class='gold'>workspace</span>",
-    bf1t:"Private & shared offices",bf1p:"Flexible, modern, fully equipped",
-    bf2t:"Equipped meeting rooms",bf2p:"Videoconference, screens, whiteboard",
-    bf3t:"High-speed WiFi & IT",bf3p:"Reliable professional infrastructure",
-    bf4t:"Reception & Secretariat",bf4p:"Dedicated phone number",
-    bf5t:"Legal domiciliation",bf5p:"Official address + mail management",
-    bizbtn:"Book a space",
-    seclbl5:"Legislation & Tax",sectit5:"Belgian <span class='acc'>tax news</span>",
-    partners_title:"Our partners & certifications",
-    seclbl6:"Let's talk about your project",sectit6:"Contact <span class='acc'>our team</span>",
-    form_title:"Book an appointment",fl_nom:"First & Last Name",fl_email:"Email",fl_tel:"Phone",fl_svc:"Service needed",
-    fl_rdv:"Appointment type",fl_msg:"Message",fl_send:"Send request",
-    opt1:"Accounting",opt2:"Tax",opt3:"Company formation",opt4:"Domiciliation",opt5:"Co-Working",opt6:"Other",
-    rdv1:"Physical meeting — Uccle",rdv2:"Physical meeting — Drogenbos",rdv3:"Video call",rdv4:"Phone call",
-    ci_title:"A firm that listens",ci_sub:"Parisa ABED and her team welcome you in our two offices or remotely. Reply guaranteed within 24h.",
-    wa_btn:"Chat on WhatsApp",
-    fc1h:"Services",fc1_1:"Accounting",fc1_2:"Tax",fc1_3:"Company formation",fc1_4:"HR & Payroll",fc1_5:"Co-Working",fc1_6:"Domiciliation",
-    fc2h:"Firm",fc2_1:"Who we serve",fc2_2:"Digital & AI",fc2_3:"News",fc2_4:"Contact",fc2_5:"Client portal",
-    fc3h:"Contact",fc3_legal:"Legal notice",
-    footer_desc:"Premium accounting firm in Uccle & Drogenbos. ITAA certified. Multilingual FR · NL · EN · فارسی.",
-    footer_cr:"© 2026 PMA Accountancy Tax Advisory · All rights reserved · Belgium",
-    w1:"Book appointment",w2:"Set up my company",w3:"Call us",w4:"AI Assistant",
-    ch_welcome:"Hello! I'm the PMA Accountancy AI assistant. Ask me about accounting, VAT, company formation in Belgium or our services.",
-    cq1:"VAT deadlines Belgium",cq2:"Set up a company",cq3:"What is Peppol?",cq4:"Our pricing"
-  },
-  fa:{
-    nav_svc:"خدمات",nav_pq:"مشتریان",nav_biz:"مرکز تجاری",nav_news:"اخبار",nav_contact:"تماس",
-    cta:"مشاوره رایگان",eyebrow:"حسابدار معتمد ITAA · اوکل و دروخنبوس",
-    h1a:"شریک استراتژیک",h1b:"حسابداری شما",h1c:"در بلژیک.",
-    herosub:"<strong>حسابداری · مالیات · مرکز تجاری</strong><br>دفتر چندزبانه برتر. عضو معتمد ITAA. Parisa ABED، حسابدار معتمد.",
-    btn1t:"رزرو وقت",btn2t:"تأسیس شرکت",
-    hs1:"سال تجربه",hs2:"مشتری فعال",hs3:"زبان",hs4:"زمان پاسخ",hs5:"دیجیتال",hs6:"معتمد",
-    seclbl1:"آنچه انجام می‌دهیم",sectit1:"خدمات <span class='acc'>سفارشی ما</span>",secsub1:"از حسابداری تا تأسیس شرکت — یک مخاطب برای همه نیازهای شما.",
-    s1t:"حسابداری",s1p:"دفترداری کامل، ترازنامه و حساب‌های سالانه.",s2t:"مالیات و VenB",s2p:"بهینه‌سازی مالیاتی، TVA، ISOC، IPP.",
-    s3t:"تأسیس شرکت",s3p:"اساسنامه، BCE، برنامه مالی، همراهی کامل.",s4t:"حقوق و دستمزد",s4p:"مدیریت حقوق، ONSS، قراردادهای کار.",
-    s5t:"مشاوره استراتژیک",s5p:"تحلیل مالی، جریان نقدی، مشاوره مدیریتی.",s6t:"TVA بلژیک",s6p:"اظهارنامه TVA، Intrastat، فهرست مشتریان.",
-    s7t:"دومیسیلیاسیون",s7p:"آدرس قانونی، مقر شرکت در اوکل و دروخنبوس.",s8t:"کو-ورکینگ",s8p:"دفاتر انعطاف‌پذیر و اتاق‌های جلسه.",
-    seclbl2:"ما همراهی می‌کنیم",sectit2:"تخصص برای <span class='gold'>هر پروفیل</span>",
-    pq1t:"پزشکان",pq1p:"متخصصان و عمومی",pq2t:"پرستاران",pq2p:"مستقل و ساختارها",
-    pq3t:"هورکا",pq3p:"رستوران، کافه، هتل",pq4t:"رانندگان",pq4p:"VTC، تاکسی، حمل‌ونقل",
-    pq5t:"مشاوران",pq5p:"IT، مدیریت، مشاوره",pq6t:"استارتاپ‌ها",pq6p:"جذب سرمایه و رشد",
-    pq7t:"تجارت الکترونیک",pq7p:"فروشگاه‌های آنلاین",pq8t:"مشاغل آزاد",pq8p:"وکلا، معماران…",
-    pq9t:"مستقل‌ها",pq9p:"همه فعالیت‌ها",pq10t:"شرکت‌ها",pq10p:"SME‌ها و چندملیتی‌ها",
-    seclbl3:"نوآوری و دیجیتال",sectit3:"حسابداری دیجیتال <span class='acc'>و مشاوره سفارشی</span>",secsub3:"تخصص معتمد ITAA همراه با پیشرفته‌ترین ابزارهای دیجیتال.",
-    df1t:"Peppol رایگان",df1p:"صدور فاکتور الکترونیک شامل",df2t:"پلتفرم امن",df2p:"پورتال مشتری رمزگذاری‌شده",
-    df3t:"امضای دیجیتال",df3p:"امضای آنلاین اسناد",df4t:"۱۰۰٪ دیجیتال",df4p:"آپلود و پردازش خودکار",
-    seclbl4:"PMA مرکز تجاری بین‌المللی",sectit4:"فضای کار <span class='gold'>برتر شما</span>",
-    bf1t:"دفاتر خصوصی و مشترک",bf1p:"انعطاف‌پذیر، مدرن، کاملاً مجهز",
-    bf2t:"اتاق‌های جلسه مجهز",bf2p:"ویدئوکنفرانس، صفحه‌نمایش، تخته سفید",
-    bf3t:"WiFi پرسرعت و IT",bf3p:"زیرساخت حرفه‌ای قابل اعتماد",
-    bf4t:"پذیرش و منشی‌گری",bf4p:"شماره تلفن اختصاصی",
-    bf5t:"دومیسیلیاسیون قانونی",bf5p:"آدرس رسمی + مدیریت پست",
-    bizbtn:"رزرو فضا",
-    seclbl5:"قانون و مالیات",sectit5:"اخبار مالیاتی <span class='acc'>بلژیک</span>",
-    partners_title:"شرکا و گواهینامه‌های ما",
-    seclbl6:"درباره پروژه‌تان صحبت کنیم",sectit6:"با <span class='acc'>تیم ما</span> تماس بگیرید",
-    form_title:"رزرو وقت ملاقات",fl_nom:"نام و نام خانوادگی",fl_email:"ایمیل",fl_tel:"تلفن",fl_svc:"خدمت مورد نیاز",
-    fl_rdv:"نوع ملاقات",fl_msg:"پیام",fl_send:"ارسال درخواست",
-    opt1:"حسابداری",opt2:"مالیات",opt3:"تأسیس شرکت",opt4:"دومیسیلیاسیون",opt5:"کو-ورکینگ",opt6:"سایر",
-    rdv1:"ملاقات حضوری — اوکل",rdv2:"ملاقات حضوری — دروخنبوس",rdv3:"ویدئوکنفرانس",rdv4:"تماس تلفنی",
-    ci_title:"دفتری که به شما گوش می‌دهد",ci_sub:"Parisa ABED و تیمش در دو دفتر یا از راه دور پذیرایتان هستند. پاسخ در کمتر از ۲۴ ساعت.",
-    wa_btn:"نوشتن در واتساپ",
-    fc1h:"خدمات",fc1_1:"حسابداری",fc1_2:"مالیات",fc1_3:"تأسیس شرکت",fc1_4:"حقوق و دستمزد",fc1_5:"کو-ورکینگ",fc1_6:"دومیسیلیاسیون",
-    fc2h:"دفتر",fc2_1:"مشتریان ما",fc2_2:"دیجیتال و هوش مصنوعی",fc2_3:"اخبار",fc2_4:"تماس",fc2_5:"پورتال مشتری",
-    fc3h:"اطلاعات تماس",fc3_legal:"اطلاعات قانونی",
-    footer_desc:"دفتر حسابداری برتر در اوکل و دروخنبوس. معتمد ITAA. چندزبانه FR · NL · EN · فارسی.",
-    footer_cr:"© ۲۰۲۶ PMA Accountancy Tax Advisory · کلیه حقوق محفوظ است · بلژیک",
-    w1:"رزرو وقت",w2:"تأسیس شرکت",w3:"تماس",w4:"دستیار هوش مصنوعی",
-    ch_welcome:"سلام! من دستیار هوش مصنوعی PMA Accountancy هستم. سؤالاتتان را درباره حسابداری، TVA، تأسیس شرکت یا خدمات ما بپرسید.",
-    cq1:"مهلت TVA بلژیک",cq2:"تأسیس SRL",cq3:"Peppol چیست؟",cq4:"تعرفه‌های ما"
-  }
-};
-
-const QUICK={
-  fr:{"Délai TVA belge":"En Belgique, les déclarations TVA trimestrielles sont dues le 20 du mois suivant la fin du trimestre. TVA mensuelle : le 20 du mois suivant. Pour les nouveaux assujettis, la fréquence dépend du chiffre d'affaires annuel.","Créer une SRL":"Pour créer une SRL en Belgique : plan financier, acte notarié, dépôt au greffe et BCE. Capital minimum légalement 1€ mais recommandé 18.550€. PMA vous accompagne de A à Z en quelques jours.","Peppol c'est quoi ?":"Peppol est le réseau européen de facturation électronique. Obligatoire pour les marchés publics, bientôt pour le B2B en Belgique. PMA intègre Peppol gratuitement dans vos services.","Nos tarifs":"Nos tarifs sont personnalisés selon votre situation. Pour une PME standard : à partir de 150€/mois. Contactez-nous pour un devis gratuit : +32 483 43 41 56 ou pma.advisors@outlook.com."},
-  nl:{"BTW-deadline België":"In België zijn kwartaalaangiften BTW verschuldigd op de 20e van de maand na het kwartaal. Maandelijkse BTW: de 20e van de volgende maand.","BV oprichten":"Voor een BV in België: financieel plan, notariële akte, neerlegging ter griffie en KBO. Minimumkapitaal: wettelijk €1 maar aanbevolen €18.550. PMA begeleidt u volledig.","Wat is Peppol?":"Peppol is het Europees netwerk voor elektronische facturatie. Verplicht voor overheidsopdrachten, binnenkort voor B2B in België. PMA integreert Peppol gratis.","Onze tarieven":"Onze tarieven zijn op maat. Voor een standaard kmo: vanaf €150/maand. Contacteer ons voor een gratis offerte: +32 483 43 41 56."},
-  en:{"VAT deadlines Belgium":"In Belgium, quarterly VAT returns are due on the 20th of the month following the quarter end. Monthly VAT: 20th of the following month.","Set up a company":"To set up a company in Belgium: financial plan, notarial deed, filing at court registry and CBE. Minimum capital: legally €1 but recommended €18,550. PMA guides you fully.","What is Peppol?":"Peppol is the European e-invoicing network. Mandatory for public procurement, soon for B2B in Belgium. PMA integrates Peppol for free.","Our pricing":"Our fees are tailored to your situation. For a standard SME: from €150/month. Contact us for a free quote: +32 483 43 41 56."},
-  fa:{"مهلت TVA بلژیک":"در بلژیک، اظهارنامه‌های TVA فصلی تا بیستم ماه پس از پایان فصل باید ارائه شوند. TVA ماهانه: بیستم ماه بعد.","تأسیس SRL":"برای تأسیس SRL در بلژیک: برنامه مالی، سند نوتاریوس، ثبت در دادگاه و BCE. سرمایه حداقل: قانوناً ۱€ اما توصیه‌شده ۱۸،۵۵۰€. PMA شما را کامل همراهی می‌کند.","Peppol چیست?":"Peppol شبکه اروپایی صدور فاکتور الکترونیک است. اجباری برای مناقصات عمومی، به زودی برای B2B در بلژیک. PMA Peppol را رایگان یکپارچه می‌کند.","تعرفه‌های ما":"تعرفه‌های ما بر اساس وضعیت شما تنظیم می‌شود. برای یک SME استاندارد: از ۱۵۰€ در ماه. با ما تماس بگیرید: +32 483 43 41 56."}
-};
-
-let lang='fr';
-function setL(l){
-  lang=l;
-  document.body.dir=l==='fa'?'rtl':'ltr';
-  document.querySelectorAll('.lb').forEach(b=>b.classList.remove('on'));
-  document.querySelectorAll('.lb').forEach(b=>{
-    const map={fr:'FR',nl:'NL',en:'EN',fa:'فا'};
-    if(b.textContent.trim()===map[l])b.classList.add('on');
-  });
-  document.querySelectorAll('[data-t]').forEach(el=>{
-    const k=el.getAttribute('data-t');
-    if(T[l]&&T[l][k]!==undefined){
-      if(['herosub','sectit1','sectit2','sectit3','sectit4','sectit5','sectit6'].includes(k))
-        el.innerHTML=T[l][k];
-      else el.textContent=T[l][k];
-    }
-  });
-  // update chatbot welcome
-  const first=document.querySelector('#chatMsgs .msg.bot');
-  if(first)first.textContent=T[l]['ch_welcome'];
-}
-
-function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
-
-/* NAV scroll */
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>80);
-  document.getElementById('back-top').classList.toggle('visible',window.scrollY>400);
-});
-
-/* HAMBURGER MENU */
-function toggleMobileNav(){
-  const ham=document.getElementById('ham');
-  const mn=document.getElementById('mobile-nav');
-  ham.classList.toggle('open');
-  mn.classList.toggle('open');
-  document.body.style.overflow=mn.classList.contains('open')?'hidden':'';
-}
-function closeMobileNav(){
-  document.getElementById('ham').classList.remove('open');
-  document.getElementById('mobile-nav').classList.remove('open');
-  document.body.style.overflow='';
-}
-
-/* FORM SUBMIT */
-function submitForm(btn){
-  const form=btn.closest('.contact-form');
-  const name=form.querySelector('input[type=text]')?.value?.trim();
-  const email=form.querySelector('input[type=email]')?.value?.trim();
-  if(!name||!email){
-    btn.textContent='⚠ Remplissez au moins votre nom et email';
-    btn.style.background='rgba(200,80,80,.8)';
-    setTimeout(()=>{btn.innerHTML='<span data-t="fl_send">Envoyer la demande</span>';btn.style.background='';},3000);
-    return;
-  }
-  btn.textContent='✓ Message envoyé — réponse sous 24h !';
-  btn.style.background='linear-gradient(135deg,#22c55e,#16a34a)';
-  btn.disabled=true;
-}
-
-/* SCROLL REVEAL */
-const srObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')});
-},{threshold:.08});
-document.querySelectorAll('.sr').forEach(el=>srObs.observe(el));
-
-/* COUNTER animation */
-function animateCounters(){
-  document.querySelectorAll('[data-count]').forEach(el=>{
-    const target=parseInt(el.dataset.count);
-    let start=0,dur=1800,startTime=null;
-    function step(ts){
-      if(!startTime)startTime=ts;
-      const progress=Math.min((ts-startTime)/dur,1);
-      const ease=1-Math.pow(1-progress,3);
-      el.textContent=Math.floor(ease*target)+(progress===1?'+':'');
-      if(progress<1)requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  });
-}
-const counterObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){animateCounters();counterObs.disconnect()}});
-},{threshold:.3});
-const statsBar=document.querySelector('.hero-stats-bar');
-if(statsBar)counterObs.observe(statsBar);
-
-/* NEWS FILTER */
-function filterNews(cat,btn){
-  document.querySelectorAll('.nf').forEach(b=>b.classList.remove('on'));
-  btn.classList.add('on');
-  document.querySelectorAll('.news-card').forEach(c=>{
-    if(cat==='all'||c.dataset.cat.includes(cat))
-      c.style.display='block';
-    else c.style.display='none';
-  });
-}
-
-/* CHATBOT */
-let chatOpen=false;
-function toggleChat(){
-  chatOpen=!chatOpen;
-  document.getElementById('chat-panel').classList.toggle('open',chatOpen);
-  document.getElementById('chat-notif').style.display=chatOpen?'none':'block';
-}
-function addMsg(text,role){
-  const msgs=document.getElementById('chatMsgs');
-  const div=document.createElement('div');
-  div.className='msg '+role;
-  div.textContent=text;
-  msgs.appendChild(div);
-  msgs.scrollTop=msgs.scrollHeight;
-}
-function showTyping(){
-  const msgs=document.getElementById('chatMsgs');
-  const d=document.createElement('div');
-  d.className='msg bot';d.id='typing';d.innerHTML='<span style="opacity:.5;animation:ping 1s infinite">···</span>';
-  msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
-}
-async function sendChat(){
-  const inp=document.getElementById('chatInput');
-  const text=inp.value.trim();
-  if(!text)return;
-  inp.value='';
-  addMsg(text,'user');
-  document.getElementById('chatSugs').style.display='none';
-  showTyping();
-  try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',max_tokens:350,
-        system:`Tu es l'assistant IA de PMA Accountancy Tax Advisory, cabinet comptable belge premium à Uccle & Drogenbos. Réponds en ${lang==='fr'?'français':lang==='nl'?'néerlandais':lang==='en'?'anglais':'persan'}, de façon courte, professionnelle et précise. Infos: tél +32 483 43 41 56, email pma.advisors@outlook.com. Expert-Comptable: Parisa ABED ITAA. Services: comptabilité, TVA, ISOC, IPP, création société, domiciliation, co-working, Peppol. Deux adresses: Uccle Avenue Bel-Air 35 et Drogenbos Grand Route 315-317.`,
-        messages:[{role:'user',content:text}]
-      })
-    });
-    const d=await res.json();
-    document.getElementById('typing')?.remove();
-    addMsg(d.content[0].text,'bot');
-  }catch{
-    document.getElementById('typing')?.remove();
-    const fb={fr:"Contactez-nous au +32 483 43 41 56 ou pma.advisors@outlook.com.",nl:"Contacteer ons via +32 483 43 41 56.",en:"Contact us at +32 483 43 41 56.",fa:"با ما تماس بگیرید: +32 483 43 41 56."};
-    addMsg(fb[lang],'bot');
-  }
-}
-function quickAsk(btn){
-  const q=btn.textContent.trim();
-  addMsg(q,'user');
-  document.getElementById('chatSugs').style.display='none';
-  showTyping();
-  setTimeout(()=>{
-    document.getElementById('typing')?.remove();
-    const a=QUICK[lang]?.[q]||'Contactez-nous pour plus d\'informations : +32 483 43 41 56';
-    addMsg(a,'bot');
-  },900);
-}
-</script>
-
-
-<div id="ConnectiveDocSignExtentionInstalled" data-extension-version="1.0.4"></div></body></html>
+<script src="assets/main.js" defer></script>
+</body>
+</html>
