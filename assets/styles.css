@@ -274,15 +274,15 @@ section{position:relative}
 #hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
 .hero-bg{position:absolute;top:-12%;inset-inline:0;height:124%;z-index:0;background:var(--bg)}
 .hero-bg img{
-  width:100%;height:100%;object-fit:cover;object-position:50% 38%;
-  filter:brightness(.84) saturate(1.06) contrast(1.05);
-  transform:translate3d(0,0,0) scale(1.06);will-change:transform;
+  width:100%;height:100%;object-fit:cover;object-position:50% 50%;
+  filter:brightness(.88) saturate(1.06) contrast(1.05);
+  transform:translate3d(0,0,0) scale(1.12);will-change:transform;
 }
 .hero-gradient{
   position:absolute;inset:0;z-index:1;
   background:
-    linear-gradient(105deg,var(--bg) 0%,rgba(10,13,22,.46) 44%,rgba(10,13,22,.06) 100%),
-    linear-gradient(to top,var(--bg) 2%,transparent 40%);
+    linear-gradient(105deg,rgba(10,13,22,.74) 0%,rgba(10,13,22,.3) 46%,rgba(10,13,22,.04) 100%),
+    linear-gradient(to top,var(--bg) 2%,rgba(10,13,22,.12) 30%,transparent 52%);
 }
 .hero-blob-1{top:14%;inset-inline-start:6%;width:520px;height:520px;background:var(--gold-glow);z-index:1}
 .hero-blob-2{bottom:18%;inset-inline-end:8%;width:380px;height:380px;background:rgba(123,167,224,.14);z-index:1}
@@ -752,28 +752,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:clamp(3rem,
   transition:width .12s linear;pointer-events:none;
 }
 
-/* ═══════════ ACCOUNTING GLYPH FIELD ═══════════ */
-#services .container{position:relative;z-index:1}
-.acct-field{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-.ag{position:absolute;will-change:transform}
-.ag>span{
-  display:block;font-family:'Manrope',sans-serif;font-weight:800;
-  color:var(--gold);opacity:.08;line-height:1;
-  animation:agfloat 9s ease-in-out infinite;
-}
-@keyframes agfloat{
-  0%,100%{transform:translateY(0) rotate(0)}
-  50%{transform:translateY(-15px) rotate(5deg)}
-}
-.ag1{top:9%;inset-inline-start:4%}.ag1>span{font-size:5.5rem}
-.ag2{top:66%;inset-inline-start:11%}.ag2>span{font-size:8rem;animation-delay:-2s}
-.ag3{top:13%;inset-inline-start:46%}.ag3>span{font-size:6rem;animation-delay:-4s}
-.ag4{top:72%;inset-inline-start:38%}.ag4>span{font-size:7rem;animation-delay:-1s}
-.ag5{top:8%;inset-inline-end:9%}.ag5>span{font-size:6.5rem;animation-delay:-3s}
-.ag6{top:56%;inset-inline-end:5%}.ag6>span{font-size:7.5rem;animation-delay:-5s}
-.ag7{top:39%;inset-inline-start:70%}.ag7>span{font-size:5rem;animation-delay:-2.5s}
-.ag8{top:33%;inset-inline-start:23%}.ag8>span{font-size:6rem;animation-delay:-6s}
-
 /* ═══════════ RESPONSIVE ═══════════ */
 @media(max-width:1024px){
   .pq-grid{grid-template-columns:repeat(3,1fr)}
@@ -815,6 +793,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:clamp(3rem,
   .sr{opacity:1;transform:none;filter:none}
   .svc-track{animation:none;transform:none}
   .svc-carousel{overflow-x:auto}
-  .ag,.hero-bg img{transform:none!important}
+  .hero-bg img{transform:none!important}
   #scroll-progress{transition:none}
 }
