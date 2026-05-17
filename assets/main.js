@@ -56,7 +56,14 @@ const T={
     ab_h1:"Cabinet multilingue — FR · NL · EN · فارسی",
     ab_h2:"Membre certifié ITAA & Peppol",
     ab_h3:"Approche digitale, proche et humaine",
-    ab_btn:"Rencontrer notre équipe"
+    ab_btn:"Rencontrer notre équipe",
+    ap_eyebrow:"Le Cabinet · Notre Équipe",
+    ap_title:"À propos de <span class='gold'>PMA</span>",
+    ap_sub:"Découvrez le cabinet et les personnes qui accompagnent votre réussite au quotidien.",
+    team_lbl:"L'équipe",team_title:"Notre <span class='acc'>équipe</span>",
+    team_sub:"Une équipe certifiée et multilingue — un interlocuteur unique à votre écoute.",
+    tm_soon:"Membre à venir",tm2_role:"Comptable",tm3_role:"Conseiller fiscal",
+    tm_soon_note:"Poste à pourvoir"
   },
   nl:{
     nav_about:"Over ons",nav_svc:"Diensten",nav_pq:"Voor Wie",nav_biz:"Business Center",nav_news:"Nieuws",nav_contact:"Contact",
@@ -109,7 +116,14 @@ const T={
     ab_h1:"Meertalig kantoor — FR · NL · EN · فارسی",
     ab_h2:"Gecertificeerd lid ITAA & Peppol",
     ab_h3:"Digitale, nabije en menselijke aanpak",
-    ab_btn:"Ontmoet ons team"
+    ab_btn:"Ontmoet ons team",
+    ap_eyebrow:"Het Kantoor · Ons Team",
+    ap_title:"Over <span class='gold'>PMA</span>",
+    ap_sub:"Ontdek het kantoor en de mensen die uw succes dagelijks begeleiden.",
+    team_lbl:"Het team",team_title:"Ons <span class='acc'>team</span>",
+    team_sub:"Een gecertificeerd en meertalig team — één vast aanspreekpunt voor u.",
+    tm_soon:"Binnenkort lid",tm2_role:"Boekhouder",tm3_role:"Fiscaal adviseur",
+    tm_soon_note:"Vacature"
   },
   en:{
     nav_about:"About",nav_svc:"Services",nav_pq:"Who We Serve",nav_biz:"Business Center",nav_news:"News",nav_contact:"Contact",
@@ -162,7 +176,14 @@ const T={
     ab_h1:"Multilingual firm — FR · NL · EN · فارسی",
     ab_h2:"Certified member ITAA & Peppol",
     ab_h3:"Digital, close and human approach",
-    ab_btn:"Meet our team"
+    ab_btn:"Meet our team",
+    ap_eyebrow:"The Firm · Our Team",
+    ap_title:"About <span class='gold'>PMA</span>",
+    ap_sub:"Meet the firm and the people who support your success every day.",
+    team_lbl:"The team",team_title:"Our <span class='acc'>team</span>",
+    team_sub:"A certified, multilingual team — one single point of contact for you.",
+    tm_soon:"Member coming soon",tm2_role:"Accountant",tm3_role:"Tax advisor",
+    tm_soon_note:"Position open"
   },
   fa:{
     nav_about:"درباره ما",nav_svc:"خدمات",nav_pq:"مشتریان",nav_biz:"مرکز تجاری",nav_news:"اخبار",nav_contact:"تماس",
@@ -215,7 +236,14 @@ const T={
     ab_h1:"دفتر چندزبانه — FR · NL · EN · فارسی",
     ab_h2:"عضو دارای گواهی ITAA و Peppol",
     ab_h3:"رویکرد دیجیتال، نزدیک و انسانی",
-    ab_btn:"آشنایی با تیم ما"
+    ab_btn:"آشنایی با تیم ما",
+    ap_eyebrow:"دفتر · تیم ما",
+    ap_title:"درباره <span class='gold'>PMA</span>",
+    ap_sub:"با دفتر و افرادی که هر روز موفقیت شما را همراهی می‌کنند آشنا شوید.",
+    team_lbl:"تیم",team_title:"تیم <span class='acc'>ما</span>",
+    team_sub:"تیمی معتمد و چندزبانه — یک مخاطب ثابت در خدمت شما.",
+    tm_soon:"عضو جدید به‌زودی",tm2_role:"حسابدار",tm3_role:"مشاور مالیاتی",
+    tm_soon_note:"موقعیت شغلی باز"
   }
 };
 
@@ -239,7 +267,7 @@ function setL(l){
   document.querySelectorAll('[data-t]').forEach(el=>{
     const k=el.getAttribute('data-t');
     if(T[l]&&T[l][k]!==undefined){
-      if(['herosub','sectit1','sectit2','sectit4','sectit5','sectit6','sectit_ab'].includes(k))
+      if(['herosub','sectit1','sectit2','sectit4','sectit5','sectit6','sectit_ab','ap_title','team_title'].includes(k))
         el.innerHTML=T[l][k];
       else el.textContent=T[l][k];
     }
@@ -249,7 +277,11 @@ function setL(l){
   if(first)first.textContent=T[l]['ch_welcome'];
 }
 
-function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+function go(id){
+  const el=document.getElementById(id);
+  if(el)el.scrollIntoView({behavior:'smooth'});
+  else location.href='index.html#'+id;
+}
 
 /* THEME — dark / light */
 function applyTheme(t){
