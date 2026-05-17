@@ -108,8 +108,11 @@ section{position:relative}
 .accent-blob{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0}
 
 /* ─── SCROLL REVEAL ─── */
-.sr{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.sr.in{opacity:1;transform:none}
+.sr{
+  opacity:0;transform:translateY(34px) scale(.99);filter:blur(3px);
+  transition:opacity .8s var(--ease),transform .8s var(--ease),filter .8s var(--ease);
+}
+.sr.in{opacity:1;transform:none;filter:none}
 .sr-d1{transition-delay:.06s}.sr-d2{transition-delay:.12s}.sr-d3{transition-delay:.18s}
 .sr-d4{transition-delay:.24s}.sr-d5{transition-delay:.3s}.sr-d6{transition-delay:.36s}
 .sr-d7{transition-delay:.42s}.sr-d8{transition-delay:.48s}.sr-d9{transition-delay:.54s}
@@ -269,13 +272,17 @@ section{position:relative}
   --cool:#7ba7e0;--cool-soft:#aecbf0;
 }
 #hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;z-index:0;background:var(--bg)}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.82) saturate(1.05) contrast(1.05)}
+.hero-bg{position:absolute;top:-12%;inset-inline:0;height:124%;z-index:0;background:var(--bg)}
+.hero-bg img{
+  width:100%;height:100%;object-fit:cover;object-position:50% 38%;
+  filter:brightness(.84) saturate(1.06) contrast(1.05);
+  transform:translate3d(0,0,0) scale(1.06);will-change:transform;
+}
 .hero-gradient{
   position:absolute;inset:0;z-index:1;
   background:
-    linear-gradient(105deg,var(--bg) 0%,rgba(10,13,22,.55) 42%,rgba(10,13,22,.12) 100%),
-    linear-gradient(to top,var(--bg) 2%,transparent 38%);
+    linear-gradient(105deg,var(--bg) 0%,rgba(10,13,22,.46) 44%,rgba(10,13,22,.06) 100%),
+    linear-gradient(to top,var(--bg) 2%,transparent 40%);
 }
 .hero-blob-1{top:14%;inset-inline-start:6%;width:520px;height:520px;background:var(--gold-glow);z-index:1}
 .hero-blob-2{bottom:18%;inset-inline-end:8%;width:380px;height:380px;background:rgba(123,167,224,.14);z-index:1}
@@ -337,32 +344,47 @@ section{position:relative}
 .svc-carousel:focus-within .svc-track{animation-play-state:paused}
 @keyframes svc-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .svc{
-  flex:0 0 300px;margin-inline-end:1.1rem;
+  flex:0 0 320px;margin-inline-end:1.1rem;
   position:relative;background:var(--surface);border:1px solid var(--line);
-  border-radius:var(--r);padding:1.9rem 1.6rem;overflow:hidden;
-  transition:transform var(--t),border-color var(--t),background var(--t);
+  border-radius:var(--r);overflow:hidden;
+  transition:transform var(--t),border-color var(--t),background var(--t),box-shadow var(--t);
 }
 .svc::before{
-  content:'';position:absolute;inset-inline:0;top:0;height:2px;
+  content:'';position:absolute;inset-inline:0;top:0;height:3px;z-index:4;
   background:linear-gradient(90deg,var(--gold),transparent);
   transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);
 }
-.svc:hover{transform:translateY(-7px);border-color:var(--line-strong);background:var(--surface-2)}
+.svc:hover{transform:translateY(-9px);border-color:var(--line-strong);background:var(--surface-2);box-shadow:var(--shadow)}
 .svc:hover::before{transform:scaleX(1)}
-.svc-num{font-size:.6rem;font-weight:700;letter-spacing:.18em;color:var(--gold-deep);margin-bottom:.9rem}
-.svc-ico{
-  width:46px;height:46px;border-radius:11px;
-  background:var(--surface-3);border:1px solid var(--line-strong);
-  display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;
-  transition:background .3s,border-color .3s;
+.svc-media{position:relative;height:172px;overflow:hidden}
+.svc-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.svc:hover .svc-media img{transform:scale(1.09)}
+.svc-media::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,var(--surface) 1%,rgba(10,13,22,.32) 46%,rgba(10,13,22,.05) 100%);
 }
-.svc:hover .svc-ico{background:rgba(230,173,107,.12);border-color:rgba(230,173,107,.32)}
-.svc-ico svg{width:22px;height:22px;stroke:var(--gold);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.svc h3{font-size:1.02rem;color:var(--ink);margin-bottom:.45rem}
-.svc p{font-size:.82rem;color:var(--ink-mute);line-height:1.6}
+.svc-num{
+  position:absolute;top:.85rem;inset-inline-end:.95rem;z-index:3;
+  font-size:.62rem;font-weight:700;letter-spacing:.16em;color:var(--ink);
+  background:rgba(10,13,22,.62);backdrop-filter:blur(6px);
+  border:1px solid var(--line-strong);padding:.26rem .56rem;border-radius:var(--r-sm);
+}
+.svc-ico{
+  position:absolute;inset-inline-start:1.3rem;bottom:1rem;z-index:3;
+  width:48px;height:48px;border-radius:12px;
+  background:rgba(20,24,38,.78);backdrop-filter:blur(8px);
+  border:1px solid var(--line-strong);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .3s,border-color .3s,transform .3s var(--ease);
+}
+.svc:hover .svc-ico{background:rgba(230,173,107,.22);border-color:rgba(230,173,107,.5);transform:translateY(-3px)}
+.svc-ico svg{width:23px;height:23px;stroke:var(--gold);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.svc-body{position:relative;padding:1.7rem 1.6rem}
+.svc h3{font-size:1.04rem;color:var(--ink);margin-bottom:.45rem}
+.svc p{font-size:.82rem;color:var(--ink-mute);line-height:1.6;padding-inline-end:2.2rem}
 .svc-arr{
-  position:absolute;bottom:1.5rem;inset-inline-end:1.5rem;
-  width:30px;height:30px;border-radius:50%;
+  position:absolute;bottom:1.5rem;inset-inline-end:1.4rem;
+  width:32px;height:32px;border-radius:50%;
   background:var(--surface-3);border:1px solid var(--line-strong);
   display:flex;align-items:center;justify-content:center;
   opacity:0;transform:translateY(6px);transition:all .3s var(--ease);
@@ -721,6 +743,37 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:clamp(3rem,
 [data-theme="light"] #chat-panel{background:rgba(255,255,255,.98)}
 [data-theme="light"] .map-wrap iframe{filter:none}
 
+/* ═══════════ SCROLL PROGRESS ═══════════ */
+#scroll-progress{
+  position:fixed;top:0;inset-inline-start:0;z-index:550;
+  height:3px;width:0;
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold-bright));
+  box-shadow:0 0 12px var(--gold-glow);
+  transition:width .12s linear;pointer-events:none;
+}
+
+/* ═══════════ ACCOUNTING GLYPH FIELD ═══════════ */
+#services .container{position:relative;z-index:1}
+.acct-field{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.ag{position:absolute;will-change:transform}
+.ag>span{
+  display:block;font-family:'Manrope',sans-serif;font-weight:800;
+  color:var(--gold);opacity:.08;line-height:1;
+  animation:agfloat 9s ease-in-out infinite;
+}
+@keyframes agfloat{
+  0%,100%{transform:translateY(0) rotate(0)}
+  50%{transform:translateY(-15px) rotate(5deg)}
+}
+.ag1{top:9%;inset-inline-start:4%}.ag1>span{font-size:5.5rem}
+.ag2{top:66%;inset-inline-start:11%}.ag2>span{font-size:8rem;animation-delay:-2s}
+.ag3{top:13%;inset-inline-start:46%}.ag3>span{font-size:6rem;animation-delay:-4s}
+.ag4{top:72%;inset-inline-start:38%}.ag4>span{font-size:7rem;animation-delay:-1s}
+.ag5{top:8%;inset-inline-end:9%}.ag5>span{font-size:6.5rem;animation-delay:-3s}
+.ag6{top:56%;inset-inline-end:5%}.ag6>span{font-size:7.5rem;animation-delay:-5s}
+.ag7{top:39%;inset-inline-start:70%}.ag7>span{font-size:5rem;animation-delay:-2.5s}
+.ag8{top:33%;inset-inline-start:23%}.ag8>span{font-size:6rem;animation-delay:-6s}
+
 /* ═══════════ RESPONSIVE ═══════════ */
 @media(max-width:1024px){
   .pq-grid{grid-template-columns:repeat(3,1fr)}
@@ -759,7 +812,9 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:clamp(3rem,
     animation-duration:.01ms!important;animation-iteration-count:1!important;
     transition-duration:.01ms!important;scroll-behavior:auto!important;
   }
-  .sr{opacity:1;transform:none}
+  .sr{opacity:1;transform:none;filter:none}
   .svc-track{animation:none;transform:none}
   .svc-carousel{overflow-x:auto}
+  .ag,.hero-bg img{transform:none!important}
+  #scroll-progress{transition:none}
 }

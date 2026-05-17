@@ -555,3 +555,35 @@ function quickAsk(btn){
     addMsg(a,'bot');
   },900);
 }
+
+/* SCROLL FX — progress bar · hero parallax · accounting glyph drift */
+(function(){
+  const bar=document.getElementById('scroll-progress');
+  const heroImg=document.getElementById('hero-img');
+  const glyphs=[].slice.call(document.querySelectorAll('.ag'));
+  const reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  let ticking=false;
+  function update(){
+    ticking=false;
+    const y=window.scrollY||window.pageYOffset||0;
+    if(bar){
+      const max=document.documentElement.scrollHeight-window.innerHeight;
+      bar.style.width=(max>0?Math.min(Math.max(y/max,0),1)*100:0)+'%';
+    }
+    if(reduce)return;
+    if(heroImg&&y<window.innerHeight*1.2){
+      heroImg.style.transform='translate3d(0,'+(y*0.22)+'px,0) scale(1.06)';
+    }
+    for(let i=0;i<glyphs.length;i++){
+      const g=glyphs[i];
+      const d=parseFloat(g.dataset.depth)||1;
+      g.style.transform='translate3d(0,'+(y*d*-0.045)+'px,0)';
+    }
+  }
+  function onScroll(){
+    if(!ticking){requestAnimationFrame(update);ticking=true;}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll,{passive:true});
+  update();
+})();
