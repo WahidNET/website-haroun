@@ -36,6 +36,7 @@
       <span class="logo-tag">Accountancy · Tax · Advisory</span>
     </a>
     <ul class="nav-links">
+      <li><a href="#about" data-t="nav_about">À propos</a></li>
       <li><a href="#services" data-t="nav_svc">Services</a></li>
       <li><a href="#pourqui" data-t="nav_pq">Pour Qui</a></li>
       <li><a href="#bizc" data-t="nav_biz">Business Center</a></li>
@@ -64,6 +65,7 @@
 <!-- ══ MOBILE NAV ══ -->
 <div id="mobile-nav">
   <button class="mn-close" onclick="closeMobileNav()" aria-label="Fermer le menu">✕</button>
+  <a href="#about" data-t="nav_about" onclick="closeMobileNav()">À propos</a>
   <a href="#services" data-t="nav_svc" onclick="closeMobileNav()">Services</a>
   <a href="#pourqui" data-t="nav_pq" onclick="closeMobileNav()">Pour Qui</a>
   <a href="#bizc" data-t="nav_biz" onclick="closeMobileNav()">Business Center</a>
@@ -94,7 +96,7 @@
     <h1 class="hero-h1">
       <span data-t="h1a">Votre partenaire</span><br>
       <span class="gold" data-t="h1b">comptable stratégique</span><br>
-      <span class="blue-hl" data-t="h1c">en Belgique.</span>
+      <span data-t="h1c">en Belgique.</span>
     </h1>
     <p class="hero-sub" data-t="herosub"><strong>Comptabilité · Fiscalité · Business Center</strong><br>Cabinet multilingue haut de gamme. Membre certifié ITAA. Parisa ABED, Expert-Comptable.</p>
     <div class="hero-btns">
@@ -120,6 +122,36 @@
     <div class="hstat"><span class="hstat-n">24h</span><span class="hstat-l" data-t="hs4">Temps de réponse</span></div>
     <div class="hstat"><span class="hstat-n">100%</span><span class="hstat-l" data-t="hs5">Digital</span></div>
     <div class="hstat"><span class="hstat-n">ITAA</span><span class="hstat-l" data-t="hs6">Certifié</span></div>
+  </div>
+</section>
+
+<!-- ══ À PROPOS ══ -->
+<section class="section-pad" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-media sr sr-d1">
+        <div class="about-photo">
+          <img src="assets/parisa-abed.jpg" alt="Parisa ABED — Expert-Comptable ITAA, fondatrice de PMA Accountancy Tax Advisory" loading="lazy">
+          <span class="about-chip">ITAA</span>
+        </div>
+        <div class="about-photo-tag">
+          <span class="about-photo-name">Parisa ABED</span>
+          <span class="about-photo-role" data-t="ab_role">Fondatrice · Expert-Comptable ITAA</span>
+        </div>
+      </div>
+      <div class="about-body sr sr-d2">
+        <p class="sec-label" data-t="seclbl_ab">Le Cabinet</p>
+        <h2 class="sec-title" data-t="sectit_ab">À propos de <span class="gold">notre cabinet</span></h2>
+        <p class="about-lead" data-t="ab_lead">À la tête de PMA Accountancy Tax Advisory, Parisa ABED accompagne entrepreneurs et indépendants avec rigueur, proximité et une vision stratégique de leur fiscalité.</p>
+        <p class="about-text" data-t="ab_p">Forte de plus de 15 ans d'expérience, elle a bâti un cabinet premium et multilingue où chaque client bénéficie d'un interlocuteur unique. De la création de société à l'optimisation fiscale, son équipe conjugue expertise certifiée ITAA et outils digitaux de pointe.</p>
+        <ul class="about-points">
+          <li><span class="about-pt-ico"><svg viewBox="0 0 24 24"><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"></path><circle cx="12" cy="12" r="10"></circle></svg></span><span data-t="ab_h1">Cabinet multilingue — FR · NL · EN · فارسی</span></li>
+          <li><span class="about-pt-ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"></path><path d="M12 2l7 3v6c0 5-3 8-7 11-4-3-7-6-7-11V5z"></path></svg></span><span data-t="ab_h2">Membre certifié ITAA &amp; Peppol</span></li>
+          <li><span class="about-pt-ico"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span><span data-t="ab_h3">Approche digitale, proche et humaine</span></li>
+        </ul>
+        <button class="btn-primary" onclick="go('contact')" data-t="ab_btn">Rencontrer notre équipe</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -410,7 +442,15 @@
       </div>
       <div class="sr sr-d2">
         <div class="contact-info">
-          <h3 data-t="ci_title">Un cabinet à votre écoute</h3>
+          <div class="ci-head">
+            <div class="ci-photo">
+              <img src="assets/parisa-abed.jpg" alt="Parisa ABED — Expert-Comptable ITAA, PMA Accountancy Tax Advisory" loading="lazy">
+            </div>
+            <div class="ci-head-txt">
+              <h3 data-t="ci_title">Un cabinet à votre écoute</h3>
+              <p class="ci-name">Parisa ABED · <span data-t="ab_role">Fondatrice · Expert-Comptable ITAA</span></p>
+            </div>
+          </div>
           <p data-t="ci_sub">Parisa ABED et son équipe vous accueillent dans nos deux locaux ou à distance. Réponse garantie sous 24h.</p>
           <div class="contact-item"><div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79 19.79 19.79 0 01.007 1.18 2 2 0 012 .01h3a2 2 0 012 1.72"></path></svg></div><a href="tel:+32483434156">+32 483 43 41 56</a></div>
           <div class="contact-item"><div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div><a href="mailto:pma.advisors@outlook.com">pma.advisors@outlook.com</a></div>
