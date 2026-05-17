@@ -279,6 +279,17 @@ const srObs=new IntersectionObserver(entries=>{
 },{threshold:.08});
 document.querySelectorAll('.sr').forEach(el=>srObs.observe(el));
 
+/* SERVICES carousel — duplicate cards for a seamless auto-scroll loop */
+(function(){
+  const track=document.getElementById('svc-track');
+  if(!track)return;
+  track.querySelectorAll('.svc').forEach(card=>{
+    const clone=card.cloneNode(true);
+    clone.setAttribute('aria-hidden','true');
+    track.appendChild(clone);
+  });
+})();
+
 /* COUNTER animation */
 function animateCounters(){
   document.querySelectorAll('[data-count]').forEach(el=>{

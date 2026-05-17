@@ -327,8 +327,17 @@ section{position:relative}
 
 /* ═══════════ SERVICES ═══════════ */
 #services{background:var(--bg-alt)}
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.svc-carousel{
+  position:relative;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+}
+.svc-track{display:flex;width:max-content;animation:svc-scroll 56s linear infinite}
+.svc-carousel:hover .svc-track,
+.svc-carousel:focus-within .svc-track{animation-play-state:paused}
+@keyframes svc-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .svc{
+  flex:0 0 300px;margin-inline-end:1.1rem;
   position:relative;background:var(--surface);border:1px solid var(--line);
   border-radius:var(--r);padding:1.9rem 1.6rem;overflow:hidden;
   transition:transform var(--t),border-color var(--t),background var(--t);
@@ -714,7 +723,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:clamp(3rem,
 
 /* ═══════════ RESPONSIVE ═══════════ */
 @media(max-width:1024px){
-  .svc-grid{grid-template-columns:repeat(2,1fr)}
   .pq-grid{grid-template-columns:repeat(3,1fr)}
   .bizc-grid,.contact-wrap{grid-template-columns:1fr}
   .news-grid{grid-template-columns:repeat(2,1fr)}
@@ -727,7 +735,8 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:clamp(3rem,
   .nav-right .lang-sw,.nav-right .nav-cta{display:none}
   .hamburger{display:flex}
   .hero-inner{padding:8rem var(--gutter) 9rem}
-  .svc-grid,.pq-grid{grid-template-columns:1fr 1fr}
+  .pq-grid{grid-template-columns:1fr 1fr}
+  .svc{flex-basis:260px}
   .news-grid{grid-template-columns:1fr}
   .hero-stats-bar{grid-template-columns:repeat(2,1fr)}
   .hstat{border-inline-end:none}
@@ -751,4 +760,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:clamp(3rem,
     transition-duration:.01ms!important;scroll-behavior:auto!important;
   }
   .sr{opacity:1;transform:none}
+  .svc-track{animation:none;transform:none}
+  .svc-carousel{overflow-x:auto}
 }
