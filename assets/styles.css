@@ -46,6 +46,32 @@
   --gutter:clamp(1.4rem,5vw,4.5rem);
 }
 
+/* ─── LIGHT THEME ───
+   warm parchment surfaces echoing the brick/stone of the building photo,
+   deepened champagne + cobalt accents for contrast on light backgrounds */
+[data-theme="light"]{
+  --bg:#f3f0e8;
+  --bg-alt:#e9e5da;
+  --surface:#ffffff;
+  --surface-2:#f6f3eb;
+  --surface-3:#ebe6da;
+  --line:rgba(28,26,22,.1);
+  --line-strong:rgba(28,26,22,.2);
+  --ink:#1c1b18;
+  --ink-soft:#403d36;
+  --ink-mute:#6f6b60;
+  --ink-faint:#9c978a;
+  --gold:#9c6a24;
+  --gold-bright:#c08f3f;
+  --gold-deep:#7a4f15;
+  --gold-glow:rgba(156,106,36,.18);
+  --cool:#3a6cae;
+  --cool-soft:#3a6cae;
+  --green:#2f9c63;
+  --shadow:0 18px 50px -14px rgba(40,34,22,.16);
+  --shadow-lg:0 30px 80px -22px rgba(40,34,22,.2);
+}
+
 /* ─── RESET ─── */
 *{margin:0;padding:0;box-sizing:border-box}
 *::before,*::after{box-sizing:border-box}
@@ -232,6 +258,15 @@ section{position:relative}
 .mobile-lang .lb{font-size:.85rem;padding:.5rem 1rem;background:var(--surface);border:1px solid var(--line)}
 
 /* ═══════════ HERO ═══════════ */
+/* hero keeps dark tokens in both themes — it sits on the night-photo background */
+#hero{
+  --bg:#0a0d16;--bg-alt:#0d111c;
+  --surface:#141826;--surface-2:#1b2031;--surface-3:#262c3e;
+  --line:rgba(255,255,255,.08);--line-strong:rgba(255,255,255,.16);
+  --ink:#f4f3f0;--ink-soft:#c9c7c0;--ink-mute:#8a877f;--ink-faint:#5c5a54;
+  --gold:#e6ad6b;--gold-bright:#f4c98e;--gold-deep:#bf8038;--gold-glow:rgba(230,173,107,.16);
+  --cool:#5b8fd6;--cool-soft:#8fb6e8;
+}
 #hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:brightness(.55) saturate(1.05) contrast(1.05)}
@@ -619,6 +654,45 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:clamp(3rem,
 #back-top.visible{opacity:1;transform:none;pointer-events:all}
 #back-top:hover{background:var(--surface-3);color:var(--gold);transform:translateY(-3px)}
 #back-top svg{width:16px;height:16px;stroke:currentColor;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* ═══════════ THEME TOGGLE ═══════════ */
+.theme-tog{
+  display:flex;align-items:center;justify-content:center;
+  width:38px;height:38px;flex-shrink:0;
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r-sm);color:var(--ink-soft);
+  transition:color .2s,border-color .2s,background .2s;
+}
+.theme-tog:hover{color:var(--gold);border-color:var(--line-strong);background:var(--surface-3)}
+.theme-tog svg{width:18px;height:18px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.theme-tog .ico-moon{display:none}
+[data-theme="light"] .theme-tog .ico-sun{display:none}
+[data-theme="light"] .theme-tog .ico-moon{display:block}
+
+/* ticker stays dark in both themes — a thin accent strip */
+.ticker{--bg-alt:#0d111c;--line:rgba(255,255,255,.08);--ink-mute:#8a877f}
+
+/* nav keeps dark tokens while transparent over the dark hero … */
+#nav{
+  --surface:#141826;--surface-3:#262c3e;
+  --line:rgba(255,255,255,.08);--line-strong:rgba(255,255,255,.16);
+  --ink:#f4f3f0;--ink-soft:#c9c7c0;--ink-mute:#8a877f;
+}
+/* … and switches to light tokens once the solid light-mode bar appears */
+[data-theme="light"] #nav.scrolled{
+  --surface:#ffffff;--surface-3:#ebe6da;
+  --line:rgba(28,26,22,.1);--line-strong:rgba(28,26,22,.2);
+  --ink:#1c1b18;--ink-soft:#403d36;--ink-mute:#6f6b60;
+  background:rgba(243,240,232,.88);
+  box-shadow:0 8px 40px -16px rgba(40,34,22,.16);
+}
+
+/* ═══════════ LIGHT THEME OVERRIDES ═══════════ */
+[data-theme="light"] #mobile-nav{background:rgba(243,240,232,.98)}
+[data-theme="light"] .digital-card-main{background:rgba(255,255,255,.82)}
+[data-theme="light"] .wid-btn{background:rgba(255,255,255,.95)}
+[data-theme="light"] #chat-panel{background:rgba(255,255,255,.98)}
+[data-theme="light"] .map-wrap iframe{filter:none}
 
 /* ═══════════ RESPONSIVE ═══════════ */
 @media(max-width:1024px){
