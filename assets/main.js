@@ -1,7 +1,7 @@
 /* ── TRANSLATIONS ── */
 const T={
   fr:{
-    nav_svc:"Services",nav_pq:"Pour Qui",nav_biz:"Business Center",nav_news:"Actualités",nav_contact:"Contact",
+    nav_about:"À propos",nav_svc:"Services",nav_pq:"Pour Qui",nav_biz:"Business Center",nav_news:"Actualités",nav_contact:"Contact",
     cta:"Consultation Gratuite",
     eyebrow:"Expert-Comptable Certifié ITAA · Uccle & Drogenbos",
     h1a:"Votre partenaire",h1b:"comptable stratégique",h1c:"en Belgique.",
@@ -48,10 +48,18 @@ const T={
     footer_cr:"© 2026 PMA Accountancy Tax Advisory · Tous droits réservés · Belgique",
     w1:"Prendre rendez-vous",w2:"Créer mon entreprise",w3:"Appeler",w4:"Assistant IA",
     ch_welcome:"Bonjour ! Je suis l'assistant IA de PMA Accountancy. Posez-moi vos questions sur la comptabilité, TVA, création de société en Belgique ou nos services.",
-    cq1:"Délai TVA belge",cq2:"Créer une SRL",cq3:"Peppol c'est quoi ?",cq4:"Nos tarifs"
+    cq1:"Délai TVA belge",cq2:"Créer une SRL",cq3:"Peppol c'est quoi ?",cq4:"Nos tarifs",
+    seclbl_ab:"Le Cabinet",sectit_ab:"À propos de <span class='gold'>notre cabinet</span>",
+    ab_role:"Fondatrice · Expert-Comptable ITAA",
+    ab_lead:"À la tête de PMA Accountancy Tax Advisory, Parisa ABED accompagne entrepreneurs et indépendants avec rigueur, proximité et une vision stratégique de leur fiscalité.",
+    ab_p:"Forte de plus de 15 ans d'expérience, elle a bâti un cabinet premium et multilingue où chaque client bénéficie d'un interlocuteur unique. De la création de société à l'optimisation fiscale, son équipe conjugue expertise certifiée ITAA et outils digitaux de pointe.",
+    ab_h1:"Cabinet multilingue — FR · NL · EN · فارسی",
+    ab_h2:"Membre certifié ITAA & Peppol",
+    ab_h3:"Approche digitale, proche et humaine",
+    ab_btn:"Rencontrer notre équipe"
   },
   nl:{
-    nav_svc:"Diensten",nav_pq:"Voor Wie",nav_biz:"Business Center",nav_news:"Nieuws",nav_contact:"Contact",
+    nav_about:"Over ons",nav_svc:"Diensten",nav_pq:"Voor Wie",nav_biz:"Business Center",nav_news:"Nieuws",nav_contact:"Contact",
     cta:"Gratis Consult",eyebrow:"Gecertificeerd Accountant ITAA · Ukkel & Drogenbos",
     h1a:"Uw strategische",h1b:"boekhoudkundige partner",h1c:"in België.",
     herosub:"<strong>Boekhouding · Fiscaliteit · Business Center</strong><br>Meertalig premium kantoor. Gecertificeerd ITAA-lid. Parisa ABED, Expert-Accountant.",
@@ -93,10 +101,18 @@ const T={
     footer_cr:"© 2026 PMA Accountancy Tax Advisory · Alle rechten voorbehouden · België",
     w1:"Afspraak maken",w2:"Mijn bedrijf oprichten",w3:"Bellen",w4:"AI Assistent",
     ch_welcome:"Goedag! Ik ben de AI-assistent van PMA Accountancy. Stel mij uw vragen over boekhouding, BTW, oprichting of onze diensten.",
-    cq1:"BTW-deadline België",cq2:"BV oprichten",cq3:"Wat is Peppol?",cq4:"Onze tarieven"
+    cq1:"BTW-deadline België",cq2:"BV oprichten",cq3:"Wat is Peppol?",cq4:"Onze tarieven",
+    seclbl_ab:"Het Kantoor",sectit_ab:"Over <span class='gold'>ons kantoor</span>",
+    ab_role:"Oprichtster · Accountant ITAA",
+    ab_lead:"Aan het hoofd van PMA Accountancy Tax Advisory begeleidt Parisa ABED ondernemers en zelfstandigen met nauwkeurigheid, nabijheid en een strategische fiscale visie.",
+    ab_p:"Met meer dan 15 jaar ervaring bouwde zij een premium en meertalig kantoor waar elke klant één vast aanspreekpunt heeft. Van oprichting tot fiscale optimalisatie combineert haar team ITAA-gecertificeerde expertise met geavanceerde digitale tools.",
+    ab_h1:"Meertalig kantoor — FR · NL · EN · فارسی",
+    ab_h2:"Gecertificeerd lid ITAA & Peppol",
+    ab_h3:"Digitale, nabije en menselijke aanpak",
+    ab_btn:"Ontmoet ons team"
   },
   en:{
-    nav_svc:"Services",nav_pq:"Who We Serve",nav_biz:"Business Center",nav_news:"News",nav_contact:"Contact",
+    nav_about:"About",nav_svc:"Services",nav_pq:"Who We Serve",nav_biz:"Business Center",nav_news:"News",nav_contact:"Contact",
     cta:"Free Consultation",eyebrow:"ITAA Certified Accountant · Uccle & Drogenbos",
     h1a:"Your strategic",h1b:"accounting partner",h1c:"in Belgium.",
     herosub:"<strong>Accounting · Tax · Business Center</strong><br>Premium multilingual firm. ITAA certified member. Parisa ABED, Chartered Accountant.",
@@ -138,10 +154,18 @@ const T={
     footer_cr:"© 2026 PMA Accountancy Tax Advisory · All rights reserved · Belgium",
     w1:"Book appointment",w2:"Set up my company",w3:"Call us",w4:"AI Assistant",
     ch_welcome:"Hello! I'm the PMA Accountancy AI assistant. Ask me about accounting, VAT, company formation in Belgium or our services.",
-    cq1:"VAT deadlines Belgium",cq2:"Set up a company",cq3:"What is Peppol?",cq4:"Our pricing"
+    cq1:"VAT deadlines Belgium",cq2:"Set up a company",cq3:"What is Peppol?",cq4:"Our pricing",
+    seclbl_ab:"The Firm",sectit_ab:"About <span class='gold'>our firm</span>",
+    ab_role:"Founder · Chartered Accountant ITAA",
+    ab_lead:"At the helm of PMA Accountancy Tax Advisory, Parisa ABED supports entrepreneurs and freelancers with rigour, closeness and a strategic vision of their taxation.",
+    ab_p:"With over 15 years of experience, she has built a premium, multilingual firm where every client has a single point of contact. From company formation to tax optimisation, her team blends ITAA-certified expertise with cutting-edge digital tools.",
+    ab_h1:"Multilingual firm — FR · NL · EN · فارسی",
+    ab_h2:"Certified member ITAA & Peppol",
+    ab_h3:"Digital, close and human approach",
+    ab_btn:"Meet our team"
   },
   fa:{
-    nav_svc:"خدمات",nav_pq:"مشتریان",nav_biz:"مرکز تجاری",nav_news:"اخبار",nav_contact:"تماس",
+    nav_about:"درباره ما",nav_svc:"خدمات",nav_pq:"مشتریان",nav_biz:"مرکز تجاری",nav_news:"اخبار",nav_contact:"تماس",
     cta:"مشاوره رایگان",eyebrow:"حسابدار معتمد ITAA · اوکل و دروخنبوس",
     h1a:"شریک استراتژیک",h1b:"حسابداری شما",h1c:"در بلژیک.",
     herosub:"<strong>حسابداری · مالیات · مرکز تجاری</strong><br>دفتر چندزبانه برتر. عضو معتمد ITAA. Parisa ABED، حسابدار معتمد.",
@@ -183,7 +207,15 @@ const T={
     footer_cr:"© ۲۰۲۶ PMA Accountancy Tax Advisory · کلیه حقوق محفوظ است · بلژیک",
     w1:"رزرو وقت",w2:"تأسیس شرکت",w3:"تماس",w4:"دستیار هوش مصنوعی",
     ch_welcome:"سلام! من دستیار هوش مصنوعی PMA Accountancy هستم. سؤالاتتان را درباره حسابداری، TVA، تأسیس شرکت یا خدمات ما بپرسید.",
-    cq1:"مهلت TVA بلژیک",cq2:"تأسیس SRL",cq3:"Peppol چیست؟",cq4:"تعرفه‌های ما"
+    cq1:"مهلت TVA بلژیک",cq2:"تأسیس SRL",cq3:"Peppol چیست؟",cq4:"تعرفه‌های ما",
+    seclbl_ab:"دفتر ما",sectit_ab:"درباره <span class='gold'>دفتر ما</span>",
+    ab_role:"بنیان‌گذار · حسابدار خبره ITAA",
+    ab_lead:"پریسا عابد در رأس PMA Accountancy Tax Advisory، کارآفرینان و افراد مستقل را با دقت، نزدیکی و نگاهی راهبردی به مالیاتشان همراهی می‌کند.",
+    ab_p:"با بیش از ۱۵ سال تجربه، او دفتری ممتاز و چندزبانه ساخته که در آن هر مشتری یک مخاطب ثابت دارد. از تأسیس شرکت تا بهینه‌سازی مالیاتی، تیم او تخصص دارای گواهی ITAA را با ابزارهای دیجیتال پیشرفته ترکیب می‌کند.",
+    ab_h1:"دفتر چندزبانه — FR · NL · EN · فارسی",
+    ab_h2:"عضو دارای گواهی ITAA و Peppol",
+    ab_h3:"رویکرد دیجیتال، نزدیک و انسانی",
+    ab_btn:"آشنایی با تیم ما"
   }
 };
 
@@ -207,7 +239,7 @@ function setL(l){
   document.querySelectorAll('[data-t]').forEach(el=>{
     const k=el.getAttribute('data-t');
     if(T[l]&&T[l][k]!==undefined){
-      if(['herosub','sectit1','sectit2','sectit4','sectit5','sectit6'].includes(k))
+      if(['herosub','sectit1','sectit2','sectit4','sectit5','sectit6','sectit_ab'].includes(k))
         el.innerHTML=T[l][k];
       else el.textContent=T[l][k];
     }
