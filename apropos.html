@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('pma-theme');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<title>À propos · PMA Accountancy Tax Advisory · Belgium</title>
+<meta name="description" content="À propos de PMA Accountancy Tax Advisory — Parisa ABED, Expert-Comptable ITAA, et son équipe multilingue à Uccle & Drogenbos.">
+<meta property="og:title" content="À propos · PMA Accountancy Tax Advisory">
+<meta property="og:description" content="Le cabinet et l'équipe PMA Accountancy Tax Advisory — certifié ITAA, multilingue.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0c0c0e">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="assets/css2.css" rel="stylesheet">
+<link href="assets/styles.css" rel="stylesheet">
+</head>
+<body dir="ltr">
+
+<!-- ══ SCROLL PROGRESS ══ -->
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker">
+  <div class="ticker-track" id="ticker">
+    <div class="ticker-item">ITAA Certified <span class="ticker-dot">✦</span> Belgique <span class="ticker-dot">✦</span> FR · NL · EN · فارسی <span class="ticker-dot">✦</span> Uccle <span class="ticker-dot">✦</span> Drogenbos <span class="ticker-dot">✦</span> Tax Advisory <span class="ticker-dot">✦</span> Co-Working <span class="ticker-dot">✦</span> Domiciliation <span class="ticker-dot">✦</span> Peppol Certified <span class="ticker-dot">✦</span> Parisa ABED <span class="ticker-dot">✦</span> Cabinet Premium <span class="ticker-dot">✦</span></div>
+    <div class="ticker-item" aria-hidden="true">ITAA Certified <span class="ticker-dot">✦</span> Belgique <span class="ticker-dot">✦</span> FR · NL · EN · فارسی <span class="ticker-dot">✦</span> Uccle <span class="ticker-dot">✦</span> Drogenbos <span class="ticker-dot">✦</span> Tax Advisory <span class="ticker-dot">✦</span> Co-Working <span class="ticker-dot">✦</span> Domiciliation <span class="ticker-dot">✦</span> Peppol Certified <span class="ticker-dot">✦</span> Parisa ABED <span class="ticker-dot">✦</span> Cabinet Premium <span class="ticker-dot">✦</span></div>
+  </div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">PMA</span>
+      <span class="logo-tag">Accountancy · Tax · Advisory</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="apropos.html" data-t="nav_about">À propos</a></li>
+      <li><a href="index.html#services" data-t="nav_svc">Services</a></li>
+      <li><a href="index.html#pourqui" data-t="nav_pq">Pour Qui</a></li>
+      <li><a href="index.html#bizc" data-t="nav_biz">Business Center</a></li>
+      <li><a href="index.html#news" data-t="nav_news">Actualités</a></li>
+      <li><a href="index.html#contact" data-t="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-tog" id="theme-tog" onclick="toggleTheme()" aria-label="Basculer mode clair / sombre" title="Mode clair / sombre">
+        <svg class="ico-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 1.6v3M12 19.4v3M4.3 4.3l2.1 2.1M17.6 17.6l2.1 2.1M1.6 12h3M19.4 12h3M4.3 19.7l2.1-2.1M17.6 6.4l2.1-2.1"></path></svg>
+        <svg class="ico-moon" viewBox="0 0 24 24"><path d="M20.5 13.2A8.3 8.3 0 1110.8 3.5a6.5 6.5 0 009.7 9.7z"></path></svg>
+      </button>
+      <div class="lang-sw" role="group" aria-label="Language">
+        <button class="lb on" onclick="setL('fr')">FR</button>
+        <button class="lb" onclick="setL('nl')">NL</button>
+        <button class="lb" onclick="setL('en')">EN</button>
+        <button class="lb" onclick="setL('fa')">فا</button>
+      </div>
+      <button class="nav-cta" onclick="go('contact')" data-t="cta">Consultation Gratuite</button>
+      <button class="hamburger" id="ham" onclick="toggleMobileNav()" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ MOBILE NAV ══ -->
+<div id="mobile-nav">
+  <button class="mn-close" onclick="closeMobileNav()" aria-label="Fermer le menu">✕</button>
+  <a href="apropos.html" data-t="nav_about" onclick="closeMobileNav()">À propos</a>
+  <a href="index.html#services" data-t="nav_svc" onclick="closeMobileNav()">Services</a>
+  <a href="index.html#pourqui" data-t="nav_pq" onclick="closeMobileNav()">Pour Qui</a>
+  <a href="index.html#bizc" data-t="nav_biz" onclick="closeMobileNav()">Business Center</a>
+  <a href="index.html#news" data-t="nav_news" onclick="closeMobileNav()">Actualités</a>
+  <a href="index.html#contact" data-t="nav_contact" onclick="closeMobileNav()">Contact</a>
+  <button class="mobile-cta" onclick="closeMobileNav();go('contact')" data-t="cta">Consultation Gratuite</button>
+  <div class="mobile-lang">
+    <button class="lb on" onclick="setL('fr');closeMobileNav()">FR</button>
+    <button class="lb" onclick="setL('nl');closeMobileNav()">NL</button>
+    <button class="lb" onclick="setL('en');closeMobileNav()">EN</button>
+    <button class="lb" onclick="setL('fa');closeMobileNav()">فا</button>
+  </div>
+</div>
+
+<!-- ══ PAGE HEADER ══ -->
+<header class="page-header">
+  <div class="container">
+    <p class="sec-label" data-t="ap_eyebrow">Le Cabinet · Notre Équipe</p>
+    <h1 class="sec-title" data-t="ap_title">À propos de <span class="gold">PMA</span></h1>
+    <p data-t="ap_sub">Découvrez le cabinet et les personnes qui accompagnent votre réussite au quotidien.</p>
+  </div>
+</header>
+
+<!-- ══ À PROPOS ══ -->
+<section class="section-pad" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-media sr sr-d1">
+        <div class="about-photo">
+          <img src="assets/parisa-abed.jpg" alt="Parisa ABED — Expert-Comptable ITAA, fondatrice de PMA Accountancy Tax Advisory" loading="lazy">
+          <span class="about-chip">ITAA</span>
+        </div>
+        <div class="about-photo-tag">
+          <span class="about-photo-name">Parisa ABED</span>
+          <span class="about-photo-role" data-t="ab_role">Fondatrice · Expert-Comptable ITAA</span>
+        </div>
+      </div>
+      <div class="about-body sr sr-d2">
+        <p class="sec-label" data-t="seclbl_ab">Le Cabinet</p>
+        <h2 class="sec-title" data-t="sectit_ab">À propos de <span class="gold">notre cabinet</span></h2>
+        <p class="about-lead" data-t="ab_lead">À la tête de PMA Accountancy Tax Advisory, Parisa ABED accompagne entrepreneurs et indépendants avec rigueur, proximité et une vision stratégique de leur fiscalité.</p>
+        <p class="about-text" data-t="ab_p">Forte de plus de 15 ans d'expérience, elle a bâti un cabinet premium et multilingue où chaque client bénéficie d'un interlocuteur unique. De la création de société à l'optimisation fiscale, son équipe conjugue expertise certifiée ITAA et outils digitaux de pointe.</p>
+        <ul class="about-points">
+          <li><span class="about-pt-ico"><svg viewBox="0 0 24 24"><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"></path><circle cx="12" cy="12" r="10"></circle></svg></span><span data-t="ab_h1">Cabinet multilingue — FR · NL · EN · فارسی</span></li>
+          <li><span class="about-pt-ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"></path><path d="M12 2l7 3v6c0 5-3 8-7 11-4-3-7-6-7-11V5z"></path></svg></span><span data-t="ab_h2">Membre certifié ITAA &amp; Peppol</span></li>
+          <li><span class="about-pt-ico"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span><span data-t="ab_h3">Approche digitale, proche et humaine</span></li>
+        </ul>
+        <button class="btn-primary" onclick="go('contact')" data-t="ab_btn">Rencontrer notre équipe</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NOTRE ÉQUIPE ══ -->
+<section class="section-pad" id="team">
+  <div class="container">
+    <div class="sec-head center sr">
+      <p class="sec-label" data-t="team_lbl">L'équipe</p>
+      <h2 class="sec-title" data-t="team_title">Notre <span class="acc">équipe</span></h2>
+      <p class="sec-sub" data-t="team_sub">Une équipe certifiée et multilingue — un interlocuteur unique à votre écoute.</p>
+    </div>
+    <div class="team-grid">
+      <article class="team-card featured sr sr-d1">
+        <img class="team-photo" src="assets/parisa-abed.jpg" alt="Parisa ABED — Expert-Comptable ITAA" loading="lazy">
+        <h3 class="team-name">Parisa ABED</h3>
+        <p class="team-role" data-t="ab_role">Fondatrice · Expert-Comptable ITAA</p>
+      </article>
+      <article class="team-card sr sr-d2">
+        <div class="team-avatar" aria-hidden="true">+</div>
+        <h3 class="team-name" data-t="tm_soon">Membre à venir</h3>
+        <p class="team-role" data-t="tm2_role">Comptable</p>
+        <p class="team-soon-note" data-t="tm_soon_note">Poste à pourvoir</p>
+      </article>
+      <article class="team-card sr sr-d3">
+        <div class="team-avatar" aria-hidden="true">+</div>
+        <h3 class="team-name" data-t="tm_soon">Membre à venir</h3>
+        <p class="team-role" data-t="tm3_role">Conseiller fiscal</p>
+        <p class="team-soon-note" data-t="tm_soon_note">Poste à pourvoir</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid sr">
+    <div class="footer-brand">
+      <div class="logo-mark">PMA</div>
+      <div class="footer-tag">Accountancy · Tax · Advisory</div>
+      <p data-t="footer_desc">Cabinet comptable et fiscal premium à Uccle &amp; Drogenbos. Certifié ITAA. Multilingue FR · NL · EN · فارسی.</p>
+      <div class="footer-badges">
+        <span class="fbadge">ITAA</span>
+        <span class="fbadge">BCE</span>
+        <span class="fbadge">Peppol</span>
+        <span class="fbadge">ONSS</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 data-t="fc1h">Services</h4>
+      <a href="index.html#services" data-t="fc1_1">Comptabilité</a>
+      <a href="index.html#services" data-t="fc1_2">Fiscalité</a>
+      <a href="index.html#services" data-t="fc1_3">Création société</a>
+      <a href="index.html#services" data-t="fc1_4">Social &amp; Payroll</a>
+      <a href="index.html#bizc" data-t="fc1_5">Co-Working</a>
+      <a href="index.html#bizc" data-t="fc1_6">Domiciliation</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-t="fc2h">Cabinet</h4>
+      <a href="apropos.html" data-t="nav_about">À propos</a>
+      <a href="index.html#pourqui" data-t="fc2_1">Pour qui</a>
+      <a href="index.html#news" data-t="fc2_3">Actualités</a>
+      <a href="index.html#contact" data-t="fc2_4">Contact</a>
+      <a href="#" data-t="fc2_5">Portail client</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-t="fc3h">Coordonnées</h4>
+      <a href="tel:+32483434156">+32 483 43 41 56</a>
+      <a href="mailto:pma.advisors@outlook.com">pma.advisors@outlook.com</a>
+      <a href="index.html#bizc">Av. Bel-Air 35, Uccle</a>
+      <a href="index.html#bizc">Grand Route 315, Drogenbos</a>
+      <a href="#" data-t="fc3_legal">Mentions légales</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-t="footer_cr">© 2026 PMA Accountancy Tax Advisory · Tous droits réservés · Belgique</p>
+    <p>Parisa ABED — Expert-Comptable &amp; Conseil Fiscal ITAA</p>
+  </div>
+</footer>
+
+<!-- ══ BACK TO TOP ══ -->
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Retour en haut">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
+
+<script src="assets/main.js" defer></script>
+</body>
+</html>
